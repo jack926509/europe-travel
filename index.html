@@ -1,0 +1,4150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>西班牙・葡萄牙・南法 自由行全攻略 2025-2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Sans+TC:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --terra: #C8502A;
+      --saffron: #E8943A;
+      --gold: #D4A843;
+      --cream: #FAF6EE;
+      --parchment: #F0E8D8;
+      --ink: #1A1208;
+      --slate: #4A4035;
+      --sage: #6B7B5A;
+      --azul: #2B5FA0;
+      --moss: #3D5A3E;
+      --rose: #C4556A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(160deg, #1A0E05 0%, #3A1F0A 40%, #5C2E0E 70%, #8B4513 100%);
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,200,100,0.06)' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Cline x1='10' y1='40' x2='70' y2='40'/%3E%3Cline x1='40' y1='10' x2='40' y2='70'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+
+    .hero-flag-strip {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .flag-pill {
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .flag-es {
+      background: #AA151B;
+      color: #F1BF00;
+      border: 1px solid #F1BF00;
+    }
+
+    .flag-pt {
+      background: #006600;
+      color: #FF0000;
+      border: 1px solid #FF9900;
+    }
+
+    .flag-fr {
+      background: #002395;
+      color: #ED2939;
+      border: 1px solid #EDEDED;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', 'Noto Serif TC', serif;
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      color: #FAF0D8;
+      text-align: center;
+      position: relative;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      letter-spacing: -0.5px;
+    }
+
+    .hero-sub {
+      color: #D4A843;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 12px;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 168, 67, 0.4);
+      color: #F5E8C0;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      background: var(--ink);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav a {
+      color: #BBA880;
+      text-decoration: none;
+      padding: 14px 20px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ─── SECTION HEADER ─── */
+    .section-header {
+      padding: 52px 0 8px;
+      border-top: 1px solid #D8CEB8;
+      margin-top: 40px;
+    }
+
+    .section-header:first-child {
+      border-top: none;
+      margin-top: 0;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terra);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', 'Noto Serif TC', serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .section-title span {
+      color: var(--terra);
+      font-style: italic;
+    }
+
+    .section-intro {
+      color: var(--slate);
+      margin-top: 10px;
+      font-size: 14px;
+      max-width: 700px;
+    }
+
+    /* ─── COUNTRY TABS ─── */
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .country-card {
+      background: white;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      border: 1px solid #E8DFC8;
+    }
+
+    .country-card-header {
+      padding: 18px 22px 14px;
+      position: relative;
+    }
+
+    .cc-es {
+      background: linear-gradient(135deg, #AA151B, #C4282F);
+    }
+
+    .cc-pt {
+      background: linear-gradient(135deg, #006400, #008000);
+    }
+
+    .cc-fr {
+      background: linear-gradient(135deg, #002395, #0035C4);
+    }
+
+    .cc-multi {
+      background: linear-gradient(135deg, var(--terra), #A03825);
+    }
+
+    .country-card-header h3 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+    }
+
+    .country-card-header .sub {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .country-card-body {
+      padding: 18px 22px;
+    }
+
+    /* ─── INFO BLOCKS ─── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .info-block {
+      background: white;
+      border: 1px solid #E8DFC8;
+      border-left: 3px solid var(--terra);
+      padding: 16px 18px;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .info-block.azul {
+      border-left-color: var(--azul);
+    }
+
+    .info-block.gold {
+      border-left-color: var(--gold);
+    }
+
+    .info-block.sage {
+      border-left-color: var(--sage);
+    }
+
+    .info-block.rose {
+      border-left-color: var(--rose);
+    }
+
+    .info-block h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+
+    .info-block p,
+    .info-block li {
+      font-size: 13.5px;
+      color: var(--ink);
+    }
+
+    .info-block ul {
+      padding-left: 16px;
+    }
+
+    .info-block li {
+      margin-bottom: 4px;
+    }
+
+    /* ─── HIGHLIGHT BOX ─── */
+    .highlight {
+      background: linear-gradient(135deg, #FFF8E8 0%, #FEF0D0 100%);
+      border: 1px solid #E8CC88;
+      border-radius: 2px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight h4 {
+      color: var(--terra);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .alert {
+      background: #FFF3CD;
+      border: 1px solid #FFCC4D;
+      border-left: 4px solid var(--saffron);
+      padding: 14px 18px;
+      margin: 16px 0;
+      border-radius: 0 2px 2px 0;
+      font-size: 13.5px;
+    }
+
+    .alert strong {
+      color: var(--terra);
+    }
+
+    /* ─── TIMELINE / STEP ─── */
+    .steps {
+      margin-top: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--terra);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .step-body h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .step-body p {
+      font-size: 13.5px;
+      color: var(--slate);
+    }
+
+    /* ─── TABLE ─── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    thead tr {
+      background: var(--ink);
+      color: var(--gold);
+    }
+
+    thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--parchment);
+    }
+
+    tbody tr:nth-child(odd) {
+      background: white;
+    }
+
+    tbody td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #E8DFC8;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #FFF8E8;
+    }
+
+    /* ─── SOUVENIR GRID ─── */
+    .souvenir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .souvenir-item {
+      background: white;
+      border: 1px solid #E8DFC8;
+      padding: 14px 14px 12px;
+      border-radius: 2px;
+      text-align: center;
+    }
+
+    .souvenir-icon {
+      font-size: 2rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .souvenir-item h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .souvenir-item p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    /* ─── PILL TAGS ─── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      background: var(--parchment);
+      border: 1px solid #D8CEB8;
+      color: var(--slate);
+    }
+
+    .tag.hot {
+      background: #FEECE4;
+      border-color: #E8A080;
+      color: var(--terra);
+    }
+
+    /* ─── COUNTRY GUIDE TABS ─── */
+    .ctab-wrap {
+      margin-top: 28px;
+    }
+
+    .ctab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      border-bottom: 2px solid #E8DFC8;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .ctab-btn {
+      padding: 10px 20px;
+      border: 1px solid #D8CEB8;
+      border-bottom: none;
+      background: var(--parchment);
+      color: var(--slate);
+      font-family: 'Noto Serif TC', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px 4px 0 0;
+      transition: all .2s;
+      position: relative;
+      top: 2px;
+      white-space: nowrap;
+    }
+
+    .ctab-btn:hover {
+      background: #F8F0DC;
+      color: var(--ink);
+    }
+
+    .ctab-btn.active {
+      background: white;
+      color: var(--terra);
+      border-color: #E8DFC8;
+      border-bottom-color: white;
+      z-index: 1;
+    }
+
+    .ctab-btn.es.active {
+      border-top: 3px solid #AA151B;
+    }
+
+    .ctab-btn.pt.active {
+      border-top: 3px solid #006600;
+    }
+
+    .ctab-btn.fr.active {
+      border-top: 3px solid #002395;
+    }
+
+    .ctab-btn.disney.active {
+      border-top: 3px solid #7B3FA0;
+    }
+
+    .ctab-panel {
+      display: none;
+      background: white;
+      border: 1px solid #E8DFC8;
+      border-top: none;
+      padding: 24px;
+    }
+
+    .ctab-panel.active {
+      display: block;
+    }
+
+    .stab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .stab-btn {
+      padding: 7px 16px;
+      border: 1px solid #D8CEB8;
+      background: var(--parchment);
+      color: var(--slate);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+
+    .stab-btn:hover {
+      background: #F0E4C0;
+    }
+
+    .stab-btn.active {
+      background: var(--ink);
+      color: var(--gold);
+      border-color: var(--ink);
+    }
+
+    .stab-panel {
+      display: none;
+    }
+
+    .stab-panel.active {
+      display: block;
+    }
+
+    .attraction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .attraction-card {
+      background: var(--parchment);
+      border: 1px solid #E0D4B8;
+      border-left: 4px solid var(--terra);
+      border-radius: 0 4px 4px 0;
+      padding: 14px 16px;
+    }
+
+    .attraction-card.pt {
+      border-left-color: #006600;
+    }
+
+    .attraction-card.fr {
+      border-left-color: #002395;
+    }
+
+    .attraction-card.disney {
+      border-left-color: #7B3FA0;
+    }
+
+    .attraction-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .attraction-card p {
+      font-size: 12.5px;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .attraction-card .badge {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--terra);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+
+    .attraction-card.pt .badge {
+      background: #006600;
+    }
+
+    .attraction-card.fr .badge {
+      background: #002395;
+    }
+
+    .attraction-card.disney .badge {
+      background: #7B3FA0;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .food-card {
+      background: white;
+      border: 1px solid #E8DFC8;
+      border-radius: 4px;
+      padding: 14px 14px 12px;
+      text-align: center;
+    }
+
+    .food-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .food-card h5 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .food-card p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    .food-card .where {
+      font-size: 11.5px;
+      color: var(--terra);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: #8A7A60;
+      text-align: center;
+      padding: 32px 20px;
+      margin-top: 60px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    /* ─── DIVIDER ─── */
+    .ornament {
+      text-align: center;
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 8px;
+      margin: 24px 0 0;
+      opacity: 0.6;
+    }
+
+    .page-content {
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 40px 16px 36px;
+      }
+
+      .container {
+        padding: 0 14px;
+      }
+
+      .country-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-flag-strip">
+      <span class="flag-pill flag-es">España</span>
+      <span class="flag-pill flag-pt">Portugal</span>
+      <span class="flag-pill flag-fr">France</span>
+    </div>
+    <h1 class="hero-title">西班牙・葡萄牙・南法<br>自由行全攻略</h1>
+    <p class="hero-sub">2025 – 2026 最新版 ｜ Taiwan Traveller's Guide</p>
+    <div class="hero-badges">
+      <span class="hero-badge">✈ 台灣出發</span>
+      <span class="hero-badge">🗺 景點交通</span>
+      <span class="hero-badge">🍽 美食指南</span>
+      <span class="hero-badge">🛍 伴手禮</span>
+      <span class="hero-badge">💰 退稅攻略</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#visa">📋 簽證</a>
+    <a href="#flight">✈ 航班</a>
+    <a href="#transport">🚆 交通</a>
+    <a href="#destinations">📖 各國攻略</a>
+    <a href="#disney">🏰 迪士尼</a>
+    <a href="#souvenir">🛍 伴手禮</a>
+    <a href="#luxury">💎 精品購物</a>
+    <a href="#taxrefund">💰 退稅</a>
+    <a href="#tips">💡 貼士</a>
+  </nav>
+
+  <div class="container page-content">
+
+    <!-- ─── 行前準備 ─── -->
+    <div id="visa" class="section-header">
+      <div class="section-tag">行前準備</div>
+      <h2 class="section-title">簽證 & <span>入境資訊</span></h2>
+      <p class="section-intro">台灣護照享有申根免簽待遇，可在180天內停留最多90天，但2026年起入境規定有重大變動。</p>
+    </div>
+
+    <div class="alert">
+      <strong>⚠ 2026 年重大新制</strong><br>
+      <strong>ETIAS 電子旅行許可</strong>預計 2026 年第四季正式上線。類似美國 ESTA，費用 €20（18–70歲），有效期 3
+      年、可多次入境。目前（2026年3月）尚未實施，但出發前務必至官網確認：<code>travel-europe.europa.eu/etias_en</code>
+    </div>
+
+    <div class="alert">
+      <strong>📌 EES 出入境數位系統</strong><br>
+      歐盟自2025年10月起部署新數位出入境系統（Entry/Exit System），目標2026年4月全面上線，將取代傳統護照蓋章，改以電子方式記錄出入境。入境時需掃描護照、拍照及按指紋。
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block azul">
+        <h4>📋 基本條件</h4>
+        <ul>
+          <li>台灣護照申根免簽</li>
+          <li>護照效期須超過 6 個月</li>
+          <li>180天內最多停留 90 天</li>
+          <li>建議備妥財力證明、訂房紀錄</li>
+        </ul>
+      </div>
+      <div class="info-block gold">
+        <h4>🏥 保險建議</h4>
+        <ul>
+          <li>申根保險：每日約 €1.1（Provisit-visum）</li>
+          <li>台灣旅平險 + 旅行不便險</li>
+          <li>推薦：富邦M2 或 新安東保險</li>
+          <li>13天保費約台幣 650 元起</li>
+        </ul>
+      </div>
+      <div class="info-block sage">
+        <h4>📱 上網方案</h4>
+        <ul>
+          <li>推薦購買歐洲多國 eSIM</li>
+          <li>或台灣出發前購好歐洲上網卡</li>
+          <li>當地電信：Vodafone、NOS（葡）</li>
+          <li>建議備一張含通話功能的SIM</li>
+        </ul>
+      </div>
+      <div class="info-block rose">
+        <h4>💳 金融準備</h4>
+        <ul>
+          <li>備妥歐元現金（部分小店僅收現金）</li>
+          <li>使用無國外手續費信用卡</li>
+          <li>Booking 等境外訂房加收 1.5% 手續費</li>
+          <li>推薦現金回饋型信用卡出國使用</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── 航班 ─── -->
+    <div id="flight" class="section-header">
+      <div class="section-tag">出發準備</div>
+      <h2 class="section-title">台灣出發 <span>航班選擇</span></h2>
+      <p class="section-intro">從桃園機場（TPE）出發至西葡法，均需轉機一次。建議提前 9–11 個月訂票，歐洲盛行早鳥訂位。</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>航空公司</th>
+            <th>轉機點</th>
+            <th>目的地</th>
+            <th>參考票價（來回）</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>卡達航空 Qatar</strong></td>
+            <td>杜哈 DOH</td>
+            <td>巴塞隆納/馬德里/里斯本</td>
+            <td>TWD 38,000–55,000</td>
+            <td>服務品質佳；商務艙口碑優</td>
+          </tr>
+          <tr>
+            <td><strong>土耳其航空 Turkish</strong></td>
+            <td>伊斯坦堡 IST</td>
+            <td>巴塞隆納/馬德里/里斯本/尼斯</td>
+            <td>TWD 32,000–48,000</td>
+            <td>伊斯坦堡機場可逛免稅店；票價親民</td>
+          </tr>
+          <tr>
+            <td><strong>阿聯酋航空 Emirates</strong></td>
+            <td>杜拜 DXB</td>
+            <td>巴塞隆納/馬德里</td>
+            <td>TWD 38,300–55,000</td>
+            <td>農曆春節旺季建議提前1年訂</td>
+          </tr>
+          <tr>
+            <td><strong>長榮航空 EVA Air</strong></td>
+            <td>— （依目的轉機）</td>
+            <td>馬德里/巴塞隆納</td>
+            <td>TWD 36,739–184,000</td>
+            <td>台灣航空；商務艙選擇</td>
+          </tr>
+          <tr>
+            <td><strong>荷蘭航空 KLM</strong></td>
+            <td>阿姆斯特丹 AMS</td>
+            <td>各主要城市</td>
+            <td>TWD 40,000–60,000</td>
+            <td>可轉機歐洲各城市</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight">
+      <h4>✈ 開口票（Open-Jaw）策略</h4>
+      <p>規劃西葡法三國時，可考慮「開口票」：例如飛巴塞隆納進、里斯本出，或尼斯進、馬德里出，省去回到原出發城市的內陸費用。西班牙、葡萄牙、法國（申根區）之間轉乘無需重新辦理入境手續。</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>🗓 最佳旅遊時機</h4>
+        <ul>
+          <li><strong>4–6月：</strong>氣候最舒適、薰衣草前季</li>
+          <li><strong>7–8月：</strong>薰衣草盛開（南法6月中–8月中）</li>
+          <li><strong>9–10月：</strong>旅遊淡旺之間，CP值高</li>
+          <li>夏季注意西班牙可能近40°C</li>
+        </ul>
+      </div>
+      <div class="info-block azul">
+        <h4>⏰ 時差</h4>
+        <ul>
+          <li>🇪🇸 西班牙 / 🇫🇷 法國：冬季慢台灣 <strong>7 小時</strong>（UTC+1）</li>
+          <li>🇵🇹 葡萄牙：冬季慢台灣 <strong>8 小時</strong>（UTC+0，與英國同區）</li>
+          <li>夏令時間（3月底–10月底）西葡法各提前1小時，差距縮短1小時</li>
+          <li>⚠ 葡萄牙比西班牙早1小時，跨境請注意調時</li>
+        </ul>
+      </div>
+      <div class="info-block gold">
+        <h4>💡 訂票訣竅</h4>
+        <ul>
+          <li>出發前 9–11 個月訂機票最划算</li>
+          <li>住宿也建議提前 9–10 個月預訂</li>
+          <li>歐洲流行「早鳥訂位」制度</li>
+          <li>春節等旺季房價漲幅 3,000–10,000 元</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── 跨國交通 ─── -->
+    <div id="transport" class="section-header">
+      <div class="section-tag">移動攻略</div>
+      <h2 class="section-title">三國 <span>交通全攻略</span></h2>
+      <p class="section-intro">涵蓋跨國移動策略、各城市交通票卡詳細說明及實用 App，規劃最省時省錢的歐洲行程。</p>
+    </div>
+
+    <div class="ctab-wrap" id="transport-wrap">
+      <div class="ctab-nav">
+        <button class="ctab-btn multi active" onclick="showTtab('cross',this)">🌍 跨國移動</button>
+        <button class="ctab-btn es" onclick="showTtab('es-t',this)">🇪🇸 西班牙</button>
+        <button class="ctab-btn pt" onclick="showTtab('pt-t',this)">🇵🇹 葡萄牙</button>
+        <button class="ctab-btn fr" onclick="showTtab('fr-t',this)">🇫🇷 法國南法</button>
+        <button class="ctab-btn" onclick="showTtab('summary',this)">📊 票卡總整理</button>
+        <button class="ctab-btn" onclick="showTtab('apps',this)">📱 實用 App</button>
+      </div>
+
+      <!-- ── 跨國移動 ── -->
+      <div id="ttab-cross" class="ctab-panel active">
+        <div class="alert" style="margin-top:0">
+          <strong>⚠ 注意：</strong>里斯本 ↔ 馬德里目前<strong>無直達高速列車</strong>，高鐵預計 2030 年後才完工。跨國移動首選廉航，省時且票價低。
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:var(--terra);margin:16px 0 10px">🛫 三國跨境路線</h3>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>路線</th>
+                <th>推薦方式</th>
+                <th>時間</th>
+                <th>費用參考</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>里斯本 ↔ 馬德里</strong></td>
+                <td>廉航（Ryanair、Vueling、TAP）</td>
+                <td>1.5 小時</td>
+                <td>€20–60</td>
+                <td>每日約 16 班；申根區免重辦入境</td>
+              </tr>
+              <tr>
+                <td><strong>里斯本/波多 ↔ 巴塞隆納</strong></td>
+                <td>廉航（Vueling、Iberia、TAP）</td>
+                <td>2 小時</td>
+                <td>€25–80</td>
+                <td>每日 12–14 班；提早訂可低至 €25</td>
+              </tr>
+              <tr>
+                <td><strong>馬德里 ↔ 巴塞隆納</strong></td>
+                <td>AVE 高鐵（Renfe）</td>
+                <td>2.5 小時</td>
+                <td>€35–120</td>
+                <td>每小時一班；市區→市區最省時</td>
+              </tr>
+              <tr>
+                <td><strong>馬德里 ↔ 巴塞隆納</strong></td>
+                <td>Iryo 私鐵</td>
+                <td>2.5 小時</td>
+                <td>€25–90</td>
+                <td>與 Renfe 競爭，有時票價更低</td>
+              </tr>
+              <tr>
+                <td><strong>馬德里 ↔ 巴塞隆納</strong></td>
+                <td>Ouigo 廉鐵</td>
+                <td>約 3 小時</td>
+                <td>€10–50</td>
+                <td>最便宜；行李規定嚴格，需仔細確認</td>
+              </tr>
+              <tr>
+                <td><strong>巴塞隆納 ↔ 南法（馬賽/尼斯）</strong></td>
+                <td>TGV/AVE 跨境</td>
+                <td>約 5 小時</td>
+                <td>€40–120</td>
+                <td>經 Figueres 過境；Renfe/SNCF 合作</td>
+              </tr>
+              <tr>
+                <td><strong>巴黎 ↔ 亞維農/南法</strong></td>
+                <td>TGV inOui</td>
+                <td>2.5–3 小時</td>
+                <td>€30–100</td>
+                <td>提前 90 天訂 Prems 早鳥票最划算</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-grid" style="margin-top:20px">
+          <div class="info-block gold">
+            <h4>✈ 行程規劃建議</h4>
+            <ul>
+              <li>飛入<strong>巴塞隆納或馬德里</strong>、飛出<strong>里斯本</strong>（開口票最省）</li>
+              <li>推薦路線：台北 → 巴塞隆納 → 馬德里 → 安達魯西亞 → 里斯本 → 南法 → 台北</li>
+              <li>國與國之間首選<strong>廉航</strong>（最省時）；預算優先選 FlixBus 長途巴士</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>🚌 長途巴士備選</h4>
+            <ul>
+              <li><strong>FlixBus</strong>：里斯本↔馬德里 €12–30（8–10 小時）</li>
+              <li><strong>ALSA</strong>：西班牙各城市間，格拉納達↔塞維亞約 €15–20</li>
+              <li><strong>Rede Expressos</strong>：里斯本↔波多 €15–20（3.5 小時）</li>
+              <li>適合預算旅行，但時間成本高，白天班次較多</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 西班牙交通 ── -->
+      <div id="ttab-es-t" class="ctab-panel">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--terra);margin:0 0 16px">🏙 巴塞隆納 Barcelona</h3>
+        <div class="info-grid" style="margin-top:0">
+          <div class="info-block">
+            <h4>🚇 地鐵系統（TMB Metro）</h4>
+            <ul>
+              <li>12 條線（L1–L12），涵蓋所有主要景點</li>
+              <li>單程票：<strong>€2.90</strong></li>
+              <li>⚠ 機場線（L9 Sud）需另購機場票 <strong>€5.50</strong>，與一般票不通用</li>
+            </ul>
+          </div>
+          <div class="info-block sage">
+            <h4>🎫 T-Casual（10次回數票）</h4>
+            <ul>
+              <li>費用：<strong>約 €11.35</strong>，Zone 1 範圍</li>
+              <li>可與他人共用（同進同出）</li>
+              <li>⚠ 不含機場線</li>
+              <li>適合短暫停留、搭乘次數少的旅客</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight" style="margin-top:16px">
+          <h4>⭐ Hola Barcelona Travel Card（觀光首選）</h4>
+        </div>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>天數</th>
+                <th>成人費用</th>
+                <th>涵蓋範圍</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2 天（48hr）</td>
+                <td><strong>€18.70</strong></td>
+                <td rowspan="4" style="vertical-align:middle; font-size:12.5px">地鐵（含機場線）、公車、輕軌、通勤火車（Zone 1）、FGC Zone
+                  1<br><br>⚠ <strong>不含</strong>：夜班公車、Aerobús 機場快巴</td>
+              </tr>
+              <tr>
+                <td>3 天（72hr）</td>
+                <td><strong>€27.30</strong></td>
+              </tr>
+              <tr>
+                <td>4 天（96hr）</td>
+                <td><strong>€35.60</strong></td>
+              </tr>
+              <tr>
+                <td>5 天（120hr）</td>
+                <td><strong>€43.60</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block" style="margin-top:10px">
+          <h4>📌 使用方式</h4>
+          <ul>
+            <li>官網購買後取得 Voucher Code，抵達後至任一地鐵站售票機輸入換卡</li>
+            <li>第一次感應後開始計時，有效期內不限次數乘車</li>
+            <li><strong>一張卡限一人使用，不可共用</strong></li>
+            <li>購買地點：地鐵站售票機、官網（線上享 10% 折扣）</li>
+          </ul>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:var(--terra);margin:28px 0 16px">🏛 馬德里 Madrid</h3>
+        <div class="info-grid" style="margin-top:0">
+          <div class="info-block">
+            <h4>🚇 地鐵系統（Metro de Madrid）</h4>
+            <ul>
+              <li>13 條線、超過 300 站，歐洲第三大地鐵網路</li>
+              <li>單程票：<strong>€1.50–2.00</strong>（依站數不同）</li>
+              <li>機場線（L8）需額外付 <strong>€3 附加費</strong>（旅遊票 Zone A 已包含）</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight" style="margin-top:16px">
+          <h4>⭐ 馬德里旅遊票 Tarjeta Turística（最推薦）</h4>
+        </div>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>天數</th>
+                <th>Zone A（市區）</th>
+                <th>Zone T（含近郊）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 天</td>
+                <td>€10</td>
+                <td>€15</td>
+              </tr>
+              <tr>
+                <td>2 天</td>
+                <td>€17</td>
+                <td>€25.50</td>
+              </tr>
+              <tr>
+                <td>3 天</td>
+                <td><strong>€22.50</strong></td>
+                <td>€34</td>
+              </tr>
+              <tr>
+                <td>5 天</td>
+                <td>€32.50</td>
+                <td>€49</td>
+              </tr>
+              <tr>
+                <td>7 天</td>
+                <td>€42</td>
+                <td>€61</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-grid" style="margin-top:10px">
+          <div class="info-block gold">
+            <h4>Zone A vs Zone T 怎麼選？</h4>
+            <ul>
+              <li><strong>Zone A</strong>：市區全涵蓋，<strong>含機場線（免 €3 附加費）</strong>→ 一般觀光首選</li>
+              <li><strong>Zone T</strong>：延伸至托雷多、塞哥維亞等近郊（AVE 高速列車不包含）</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>📌 使用方式</h4>
+            <ul>
+              <li>需同時購買 <strong>Tarjeta Multi</strong> 智慧卡（可重複使用）</li>
+              <li>售票機選 Other Options → Tourist Ticket</li>
+              <li>第一次進站打卡後開始計算，有效至最後一天凌晨 5 點</li>
+              <li>兒童（4–11 歲）5 折；4 歲以下免費</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:var(--terra);margin:28px 0 10px">🌞 安達魯西亞 Andalucía</h3>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>城市</th>
+                <th>市區交通</th>
+                <th>單次費用</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>塞維亞</strong></td>
+                <td>Tussam 公車 / 輕軌 Metro</td>
+                <td>€1.35–1.40</td>
+                <td>市中心景點步行可達；短距離建議 Uber/Cabify</td>
+              </tr>
+              <tr>
+                <td><strong>格拉納達</strong></td>
+                <td>LAC 公車</td>
+                <td>€1.40</td>
+                <td>市中心→阿爾罕布拉宮步行約 40 分或搭 C30/C32</td>
+              </tr>
+              <tr>
+                <td><strong>哥多華</strong></td>
+                <td>市區公車</td>
+                <td>€1.30</td>
+                <td>景點集中，基本步行可達</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block" style="margin-top:10px">
+          <h4>🚆 安達魯西亞城際移動</h4>
+          <ul>
+            <li>馬德里 ↔ 塞維亞：AVE 高鐵約 <strong>2.5 小時</strong></li>
+            <li>格拉納達 ↔ 塞維亞：ALSA 長途巴士約 3 小時，€15–20</li>
+            <li>各城市間亦可搭 FlixBus，預算旅客適用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── 葡萄牙交通 ── -->
+      <div id="ttab-pt-t" class="ctab-panel">
+        <h3 style="font-family:'Playfair Display',serif;color:#006600;margin:0 0 12px">🚆 里斯本 ↔ 波多（城際列車）</h3>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>列車類型</th>
+                <th>時間</th>
+                <th>2等費用</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Alfa Pendular（AP）</strong></td>
+                <td>約 2h50m</td>
+                <td>€34.60</td>
+                <td>最快；傾斜過彎技術，1等 €48.40</td>
+              </tr>
+              <tr>
+                <td><strong>Intercidades（IC）</strong></td>
+                <td>約 3h13m</td>
+                <td>€27.40</td>
+                <td>稍慢略便宜，停靠多；1等 €40.55</td>
+              </tr>
+              <tr>
+                <td><strong>Rede Expressos 巴士</strong></td>
+                <td>約 3h15m</td>
+                <td>€15–20</td>
+                <td>最便宜；FlixBus 最低 €8 起但常滿</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block" style="margin-top:10px">
+          <h4>📌 訂票建議</h4>
+          <ul>
+            <li>網站：<strong>cp.pt</strong> 或 CP App，提前 2–4 週訂可享最高 65% 早鳥折扣</li>
+            <li>里斯本出發站：<strong>Santa Apolónia</strong> 或 <strong>Oriente</strong> 站</li>
+            <li>里斯本 ↔ 辛特拉：從 Rossio 站出發，約 40 分，單程約 €2.25</li>
+          </ul>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:#006600;margin:28px 0 12px">🏙 里斯本市區交通</h3>
+        <div class="info-grid" style="margin-top:0">
+          <div class="info-block sage">
+            <h4>🚇 地鐵（Metro de Lisboa）</h4>
+            <ul>
+              <li>4 條線（黃、綠、藍、紅），6:30–凌晨 1:00</li>
+              <li>單次：<strong>€1.61</strong>（Navegante 儲值）/ <strong>€2.10</strong>（現場購票）</li>
+            </ul>
+          </div>
+          <div class="info-block rose">
+            <h4>🚋 28 號電車</h4>
+            <ul>
+              <li>穿越阿爾法瑪舊城區，最具特色的觀光電車</li>
+              <li>費用：<strong>€3.20</strong>（車上現金）/ Lisboa Card 或 Navegante 約 €1.61</li>
+              <li>⚠ 非常擁擠，請小心扒手</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight" style="margin-top:16px">
+          <h4>⭐ Navegante Occasional Card（最常用交通卡）</h4>
+        </div>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>充值方式</th>
+                <th>費用</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>卡費</td>
+                <td>€0.50（有效 1 年）</td>
+                <td>地鐵站售票機、煙草店、便利商店購買</td>
+              </tr>
+              <tr>
+                <td>Zapping 儲值</td>
+                <td>充 €3 起，每次扣費</td>
+                <td>地鐵/公車每次 €1.61；電車同價；渡輪 €1.55–3.25</td>
+              </tr>
+              <tr>
+                <td>24 小時日票（市區）</td>
+                <td><strong>€7.00</strong></td>
+                <td>涵蓋地鐵、公車、電車、纜車</td>
+              </tr>
+              <tr>
+                <td>24 小時日票（含辛特拉）</td>
+                <td><strong>€11.00</strong></td>
+                <td>加上 CP 近郊線（辛特拉/卡斯凱什方向）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight" style="margin-top:16px">
+          <h4>⭐ Lisboa Card（景點+交通複合卡）</h4>
+        </div>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>天數</th>
+                <th>成人</th>
+                <th>兒童（4–15 歲）</th>
+                <th>包含內容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>24 小時</td>
+                <td>€21</td>
+                <td>€13</td>
+                <td rowspan="3" style="vertical-align:middle; font-size:12.5px">✅ 無限搭地鐵/公車/電車/纜車/聖胡斯塔電梯<br>✅ CP
+                  近郊線（辛特拉、卡斯凱什）<br>✅ <strong>52 個景點免費</strong>（熱羅尼莫斯 €15、聖喬治城堡 €10…）<br>✅ 12 個景點免排隊<br>✅ 機場地鐵</td>
+              </tr>
+              <tr>
+                <td>48 小時</td>
+                <td><strong>€35</strong></td>
+                <td>€18</td>
+              </tr>
+              <tr>
+                <td>72 小時</td>
+                <td><strong>€44</strong></td>
+                <td>€23</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block gold" style="margin-top:10px">
+          <h4>Navegante vs Lisboa Card 怎麼選？</h4>
+          <ul>
+            <li>每天參觀多個景點 → <strong>Lisboa Card</strong>（門票省更多）</li>
+            <li>以散步為主、少進博物館 → <strong>Navegante + Zapping</strong>（彈性佳）</li>
+          </ul>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:#006600;margin:28px 0 12px">🏙 波多市區交通</h3>
+        <div class="info-block" style="margin-top:0">
+          <h4>🚇 地鐵（Metro do Porto）</h4>
+          <ul>
+            <li>6 條線（A–F），81 站；關鍵樞紐：<strong>Trindade 站</strong></li>
+            <li><strong>E 線（紫線）</strong>：機場 ↔ Trindade 市中心直達</li>
+            <li>採分區收費（Zone 制），市區通常需 Zone 2–4</li>
+          </ul>
+        </div>
+        <div class="table-wrap" style="margin-top:12px">
+          <table>
+            <thead>
+              <tr>
+                <th>票卡</th>
+                <th>費用</th>
+                <th>有效期</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Andante Tour 1</strong></td>
+                <td>€7.00</td>
+                <td>首次驗票後 24 小時</td>
+                <td rowspan="2" style="vertical-align:middle; font-size:12.5px">涵蓋全區所有 Zone（含機場）<br>地鐵 6 條線、STCP 公車、CP
+                  通勤列車<br>⚠ 不含 Guindais 纜車、歷史電車（22/1/18 號）</td>
+              </tr>
+              <tr>
+                <td><strong>Andante Tour 3</strong></td>
+                <td><strong>€15.00</strong></td>
+                <td>首次驗票後 72 小時</td>
+              </tr>
+              <tr>
+                <td><strong>Porto Card 3 天（含交通）</strong></td>
+                <td>€32</td>
+                <td>72 小時</td>
+                <td>Andante Tour 交通 + 130+ 景點折扣/免費（含萊羅書店）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alert" style="margin-top:12px">
+          <strong>⚠ 波多驗票規定：</strong>上車/進站前必須在<strong>黃色驗票機感應</strong>（換乘時每次都要重新感應），違規重罰，票務人員查票頻繁。
+        </div>
+      </div>
+
+      <!-- ── 法國南法交通 ── -->
+      <div id="ttab-fr-t" class="ctab-panel">
+        <h3 style="font-family:'Playfair Display',serif;color:#002395;margin:0 0 12px">🚆 南法城際列車（TGV / TER）</h3>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>路線</th>
+                <th>交通方式</th>
+                <th>時間</th>
+                <th>費用</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>巴黎 → 亞維農</td>
+                <td>TGV inOui</td>
+                <td>約 2.5 小時</td>
+                <td>€30–100</td>
+              </tr>
+              <tr>
+                <td>巴黎 → 馬賽</td>
+                <td>TGV inOui</td>
+                <td>約 3 小時</td>
+                <td>€35–120</td>
+              </tr>
+              <tr>
+                <td>亞維農 → 尼斯</td>
+                <td>TGV / TER</td>
+                <td>約 3 小時</td>
+                <td>€45–90</td>
+              </tr>
+              <tr>
+                <td>尼斯 → 馬賽</td>
+                <td>TER</td>
+                <td>約 2.5 小時</td>
+                <td>€20–40</td>
+              </tr>
+              <tr>
+                <td>馬賽 → 坎城</td>
+                <td>TER</td>
+                <td>約 2 小時</td>
+                <td>€20–35</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alert" style="margin-top:10px">
+          <strong>⚠ 亞維農雙車站：</strong><strong>Avignon Centre</strong>（市中心，TER 區間車）vs <strong>Avignon
+            TGV</strong>（市郊，高速列車），訂票時務必確認！
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:#002395;margin:28px 0 12px">🏙 巴黎大眾運輸</h3>
+        <div class="info-block" style="margin-top:0">
+          <h4>🚇 基本資訊</h4>
+          <ul>
+            <li>2025 年起全區單一票價；單次票（數位 T+）：<strong>€2.50</strong></li>
+            <li>CDG 機場 → 市區（RER B）：單程約 <strong>€11.30</strong></li>
+          </ul>
+        </div>
+        <div class="table-wrap" style="margin-top:12px">
+          <table>
+            <thead>
+              <tr>
+                <th>票卡</th>
+                <th>費用</th>
+                <th>適合對象</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Navigo Easy Card</strong></td>
+                <td>卡費 €2 + 儲值</td>
+                <td>停留 1–2 天、搭乘次數少</td>
+                <td>充值單次票（T+）或日票；可重複使用</td>
+              </tr>
+              <tr>
+                <td><strong>Paris Visite 1 天（Zone 1–5）</strong></td>
+                <td>€30.60</td>
+                <td>含機場接送、去迪士尼/凡爾賽</td>
+                <td>涵蓋地鐵、RER、公車、含機場；兒童 5 折</td>
+              </tr>
+              <tr>
+                <td><strong>Paris Visite 3 天（Zone 1–5）</strong></td>
+                <td>€63.80</td>
+                <td>3–5 天深度遊，需機場</td>
+                <td>同上，多天版</td>
+              </tr>
+              <tr>
+                <td><strong>Navigo Jour 日票</strong></td>
+                <td>€12.30 / 天</td>
+                <td>單日密集遊</td>
+                <td>⚠ 2025 起不含機場，機場需另購</td>
+              </tr>
+              <tr>
+                <td><strong>Navigo Découverte 週票</strong></td>
+                <td>€32.40 / 週</td>
+                <td>整週停留（周一抵達最划算）</td>
+                <td>⚠ 按「周一至周日」計算，非購買日起算；需貼照片</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block gold" style="margin-top:10px">
+          <h4>Paris Visite vs Navigo 怎麼選？</h4>
+          <ul>
+            <li>1–2 天 + 需機場接送 → <strong>Paris Visite</strong></li>
+            <li>3–5 天不需機場 → <strong>Navigo 日票</strong>（每天 €12.30）</li>
+            <li>整週停留且周一抵達 → <strong>Navigo 週票</strong>（€32.40 最划算）</li>
+            <li>要去迪士尼或凡爾賽 → <strong>Paris Visite Zone 1–5</strong></li>
+          </ul>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:#002395;margin:28px 0 12px">🌊 尼斯 & 蔚藍海岸</h3>
+        <div class="info-block" style="margin-top:0">
+          <h4>🚋 尼斯市區（Lignes d'Azur）</h4>
+          <ul>
+            <li>100+ 條公車及 2 條電車；機場在 <strong>T2 電車線</strong>終點</li>
+            <li>單次票：<strong>€1.70</strong>（機器）/ €2.00（車上）；90 分鐘內可換乘</li>
+          </ul>
+        </div>
+        <div class="highlight" style="margin-top:12px">
+          <h4>⭐ Pass SUD AZUR EXPLORE（蔚藍海岸旅客首選）</h4>
+        </div>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>天數</th>
+                <th>成人</th>
+                <th>兒童（4–17 歲）</th>
+                <th>涵蓋範圍</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3 天</strong></td>
+                <td>€35</td>
+                <td>€30</td>
+                <td rowspan="3" style="vertical-align:middle; font-size:12.5px">✅ 尼斯市內所有公車及電車（含機場 T2）<br>✅ TER
+                  區間列車：坎城↔尼斯↔芒通↔義大利邊境<br>✅ ZOU! 地區公車：埃日、格拉斯、旺斯等<br>✅ 摩納哥 CAM 公車<br>✅ 坎城 Palm Bus、昂蒂布 Envibus<br>⚠ 不含 TGV
+                  高速列車</td>
+              </tr>
+              <tr>
+                <td><strong>7 天</strong></td>
+                <td><strong>€50</strong></td>
+                <td>€40</td>
+              </tr>
+              <tr>
+                <td>14 天</td>
+                <td>€80</td>
+                <td>€65</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block azul" style="margin-top:10px">
+          <h4>💡 7 天 Pass SUD AZUR 特別推薦</h4>
+          <ul>
+            <li>僅 €50（另付 La Carte 卡費 €2）即可暢遊整個蔚藍海岸</li>
+            <li>搭 TER 輕鬆到坎城影展（1 小時）、格拉斯香水工廠（1 小時）、芒通（近義大利）</li>
+            <li>購買地點：尼斯機場 T2 電車站售票機，抵達即可購買</li>
+            <li>⚠ 每次上車/電車都必須感應，查票頻繁</li>
+          </ul>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',serif;color:#002395;margin:28px 0 12px">🚗 普羅旺斯自駕建議</h3>
+        <div class="alert" style="margin-top:0">
+          <strong>強烈建議租車：</strong>薰衣草鄉村（塞南克修道院、瓦朗索勒、石頭城 Gordes）公共交通極為有限，租車是唯一暢玩方式。
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>租車費用</td>
+                <td>5 天約 €150–250（含保險）</td>
+              </tr>
+              <tr>
+                <td>租車地點</td>
+                <td>亞維農 TGV 站、尼斯機場、馬賽機場均有各大租車公司</td>
+              </tr>
+              <tr>
+                <td>駕照</td>
+                <td>台灣駕照 + 國際駕照（IDP）即可</td>
+              </tr>
+              <tr>
+                <td>停車</td>
+                <td>多數景點有收費停車場，€2–5 / 小時</td>
+              </tr>
+              <tr>
+                <td>薰衣草季注意</td>
+                <td>6 月中–8 月初，務必提早訂車（旺季常缺貨）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-block" style="margin-top:10px">
+          <h4>不租車的替代方案（以亞維農為基地）</h4>
+          <ul>
+            <li>亞維農 → 馬賽：TER 約 1 小時</li>
+            <li>亞維農 → 亞爾勒：TER 約 20 分鐘</li>
+            <li>亞維農 → 尼姆：TER 約 30 分鐘</li>
+            <li>小村落（聖雷米等）：107 / 707 號公車（班次少，需查好時刻表）</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── 票卡總整理 ── -->
+      <div id="ttab-summary" class="ctab-panel">
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>城市</th>
+                <th>推薦票卡</th>
+                <th>費用</th>
+                <th>最適合</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🇪🇸 <strong>巴塞隆納</strong></td>
+                <td>Hola Barcelona 3 天</td>
+                <td>€27.30</td>
+                <td>停留 3–5 天，含機場</td>
+              </tr>
+              <tr>
+                <td>🇪🇸 <strong>馬德里</strong></td>
+                <td>旅遊票 Zone A 3 天</td>
+                <td>€22.50</td>
+                <td>停留 3–4 天，含機場</td>
+              </tr>
+              <tr>
+                <td>🇵🇹 <strong>里斯本</strong>（景點多）</td>
+                <td>Lisboa Card 72 小時</td>
+                <td>€44</td>
+                <td>每天參觀多景點，含機場</td>
+              </tr>
+              <tr>
+                <td>🇵🇹 <strong>里斯本</strong>（以逛街為主）</td>
+                <td>Navegante + Zapping</td>
+                <td>€0.50 + 儲值</td>
+                <td>彈性最高，按次計費</td>
+              </tr>
+              <tr>
+                <td>🇵🇹 <strong>波多</strong></td>
+                <td>Andante Tour 3</td>
+                <td>€15</td>
+                <td>停留 3 天，含機場</td>
+              </tr>
+              <tr>
+                <td>🇵🇹 <strong>波多</strong>（含景點）</td>
+                <td>Porto Card 3 天</td>
+                <td>€32</td>
+                <td>交通 + 景點折扣全包</td>
+              </tr>
+              <tr>
+                <td>🇫🇷 <strong>巴黎</strong>（含機場/迪士尼）</td>
+                <td>Paris Visite 3 天 Zone 1–5</td>
+                <td>€63.80</td>
+                <td>需機場接送或去近郊</td>
+              </tr>
+              <tr>
+                <td>🇫🇷 <strong>巴黎</strong>（整週）</td>
+                <td>Navigo 週票</td>
+                <td>€32.40</td>
+                <td>停留一週，周一抵達最划算</td>
+              </tr>
+              <tr>
+                <td>🇫🇷 <strong>尼斯/蔚藍海岸</strong></td>
+                <td>Pass SUD AZUR 7 天</td>
+                <td>€50 + €2</td>
+                <td>跨城遊覽坎城、摩納哥、格拉斯</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight" style="margin-top:16px">
+          <h4>💡 7–10 天行程交通費用預估</h4>
+          <div class="table-wrap" style="margin-top:8px">
+            <table>
+              <thead>
+                <tr>
+                  <th>城市（天數）</th>
+                  <th>建議票卡</th>
+                  <th>費用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>巴塞隆納（3 天）</td>
+                  <td>Hola Barcelona 3 天</td>
+                  <td>€27.30</td>
+                </tr>
+                <tr>
+                  <td>馬德里（2 天）</td>
+                  <td>旅遊票 Zone A 2 天</td>
+                  <td>€17</td>
+                </tr>
+                <tr>
+                  <td>里斯本（3 天）</td>
+                  <td>Lisboa Card 72 小時</td>
+                  <td>€44</td>
+                </tr>
+                <tr>
+                  <td>波多（2 天）</td>
+                  <td>Andante Tour 3</td>
+                  <td>€15</td>
+                </tr>
+                <tr>
+                  <td>尼斯/蔚藍海岸（4 天）</td>
+                  <td>Pass SUD AZUR 7 天</td>
+                  <td>€52</td>
+                </tr>
+                <tr style="background:#FFF8E8">
+                  <td colspan="2"><strong>廉航跨國小計（提前訂）</strong></td>
+                  <td><strong>€80–150</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 實用 App ── -->
+      <div id="ttab-apps" class="ctab-panel">
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>App</th>
+                <th>用途</th>
+                <th>適用地區</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Moovit</strong></td>
+                <td>多城市公共交通導航（含路線圖、即時資訊）</td>
+                <td>三國通用</td>
+              </tr>
+              <tr>
+                <td><strong>Rome2Rio</strong></td>
+                <td>城市間各種交通方式比較（飛機/火車/巴士）</td>
+                <td>三國通用</td>
+              </tr>
+              <tr>
+                <td><strong>Google Maps</strong></td>
+                <td>小鎮步行、公車路線</td>
+                <td>三國通用</td>
+              </tr>
+              <tr>
+                <td><strong>Uber / Bolt</strong></td>
+                <td>叫車，比計程車便宜且透明</td>
+                <td>三國大城市</td>
+              </tr>
+              <tr>
+                <td><strong>BlaBlaCar</strong></td>
+                <td>長途共乘，前往公共交通不便的小鎮</td>
+                <td>三國</td>
+              </tr>
+              <tr>
+                <td><strong>FlixBus</strong></td>
+                <td>廉價長途巴士訂票</td>
+                <td>三國</td>
+              </tr>
+              <tr>
+                <td><strong>Renfe App</strong></td>
+                <td>西班牙 AVE / 城際列車訂票</td>
+                <td>🇪🇸 西班牙</td>
+              </tr>
+              <tr>
+                <td><strong>Iryo App</strong></td>
+                <td>西班牙私鐵高速列車訂票</td>
+                <td>🇪🇸 西班牙</td>
+              </tr>
+              <tr>
+                <td><strong>CP App（Comboios de Portugal）</strong></td>
+                <td>葡萄牙火車訂票、時刻表查詢</td>
+                <td>🇵🇹 葡萄牙</td>
+              </tr>
+              <tr>
+                <td><strong>SNCF Connect</strong></td>
+                <td>法國 TGV/TER 訂票（亦可充值 Navigo）</td>
+                <td>🇫🇷 法國</td>
+              </tr>
+              <tr>
+                <td><strong>Île-de-France Mobilités</strong></td>
+                <td>巴黎交通票務（數位化 Navigo）</td>
+                <td>🇫🇷 巴黎</td>
+              </tr>
+              <tr>
+                <td><strong>Lignes d'Azur Tickets</strong></td>
+                <td>尼斯公車/電車票（充值 La Carte）</td>
+                <td>🇫🇷 尼斯</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-grid" style="margin-top:16px">
+          <div class="info-block gold">
+            <h4>💳 機場交通費用速查</h4>
+            <ul>
+              <li>🇪🇸 巴塞隆納 BCN：L9 Sud 地鐵 €5.50 / Hola BCN 含機場</li>
+              <li>🇪🇸 馬德里 MAD：L8 地鐵 + €3 附加費 / 旅遊票 Zone A 已含</li>
+              <li>🇵🇹 里斯本 LIS：紅線地鐵 €1.61（Navegante）/ Lisboa Card 含</li>
+              <li>🇵🇹 波多 OPO：E 線地鐵 / Andante Tour 含</li>
+              <li>🇫🇷 巴黎 CDG：RER B 約 €11.30 / Paris Visite Zone 5 含</li>
+              <li>🇫🇷 尼斯 NCE：T2 電車 / Pass SUD AZUR 含</li>
+            </ul>
+          </div>
+          <div class="info-block azul">
+            <h4>💡 訂票省錢技巧</h4>
+            <ul>
+              <li>西班牙 AVE：提前 1–3 個月，票差可達 3–5 倍</li>
+              <li>法國 TGV：提前 90 天搶 <strong>Prems 早鳥票</strong>，低至 €15</li>
+              <li>葡萄牙 CP：提前 2–4 週，Alfa Pendular 早鳥享 65% 折扣</li>
+              <li>信用卡：Wise 卡、玉山無海外手續費卡可省匯差</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /transport-wrap -->
+
+    <!-- ─── 各國詳細攻略（分頁） ─── -->
+    <div id="destinations" class="section-header" style="margin-top:40px">
+      <div class="section-tag">詳細攻略</div>
+      <h2 class="section-title">各國 <span>旅遊指南</span></h2>
+      <p class="section-intro">點選國家，切換景點行程、必吃美食、節慶活動、實用貼士各分頁。</p>
+    </div>
+
+    <div class="ctab-wrap">
+      <!-- ── 國家分頁按鈕 ── -->
+      <div class="ctab-nav">
+        <button class="ctab-btn es active" onclick="showCtab('es',this)">🇪🇸 西班牙</button>
+        <button class="ctab-btn pt" onclick="showCtab('pt',this)">🇵🇹 葡萄牙</button>
+        <button class="ctab-btn fr" onclick="showCtab('fr',this)">🇫🇷 南法</button>
+      </div>
+
+      <!-- ════════════════════════════════
+         🇪🇸  西班牙
+    ════════════════════════════════ -->
+      <div id="ctab-es" class="ctab-panel active">
+        <div class="stab-nav">
+          <button class="stab-btn active" onclick="showStab('es','sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showStab('es','food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showStab('es','festival',this)">🎉 節慶活動</button>
+          <button class="stab-btn" onclick="showStab('es','tips',this)">💡 實用貼士</button>
+        </div>
+
+        <!-- 景點 -->
+        <div id="es-sights" class="stab-panel active">
+          <!-- 城市概覽卡片 -->
+          <div class="country-grid" style="margin-top:0; margin-bottom:24px">
+            <div class="country-card">
+              <div class="country-card-header cc-es">
+                <h3>🏙 巴塞隆納</h3>
+                <div class="sub">Barcelona</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>聖家堂（Sagrada Família）— 必訂票</li>
+                  <li>奎爾公園（Park Güell）</li>
+                  <li>米拉之家、巴特略之家</li>
+                  <li>波蓋利亞市場（La Boqueria）⚠ 已高度觀光化，建議以參觀為主</li>
+                  <li>哥德區、海邊散步</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag hot">必訂高第景點票</span>
+                  <span class="tag">3–4天</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-es">
+                <h3>🏛 馬德里</h3>
+                <div class="sub">Madrid</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>普拉多美術館（必看）</li>
+                  <li>麗池公園、西貝萊斯廣場</li>
+                  <li>San Miguel 市場美食</li>
+                  <li>近郊一日遊：托雷多（世界遺產古城）、塞哥維亞（羅馬水道橋）</li>
+                  <li>El Rastro 跳蚤市場（週日）</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag">2–3天</span>
+                  <span class="tag">AVE直達巴塞</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-es" style="background:linear-gradient(135deg,#7B1113,#9B1A1F)">
+                <h3>💃 安達盧西亞</h3>
+                <div class="sub">Sevilla / Granada / Córdoba</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>塞維亞：阿爾卡薩城堡、西班牙廣場</li>
+                  <li>格拉納達：阿爾罕布拉宮（提前訂！）</li>
+                  <li>哥多華：清真寺大教堂</li>
+                  <li>隆達懸崖（Ronda）、弗拉門戈表演</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag hot">阿爾罕布拉宮必訂票</span>
+                  <span class="tag">3–4天</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block gold">
+              <h4>📍 基本資訊</h4>
+              <ul>
+                <li>首都：馬德里 Madrid</li>
+                <li>時差：慢台灣 7 小時（夏令 -6hr）</li>
+                <li>退稅門檻：單店 <strong>€90.50</strong></li>
+                <li>最佳季節：4–6月、9–10月</li>
+                <li>幣值：歐元 €</li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h4>🗓 建議行程天數</h4>
+              <ul>
+                <li>巴塞隆納：<strong>3–4 天</strong></li>
+                <li>馬德里：<strong>2–3 天</strong></li>
+                <li>安達魯西亞（格拉納達＋塞維亞＋哥多華）：<strong>4–5 天</strong></li>
+                <li>近郊一日遊：托雷多 / 塞哥維亞 / 蒙塞拉特</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="margin:20px 0 8px; font-family:'Playfair Display',serif; color:var(--terra)">🔴 巴塞隆納 Barcelona</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card">
+              <h4>⛪ 聖家堂 Sagrada Família</h4>
+              <p>高第最偉大未完成傑作，預計 2026 年完工。旺季一票難求。</p>
+              <span class="badge">⚠ 務必提前網路訂票</span>
+            </div>
+            <div class="attraction-card">
+              <h4>🌈 奎爾公園 Park Güell</h4>
+              <p>色彩繽紛磁磚裝飾，俯瞰城市全景。需預約入場，有免費參觀區。</p>
+              <span class="badge">需預約</span>
+            </div>
+            <div class="attraction-card">
+              <h4>🌊 米拉之家 Casa Milà</h4>
+              <p>波浪造型外牆，屋頂是絕佳拍照點。夜間「魔幻的夜晚」場次體驗更佳。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🦎 巴特略之家 Casa Batlló</h4>
+              <p>「骨頭之家」，蜥蜴鱗片屋頂。票價約 €35，值得入場。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🚶 蘭布拉大道 La Rambla</h4>
+              <p>最熱鬧的步行大街，聚集街頭藝術與市場。</p>
+              <span class="badge">⚠ 扒手眾多，注意財物</span>
+            </div>
+            <div class="attraction-card">
+              <h4>🥩 博蓋利亞市場 La Boqueria</h4>
+              <p>色彩豐富傳統市場，海鮮、火腿、水果。觀光化嚴重，建議以參觀為主。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>⛪ 加泰隆尼亞音樂宮</h4>
+              <p>世界遺產，華麗彩繪玻璃裝飾，建議提前訂票。</p>
+              <span class="badge">UNESCO 世遺</span>
+            </div>
+            <div class="attraction-card">
+              <h4>🏔 蒙塞拉特山（近郊）</h4>
+              <p>鋸齒狀奇岩、修道院、黑色聖母像。巴塞隆納近郊最推薦半日遊。</p>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:var(--terra)">🔴 馬德里 Madrid</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card">
+              <h4>🖼 普拉多美術館</h4>
+              <p>世界三大美術館之一，維拉斯奎茲、哥雅原作，館藏超過 8,000 件。</p>
+              <span class="badge">世界頂尖美術館</span>
+            </div>
+            <div class="attraction-card">
+              <h4>👑 馬德里皇宮</h4>
+              <p>全歐洲最大皇宮，金碧輝煌的國家廳，目前為官方儀式用途。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🌿 麗池公園 Retiro</h4>
+              <p>免費大公園，玻璃宮、湖面划船，馬德里人的後花園。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🎨 蘇菲亞王妃藝術中心</h4>
+              <p>畢卡索《格爾尼卡》原作所在地，現代藝術首選。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🏛 德波神殿</h4>
+              <p>從埃及移植的古羅馬神殿，日落必去，免費入場。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🏰 托雷多（近郊一日遊）</h4>
+              <p>古城、三宗教文化遺跡，距馬德里 30 分鐘高鐵。</p>
+              <span class="badge">近郊推薦</span>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:var(--terra)">🔴 安達魯西亞 Andalucía
+          </h3>
+          <div class="attraction-grid">
+            <div class="attraction-card">
+              <h4>🕌 阿爾罕布拉宮 Alhambra（格拉納達）</h4>
+              <p>全球最美宮殿之一，伊斯蘭建築極致。奈斯爾宮殿票需<strong>提前數週甚至 1 個月前</strong>訂購。</p>
+              <span class="badge">⚠ 提前 4–6 週訂票</span>
+            </div>
+            <div class="attraction-card">
+              <h4>🌅 阿爾拜辛區（格拉納達）</h4>
+              <p>摩爾人舊城區，聖尼可拉斯觀景台可拍阿爾罕布拉夕陽全景。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🏰 阿爾卡薩城堡（塞維亞）</h4>
+              <p>現役最古老皇室宮殿，UNESCO 世遺，曼努埃爾風格花園絕美。</p>
+              <span class="badge">UNESCO 世遺</span>
+            </div>
+            <div class="attraction-card">
+              <h4>💃 西班牙廣場（塞維亞）</h4>
+              <p>半圓形廣場，全歐最上鏡打卡點之一，免費入場。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🕌 清真寺主教座堂（哥多華）</h4>
+              <p>Mezquita，清真寺與大教堂融為一體，世界建築奇景。百花巷 5 月花季最美。</p>
+            </div>
+            <div class="attraction-card">
+              <h4>🏔 隆達 Ronda 懸崖古城</h4>
+              <p>懸崖絕壁上的古城，新橋（Puente Nuevo）是西班牙最著名地標之一。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 美食 -->
+        <div id="es-food" class="stab-panel">
+          <div class="food-grid">
+            <div class="food-card">
+              <span class="food-icon">🥘</span>
+              <h5>海鮮燉飯 Paella</h5>
+              <p>米飯炒熟後悶煮，鍋底焦香 Socarrat 才是靈魂，需現點現做（約 20 分鐘）</p>
+              <p class="where">推薦：La Barraca（馬德里）</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍢</span>
+              <h5>Tapas 小吃</h5>
+              <p>各式小碟拼盤：橄欖、炸魷魚、番茄麵包 Pa amb tomàquet，是西班牙飲食文化核心</p>
+              <p class="where">推薦：聖米格爾市場、塞維亞任何小酒館</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🥩</span>
+              <h5>黑毛豬火腿 Jamón Ibérico</h5>
+              <p>頂級橡果飼育，入口即化。現場切片比超市真空包裝風味好上幾倍</p>
+              <p class="where">推薦：各地火腿專賣店、博蓋利亞市場</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🥤</span>
+              <h5>西班牙冷湯 Gazpacho</h5>
+              <p>夏季番茄冷湯，清爽解暑，是安達魯西亞的日常飲品</p>
+              <p class="where">推薦：安達魯西亞任何餐廳</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🐷</span>
+              <h5>烤乳豬 Cochinillo</h5>
+              <p>塞哥維亞名菜，用瓷盤切開代表外皮夠酥脆，全桌最有話題的主菜</p>
+              <p class="where">推薦：Mesón de Cándido（塞哥維亞）</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🥐</span>
+              <h5>Pastelería Mallorca 甜點</h5>
+              <p>馬德里百年老店，可頌、費南雪、各式西班牙傳統糕點必嚐</p>
+              <p class="where">推薦：馬德里各分店</p>
+            </div>
+          </div>
+          <div class="alert" style="margin-top:16px">
+            <strong>⚠ 海關提醒：</strong>黑毛豬火腿等豬肉製品<strong>禁止攜帶入台灣</strong>，請勿嘗試帶回，罰鍰最高 NT$1,000,000。
+          </div>
+        </div>
+
+        <!-- 節慶 -->
+        <div id="es-festival" class="stab-panel">
+          <div class="country-grid" style="margin-top:0; margin-bottom:20px">
+            <div class="country-card">
+              <div class="country-card-header cc-es" style="background:linear-gradient(135deg,#4A3060,#6B4A9A)">
+                <h3>🌸 西班牙節慶一覽</h3>
+                <div class="sub">Spain Festivals</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>🔥 瓦倫西亞火節 Las Fallas（3月）</li>
+                  <li>🌷 塞維亞春祭 Feria de Abril（4月）</li>
+                  <li>🍅 番茄節 La Tomatina（8月）</li>
+                  <li>🚶 聖地牙哥朝聖之路 Camino（全年）</li>
+                  <li>折扣季 Rebajas（1月 / 7月）</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap" style="margin-top:0">
+            <table>
+              <thead>
+                <tr>
+                  <th>節慶</th>
+                  <th>時間</th>
+                  <th>地點</th>
+                  <th>說明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>瓦倫西亞火節 Las Fallas</strong></td>
+                  <td>每年 3 月 15–19 日</td>
+                  <td>瓦倫西亞</td>
+                  <td>超大型紙雕人偶最終夜在廣場焚燒，爆竹聲震耳欲聾</td>
+                </tr>
+                <tr>
+                  <td><strong>塞維亞春祭 Feria de Abril</strong></td>
+                  <td>復活節後兩週（4月）</td>
+                  <td>塞維亞</td>
+                  <td>女性穿傳統弗拉門戈裝，馬車遊行，露天帳篷舞會</td>
+                </tr>
+                <tr>
+                  <td><strong>番茄節 La Tomatina</strong></td>
+                  <td>每年 8 月最後一個週三</td>
+                  <td>布尼奧爾 Buñol</td>
+                  <td>全球最大食物大戰，需提前網路購票，約 €10</td>
+                </tr>
+                <tr>
+                  <td><strong>折扣季 Rebajas</strong></td>
+                  <td>1月初 & 7月初</td>
+                  <td>全國</td>
+                  <td>快時尚最低 2 折，精品百貨亦有折扣，購物旅行者必掌握</td>
+                </tr>
+                <tr>
+                  <td><strong>聖週 Semana Santa</strong></td>
+                  <td>復活節前一週</td>
+                  <td>全國（塞維亞最盛大）</td>
+                  <td>宗教遊行隊伍龐大壯觀，塞維亞版為西班牙文化指標</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 貼士 -->
+        <div id="es-tips" class="stab-panel">
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block gold">
+              <h4>🚆 城市間交通</h4>
+              <ul>
+                <li>AVE 高鐵：巴塞隆納→馬德里約 <strong>2.5 小時</strong></li>
+                <li>民營 <strong>Iryo 高鐵</strong> 提供競爭性票價，建議與 Renfe 比價</li>
+                <li>KLOOK 有中文介面可訂 Renfe 火車票</li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h4>🚇 城市內交通</h4>
+              <ul>
+                <li>巴塞隆納：T-Casual 10次券最划算，地鐵＋公車通用</li>
+                <li>馬德里：地鐵覆蓋廣，機場線需加購 Suplemento</li>
+              </ul>
+            </div>
+            <div class="info-block rose">
+              <h4>🔒 治安提醒</h4>
+              <ul>
+                <li>蘭布拉大道扒手極多，側背包置前</li>
+                <li>不在餐廳椅背掛包包</li>
+                <li>哥德區夜晚注意安全</li>
+                <li>避免展示貴重相機、手機</li>
+              </ul>
+            </div>
+            <div class="info-block sage">
+              <h4>🎟 訂票 & 實用</h4>
+              <ul>
+                <li>高第景點全部需提前訂票</li>
+                <li>阿爾罕布拉宮建議 4–6 週前訂</li>
+                <li>El Corte Inglés 百貨：服務台憑護照領旅客 10% 回饋卡</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- /ctab-es -->
+
+      <!-- ════════════════════════════════
+         🇵🇹  葡萄牙
+    ════════════════════════════════ -->
+      <div id="ctab-pt" class="ctab-panel">
+        <div class="stab-nav">
+          <button class="stab-btn active" onclick="showStab('pt','sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showStab('pt','food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showStab('pt','tips',this)">💡 實用貼士</button>
+        </div>
+
+        <!-- 景點 -->
+        <div id="pt-sights" class="stab-panel active">
+          <!-- 城市概覽卡片 -->
+          <div class="country-grid" style="margin-top:0; margin-bottom:24px">
+            <div class="country-card">
+              <div class="country-card-header cc-pt">
+                <h3>🚋 里斯本</h3>
+                <div class="sub">Lisboa</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>貝倫塔、熱羅尼莫斯修道院（世界遺產）</li>
+                  <li>阿爾法馬舊城區漫步</li>
+                  <li>28號復古電車 ⚠ 扒手猖獗</li>
+                  <li>里斯本自由大道—精品購物</li>
+                  <li>貝倫：Pastéis de Belém 原創蛋塔</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag hot">LV 退稅後全歐最低價</span>
+                  <span class="tag">3–4天</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-pt">
+                <h3>🍷 波多</h3>
+                <div class="sub">Porto</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>路易一世鐵橋</li>
+                  <li>杜羅河遊船</li>
+                  <li>聖本篤車站藍白磁磚</li>
+                  <li>波特酒酒窖參觀品酒</li>
+                  <li>萊羅書店（哈利波特靈感）</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag">2–3天</span>
+                  <span class="tag">杜羅河葡萄酒之旅</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-pt" style="background:linear-gradient(135deg,#005500,#007700)">
+                <h3>🏰 辛特拉 & 近郊</h3>
+                <div class="sub">Sintra & Day Trips</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>辛特拉宮殿群（世界遺產）</li>
+                  <li>羅卡角——歐洲最西端</li>
+                  <li>卡斯卡伊斯小鎮</li>
+                  <li>歐比多斯古城（Ginja 巧克力杯）</li>
+                  <li>法提瑪（天主教聖地）</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag">里斯本出發一日遊</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-pt" style="background:linear-gradient(135deg,#006688,#0088AA)">
+                <h3>💰 物價 & 消費</h3>
+                <div class="sub">Budget Guide</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>簡單外帶輕食：€3–8</li>
+                  <li>平價餐廳：€10–15/人</li>
+                  <li>午間特餐 Menu do Dia 更優惠</li>
+                  <li>退稅門檻：單筆 €61.35（全歐最低）</li>
+                  <li>退稅比例：10–23%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block sage">
+              <h4>📍 基本資訊</h4>
+              <ul>
+                <li>首都：里斯本 Lisboa</li>
+                <li>時差：慢台灣 8 小時（夏令 -7hr）</li>
+                <li>退稅門檻：單店 <strong>€61.35</strong>（全歐最低）</li>
+                <li>物價：比西班牙便宜約 20–30%</li>
+                <li>最佳季節：4–6月、9–10月</li>
+              </ul>
+            </div>
+            <div class="info-block azul">
+              <h4>🗓 建議行程天數</h4>
+              <ul>
+                <li>里斯本：<strong>3–4 天</strong>（含貝倫區）</li>
+                <li>波多：<strong>2–3 天</strong></li>
+                <li>辛特拉：<strong>一日遊</strong>（從里斯本）</li>
+                <li>歐比多斯 / 羅卡角：各一日遊</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="margin:20px 0 8px; font-family:'Playfair Display',serif; color:#006600">🟢 里斯本 Lisboa</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card pt">
+              <h4>🏰 貝倫塔 Torre de Belém</h4>
+              <p>UNESCO 世遺，航海時代的港口守護者，曼努埃爾式建築代表作。</p>
+              <span class="badge">UNESCO 世遺</span>
+            </div>
+            <div class="attraction-card pt">
+              <h4>⛪ 熱羅尼莫斯修道院</h4>
+              <p>UNESCO 世遺，曼努埃爾式建築極致，蛋塔發源地 Pastéis de Belém 就在旁邊。</p>
+              <span class="badge">UNESCO 世遺</span>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🗿 發現者紀念碑</h4>
+              <p>可登頂眺望特茹河，展示葡萄牙航海英雄雕像，地面有世界地圖馬賽克。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🏗 聖胡斯塔升降梯</h4>
+              <p>鐵製新哥德式電梯，可俯瞰下城區屋頂，視覺上比進電梯更美。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🏰 聖喬治城堡</h4>
+              <p>里斯本最古老遺產，城牆可俯瞰全市，夕陽最美時刻入場。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🎵 法朵 Fado 表演</h4>
+              <p>葡萄牙靈魂音樂，建議晚間到 Alfama 小酒館 Tasca do Chico 現場聆聽。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🍽 Time Out Market</h4>
+              <p>超人氣美食廣場，20+ 餐廳，週末營業至半夜 2 點。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>📚 Bertrand Livreiros</h4>
+              <p>世界最古老書店（1732年），位於 Chiado 區，有豐富葡語書籍與紀念品。</p>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:#006600">🟢 波多 Porto</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card pt">
+              <h4>🌉 路易一世鐵橋</h4>
+              <p>雙層橋，上層步行俯瞰杜羅河全景，下層電車通行，是波多最代表性地標。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🚂 聖本篤車站</h4>
+              <p>大廳佈滿兩萬塊藍白花磁磚（Azulejo），描繪葡萄牙歷史，免費入場。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>📚 萊羅書店 Livraria Lello</h4>
+              <p>哈利波特霍格華茲圖書館靈感來源，螺旋紅色樓梯超上鏡，需購票入場。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🍷 加亞新城波特酒窖</h4>
+              <p>Graham's / Taylor's / Sandeman 酒窖提供免費或付費導覽，含品酒體驗。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🚋 22 號復古電車</h4>
+              <p>鵝黃色百年電車，Batalha 到 Carmo 路線，單程 €4，是最有趣的市區交通。</p>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:#006600">🟢 近郊一日遊</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card pt">
+              <h4>🏰 辛特拉 Sintra</h4>
+              <p>里斯本搭火車 40 分鐘，UNESCO 世界遺產文化景觀。佩納宮彩色浪漫宮殿、雷加萊拉宮神秘螺旋井。</p>
+              <span class="badge">⚠ 私家車有交通管制，建議搭火車</span>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🍷 歐比多斯 Óbidos</h4>
+              <p>中世紀城牆包圍的「皇后小鎮」，試喝巧克力杯裝 Ginja 櫻桃酒必做。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🌊 羅卡角 Cabo da Roca</h4>
+              <p>「大地在此終結，海洋在此開始」——歐洲最西端，建議傍晚時分前往。</p>
+            </div>
+            <div class="attraction-card pt">
+              <h4>🍇 杜羅河谷 Douro Valley</h4>
+              <p>葡萄酒莊梯田景觀，秋季採收季（9–10月）最美，可搭船遊河。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 美食 -->
+        <div id="pt-food" class="stab-panel">
+          <div class="food-grid">
+            <div class="food-card">
+              <span class="food-icon">🥧</span>
+              <h5>葡式蛋塔 Pastel de Nata</h5>
+              <p>奶油卡士達餡，外皮酥脆，灑上肉桂粉是正確吃法</p>
+              <p class="where">Pastéis de Belém（1837年創立原祖店）</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🥪</span>
+              <h5>豬扒包 Bifana</h5>
+              <p>醃豬肉三明治，配上特製醬汁，簡單卻讓人上癮</p>
+              <p class="where">里斯本 Casa Das Bifanas、波多 Conga</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🧀</span>
+              <h5>濕搭搭三明治 Francesinha</h5>
+              <p>波多名吃！多層肉片、起司、番茄辣醬，超濃郁重口味，必嚐一次</p>
+              <p class="where">Santiago Café（波多）</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🐟</span>
+              <h5>烤鱈魚 Bacalhau</h5>
+              <p>葡萄牙國魚，相傳有 365 種料理方式，每家餐廳作法不同</p>
+              <p class="where">各地傳統餐廳均有</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🦞</span>
+              <h5>海鮮燉飯 Arroz de Marisco</h5>
+              <p>比西班牙版更濃郁湯汁，當日新鮮海鮮，是里斯本必點主菜</p>
+              <p class="where">Uma（里斯本，只收現金）</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍫</span>
+              <h5>Ginja 巧克力杯櫻桃酒</h5>
+              <p>用巧克力杯盛裝的甜酸櫻桃酒，是最受歡迎的里斯本街頭飲品</p>
+              <p class="where">歐比多斯最有特色</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 貼士 -->
+        <div id="pt-tips" class="stab-panel">
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block sage">
+              <h4>🎫 城市交通卡</h4>
+              <ul>
+                <li><strong>里斯本卡 Lisboa Card</strong>：24hr €19，無限搭乘地鐵＋電車＋公車，含貝倫塔等景點免費，超值</li>
+                <li><strong>波多卡 Porto Card</strong>：同樣概念，含地鐵無限搭乘</li>
+                <li><strong>navigante 卡</strong>：類似悠遊卡，不需要景點優惠時使用</li>
+              </ul>
+            </div>
+            <div class="info-block azul">
+              <h4>🚆 城市間交通</h4>
+              <ul>
+                <li>里斯本 ⟷ 波多：IC 火車約 <strong>3.5 小時</strong>，建議提早訂位</li>
+                <li>里斯本 ⟷ 辛特拉：普通火車約 <strong>40 分鐘</strong>，CP 鐵路</li>
+              </ul>
+            </div>
+            <div class="info-block rose">
+              <h4>🔒 治安提醒</h4>
+              <ul>
+                <li>整體安全，觀光區注意扒竊</li>
+                <li>上坡石板路路面不平，穿舒適鞋</li>
+                <li>電車上注意緊拿隨身物品</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- /ctab-pt -->
+
+      <!-- ════════════════════════════════
+         🇫🇷  南法
+    ════════════════════════════════ -->
+      <div id="ctab-fr" class="ctab-panel">
+        <div class="stab-nav">
+          <button class="stab-btn active" onclick="showStab('fr','sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showStab('fr','food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showStab('fr','festival',this)">🎉 節慶活動</button>
+          <button class="stab-btn" onclick="showStab('fr','tips',this)">💡 實用貼士</button>
+        </div>
+
+        <!-- 景點 -->
+        <div id="fr-sights" class="stab-panel active">
+          <!-- 城市概覽卡片 -->
+          <div class="country-grid" style="margin-top:0; margin-bottom:24px">
+            <div class="country-card">
+              <div class="country-card-header cc-fr">
+                <h3>💜 普羅旺斯核心</h3>
+                <div class="sub">Provence</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>亞維農（Avignon）教皇宮、斷橋</li>
+                  <li>天空之城 Gordes</li>
+                  <li>塞南克修道院薰衣草田（最美打卡）</li>
+                  <li>瓦倫索勒薰衣草大海</li>
+                  <li>索格島週日大市集</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag hot">6月底–8月薰衣草季</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-fr">
+                <h3>🌊 蔚藍海岸</h3>
+                <div class="sub">Côte d'Azur</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>尼斯：天使灣、英國大道、老城</li>
+                  <li>埃日鷹巢村（Eze）</li>
+                  <li>摩納哥：蒙地卡羅賭場</li>
+                  <li>坎城：電影宮、星光大道</li>
+                  <li>格拉斯香水博物館</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag">直飛尼斯機場可進出</span>
+                </div>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-fr" style="background:linear-gradient(135deg,#1A4A1A,#2A6A2A)">
+                <h3>🏛 馬賽 & 梵谷之路</h3>
+                <div class="sub">Marseille & Arles</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>馬賽：守護聖母教堂制高點全景</li>
+                  <li>亞爾（Arles）：梵谷咖啡館、古羅馬遺跡</li>
+                  <li>南法光影採石場 Carrières de Lumières</li>
+                  <li>雷伯古城 Les-Baux-de-Provence</li>
+                  <li>卡馬格濕地火鶴</li>
+                </ul>
+              </div>
+            </div>
+            <div class="country-card">
+              <div class="country-card-header cc-fr" style="background:linear-gradient(135deg,#3A2060,#5A3A90)">
+                <h3>🏔 大自然奇景</h3>
+                <div class="sub">Nature</div>
+              </div>
+              <div class="country-card-body">
+                <ul style="padding-left:16px; font-size:13.5px;">
+                  <li>凡爾登大峽谷（歐洲大峽谷，25km長）</li>
+                  <li>聖十字湖（翡翠色人工湖）</li>
+                  <li>艾格莫尔特粉紅鹽湖</li>
+                  <li>陶瓷小鎮 Moustiers-Sainte-Marie</li>
+                  <li>碧泉村 Fontaine de Vaucluse</li>
+                </ul>
+                <div class="tags">
+                  <span class="tag hot">必自駕探訪</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 南法節慶 & 自駕注意 -->
+          <div class="info-grid" style="margin-bottom:24px">
+            <div class="info-block">
+              <h4>🌿 南法節慶（2025–2026）</h4>
+              <ul>
+                <li>亞維農戲劇節：7月5–26日</li>
+                <li>尼姆音樂節：6月22–7月24日</li>
+                <li>尼斯爵士節：7月24–27日</li>
+                <li>坎城電影節：5月</li>
+                <li>阿爾勒攝影節：7月–10月</li>
+              </ul>
+            </div>
+            <div class="info-block azul">
+              <h4>🚗 南法自駕注意</h4>
+              <ul>
+                <li>夏季普羅旺斯熱浪可達40°C</li>
+                <li>訂房務必確認有冷氣</li>
+                <li>大部分城市禮拜二有大市集</li>
+                <li>艾克斯普羅旺斯市集：二四六</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block azul">
+              <h4>📍 基本資訊</h4>
+              <ul>
+                <li>核心城市：亞維農、尼斯、艾克斯普羅旺斯、馬賽</li>
+                <li>時差：慢台灣 7 小時（夏令 -6hr）</li>
+                <li>退稅門檻：單店 <strong>€175.01</strong>（全歐最高）</li>
+                <li>最佳季節：6–8月（薰衣草）、4–5月、9–10月</li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h4>🗓 建議行程天數</h4>
+              <ul>
+                <li>蔚藍海岸（尼斯為基地）：<strong>3–4 天</strong></li>
+                <li>普羅旺斯亞維農：<strong>2 天</strong></li>
+                <li>薰衣草山城自駕：<strong>2–3 天</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 style="margin:20px 0 8px; font-family:'Playfair Display',serif; color:#002395">🟣 亞維農 Avignon</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card fr">
+              <h4>🏰 教皇宮 Palais des Papes</h4>
+              <p>14 世紀歐洲最宏偉哥德式建築，UNESCO 世遺，普羅旺斯文化首都象徵。</p>
+              <span class="badge">UNESCO 世遺</span>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🌉 聖貝內澤橋（斷橋）</h4>
+              <p>中世紀著名半殘石橋，亮燈後夜景超美，從對岸 Villeneuve 拍全景更震撼。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🌿 岩石花園 Jardin des Doms</h4>
+              <p>免費入場，俯瞰隆河全景的絕佳觀景台，附近有天鵝湖。</p>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:#002395">🟣 普羅旺斯薰衣草聖地（6月中–8月初）</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card fr">
+              <h4>⛪ 塞南克修道院 Abbaye de Sénanque</h4>
+              <p>修道院前的薰衣草田，普羅旺斯最著名明信片畫面，7月初薰衣草最盛開。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>💜 瓦朗索勒 Valensole</h4>
+              <p>大片薰衣草海，拍照最自由，緊鄰 L'Occitane 工廠門市，可一起安排。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🏘 石頭城 Gordes</h4>
+              <p>「天空之城」，法國最美村莊，白石建築依山而建，日落時光線最美。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🔴 紅土城 Roussillon</h4>
+              <p>全球最大赭石礦床，整座城市橙紅色，漫步小路沿途都是拍照好景。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🎨 亞爾 Arles</h4>
+              <p>梵谷創作最豐盛的城市，「星空下的咖啡館」場景就在此地，每年 7–10 月有攝影節。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🏺 陶瓷小鎮 Moustiers-Sainte-Marie</h4>
+              <p>懸崖上的陶瓷工藝之鄉，山谷景觀絕美，是自駕最值得繞路的小鎮。</p>
+            </div>
+          </div>
+
+          <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:#002395">🟣 蔚藍海岸</h3>
+          <div class="attraction-grid">
+            <div class="attraction-card fr">
+              <h4>😎 尼斯 Nice（基地城市）</h4>
+              <p>英國人散步大道、天使灣海灘、尼斯老城橙黃色建築。城堡山免費纜車俯瞰全景。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🏔 埃日 Eze 鷹巢村</h4>
+              <p>崖頂中世紀古村，眺望地中海絕景，距尼斯 30 分鐘，香水博物館也在此。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🎰 摩納哥 Monaco</h4>
+              <p>世界第二小國，蒙地卡羅賭場（免費入場大廳）、王宮衛兵交接，距尼斯 40 分鐘。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🎬 坎城 Cannes</h4>
+              <p>電影宮紅毯、自由島，5 月電影節期間熱鬧非凡。距尼斯 1 小時。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🌸 格拉斯 Grasse</h4>
+              <p>世界香水之都，Fragonard / Galimard / Molinard 工廠免費參觀、試香、可付費調製專屬香水。</p>
+            </div>
+            <div class="attraction-card fr">
+              <h4>🏔 凡爾登大峽谷</h4>
+              <p>歐洲版大峽谷，25km 長翠綠峽谷。可在聖十字湖划獨木舟穿越峽谷，震撼無比。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 美食 -->
+        <div id="fr-food" class="stab-panel">
+          <div class="food-grid">
+            <div class="food-card">
+              <span class="food-icon">🦞</span>
+              <h5>馬賽魚湯 Bouillabaisse</h5>
+              <p>番紅花基底海鮮濃湯，含龍蝦、鱸魚、淡菜，是南法最具代表性料理</p>
+              <p class="where">馬賽、尼斯海邊餐廳</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍲</span>
+              <h5>普羅旺斯燉菜 Ratatouille</h5>
+              <p>番茄、茄子、南瓜慢燉，配法棍，電影主角料理</p>
+              <p class="where">各地傳統餐廳</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🥗</span>
+              <h5>尼斯沙拉 Salade Niçoise</h5>
+              <p>水煮蛋、鮪魚、橄欖、四季豆，是尼斯的靈魂家常菜</p>
+              <p class="where">尼斯老城區任何餐廳</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍬</span>
+              <h5>Calisson 杏仁甜點</h5>
+              <p>艾克斯特產，杏仁糖霜橢圓甜餅，是回台灣最適合的伴手禮之一</p>
+              <p class="where">艾克斯普羅旺斯</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍰</span>
+              <h5>Tropézienne 奶油甜麵包</h5>
+              <p>聖特羅佩發源的奶油夾心蛋糕，外脆內軟</p>
+              <p class="where">聖特羅佩</p>
+            </div>
+            <div class="food-card">
+              <span class="food-icon">🍷</span>
+              <h5>普羅旺斯粉紅酒 Rosé</h5>
+              <p>全球最知名玫瑰粉紅酒產地，超市即可買到品質佳的本地酒</p>
+              <p class="where">普羅旺斯超市、農夫市集</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 節慶 -->
+        <div id="fr-festival" class="stab-panel">
+          <div class="table-wrap" style="margin-top:0">
+            <table>
+              <thead>
+                <tr>
+                  <th>節慶</th>
+                  <th>時間</th>
+                  <th>地點</th>
+                  <th>說明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>坎城電影節</strong></td>
+                  <td>2026年5月</td>
+                  <td>坎城</td>
+                  <td>紅毯嘉賓雲集，公眾可在電影宮前廣場觀察明星出席，部分場次公開播放</td>
+                </tr>
+                <tr>
+                  <td><strong>亞維農藝術節 Festival d'Avignon</strong></td>
+                  <td>7月5–26日</td>
+                  <td>亞維農</td>
+                  <td>全球最大表演藝術節，全城變成劇場，街頭演出免費</td>
+                </tr>
+                <tr>
+                  <td><strong>尼斯爵士節</strong></td>
+                  <td>7月下旬</td>
+                  <td>尼斯</td>
+                  <td>室外草坪演出，夜晚星空下聽爵士音樂</td>
+                </tr>
+                <tr>
+                  <td><strong>薰衣草季</strong></td>
+                  <td>6月中–8月初</td>
+                  <td>普羅旺斯全域</td>
+                  <td>塞南克修道院約 7 月初最盛開，Valensole 觀光最自由</td>
+                </tr>
+                <tr>
+                  <td><strong>亞爾攝影節 Les Rencontres d'Arles</strong></td>
+                  <td>7月–10月</td>
+                  <td>亞爾</td>
+                  <td>全球重要攝影藝術節，各類展覽散佈全城</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 貼士 -->
+        <div id="fr-tips" class="stab-panel">
+          <div class="info-grid" style="margin-top:0">
+            <div class="info-block gold">
+              <h4>🚗 自駕是關鍵</h4>
+              <ul>
+                <li>普羅旺斯小鎮公共交通不便，<strong>租車後才能暢玩</strong></li>
+                <li>台灣駕照需至監理所換發國際駕照（台灣版）</li>
+                <li>停車場 App：PayByPhone、Onepark</li>
+              </ul>
+            </div>
+            <div class="info-block azul">
+              <h4>🚆 TGV 高鐵</h4>
+              <ul>
+                <li>巴黎 → 亞維農：約 <strong>2.5 小時</strong></li>
+                <li>⚠ 亞維農有兩個車站，注意選「<strong>Avignon Centre</strong>」市中心站</li>
+                <li>尼斯有國際機場，可直飛入</li>
+              </ul>
+            </div>
+            <div class="info-block rose">
+              <h4>☀ 氣候提醒</h4>
+              <ul>
+                <li>7–8月氣溫可達 <strong>40°C</strong>，訂房務必確認有冷氣</li>
+                <li>「密斯特拉風」（Mistral）不定期強風，薄外套備著</li>
+                <li>薰衣草盛開狀況每年略有不同，建議出發前查當年實況</li>
+              </ul>
+            </div>
+            <div class="info-block sage">
+              <h4>💰 退稅提醒</h4>
+              <ul>
+                <li>法國門檻 €175.01，<strong>全歐最高</strong></li>
+                <li>建議同日在同家店集中消費，一次辦理</li>
+                <li>推薦 <strong>Wevat App</strong> 辦退稅，普及率高</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- /ctab-fr -->
+
+    </div><!-- /ctab-wrap -->
+
+    <!-- ─── 巴黎迪士尼 ─── -->
+    <div id="disney" class="section-header" style="margin-top:40px">
+      <div class="section-tag">迪士尼攻略</div>
+      <h2 class="section-title">🏰 <span>巴黎迪士尼</span></h2>
+      <p class="section-intro">全球首座冰雪奇緣王國於 2026 年 3 月 29 日盛大開幕！含園區介紹、必玩設施、票價攻略與行程規劃。</p>
+    </div>
+    <div id="ctab-disney" style="background:white; border:1px solid #E8DFC8; padding:24px; margin-top:12px">
+      <div class="stab-nav">
+        <button class="stab-btn active" onclick="showStab('disney','intro',this)">🎡 園區介紹</button>
+        <button class="stab-btn" onclick="showStab('disney','rides',this)">🎢 必玩設施</button>
+        <button class="stab-btn" onclick="showStab('disney','tickets',this)">🎟 票價攻略</button>
+        <button class="stab-btn" onclick="showStab('disney','dining',this)">🍔 餐廳</button>
+        <button class="stab-btn" onclick="showStab('disney','tips',this)">💡 行程貼士</button>
+      </div>
+
+      <!-- 園區介紹 -->
+      <div id="disney-intro" class="stab-panel active">
+        <div class="alert" style="margin-top:0; margin-bottom:16px">
+          <strong>🎉 2026 年 3 月 29 日重大開幕：冰雪奇緣王國 World of Frozen！</strong>
+          全球第一座冰雪奇緣大型沉浸式園區，預計訪客量暴增，<strong>務必提前訂票</strong>。
+        </div>
+
+        <div class="info-grid" style="margin-top:0">
+          <div class="info-block">
+            <h4>📍 基本資訊</h4>
+            <ul>
+              <li>地址：Boulevard de Parc, 77777 Chessy</li>
+              <li>從巴黎市區：RER A 線，Marne-la-Vallée/Chessy 站，約 40 分鐘，€8 左右</li>
+              <li>官方 App：Disneyland Paris（必裝）</li>
+              <li>⚠ <strong>現場無法購票</strong>，必須提前網路購買</li>
+            </ul>
+          </div>
+          <div class="info-block gold">
+            <h4>🎭 期間限定活動</h4>
+            <ul>
+              <li><strong>Disney Magical Christmas</strong>：2025/11/8–2026/1/6，聖誕巡遊</li>
+              <li><strong>冰雪奇緣王國開幕慶典</strong>：2026/3/29 起</li>
+              <li><strong>Disney Tales of Magic</strong>（全年）：夜間城堡投影秀</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:14px">
+          <div style="background:linear-gradient(135deg,#FF9EC7,#FFB8D4); border-radius:4px; padding:18px">
+            <h4 style="font-family:'Playfair Display',serif; color:#6B003A; margin-bottom:10px">1️⃣ 迪士尼樂園 Disneyland
+              Park</h4>
+            <p style="font-size:13px; color:#4A0028">童話故事 · 公主奇幻 · 粉色睡美人城堡</p>
+            <ul style="font-size:12.5px; padding-left:16px; margin-top:8px; color:#3A0020">
+              <li>Main Street U.S.A.（購物、遊行）</li>
+              <li>Discoveryland（太空山、巴斯光年）</li>
+              <li>Adventureland（加勒比海盜）</li>
+              <li>Frontierland（大雷山、幽靈公館）</li>
+              <li>Fantasyland（睡美人城堡、飛天小象）</li>
+            </ul>
+            <p style="font-size:12px; margin-top:8px; color:#6B003A">💡 可進入城堡內部參觀彩繪玻璃及地下睡龍巢穴</p>
+          </div>
+          <div style="background:linear-gradient(135deg,#4A2080,#6B35B0); border-radius:4px; padding:18px">
+            <h4 style="font-family:'Playfair Display',serif; color:#FFD4FF; margin-bottom:10px">2️⃣ 華特迪士尼影城 Walt Disney
+              Studios</h4>
+            <p style="font-size:13px; color:#DDB0FF">電影世界 · 漫威英雄 · 刺激設施</p>
+            <ul style="font-size:12.5px; padding-left:16px; margin-top:8px; color:#E8C4FF">
+              <li>復仇者聯盟園區 Avengers Campus（2022開放）</li>
+              <li>好萊塢塔 Tower of Terror</li>
+              <li>鼠來堡歷險記 Ratatouille Adventure</li>
+              <li>❄️ <strong>冰雪奇緣王國</strong>（2026/3/29 開幕）</li>
+            </ul>
+            <p style="font-size:12px; margin-top:8px; color:#FFD4FF">💡 刺激設施集中在影城，大人首選</p>
+          </div>
+        </div>
+
+        <h3 style="margin:24px 0 8px; font-family:'Playfair Display',serif; color:#7B3FA0">❄️ 冰雪奇緣王國詳情（2026/3/29 開幕）
+        </h3>
+        <div class="attraction-grid">
+          <div class="attraction-card disney">
+            <h4>🏔 阿倫黛爾王國場景</h4>
+            <p>真實大小的阿倫黛爾場景重現，置身電影之中的沉浸體驗。</p>
+          </div>
+          <div class="attraction-card disney">
+            <h4>👑 安娜與艾莎見面會</h4>
+            <p>皇家見面會體驗，可與安娜、艾莎合照，是公主粉絲必排。</p>
+          </div>
+          <div class="attraction-card disney">
+            <h4>🍺 北山客棧主題餐廳</h4>
+            <p>Wandering Oaken's Trading Post 主題餐廳，全新冰雪奇緣主題料理。</p>
+          </div>
+          <div class="attraction-card disney">
+            <h4>🎢 全新家庭遊樂設施</h4>
+            <p>適合全年齡的新設施，搭配白天戶外表演秀，讓親子都盡興。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 必玩設施 -->
+      <div id="disney-rides" class="stab-panel">
+        <h4 style="color:var(--terra); margin-bottom:12px; letter-spacing:1px">💥 高刺激設施（建議購買 Premier Access）</h4>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>設施</th>
+                <th>園區</th>
+                <th>特色</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>好萊塢恐怖塔 Tower of Terror</strong></td>
+                <td>影城</td>
+                <td>自由落體電梯，俯瞰度假村，排隊時間最長</td>
+              </tr>
+              <tr>
+                <td><strong>旋轉海龜 Crush's Coaster</strong></td>
+                <td>影城</td>
+                <td>海底總動員旋轉滑水車，刺激又可愛</td>
+              </tr>
+              <tr>
+                <td><strong>星際大戰太空山 Hyperspace Mountain</strong></td>
+                <td>樂園</td>
+                <td>室內黑暗雲霄飛車，Star Wars 主題</td>
+              </tr>
+              <tr>
+                <td><strong>印第安納瓊斯 Indiana Jones</strong></td>
+                <td>樂園</td>
+                <td>巴黎限定，速度比其他迪士尼版本更快</td>
+              </tr>
+              <tr>
+                <td><strong>飛行特攻隊 Avengers Assemble</strong></td>
+                <td>影城</td>
+                <td>鋼鐵人＋驚奇隊長主題高速飛車</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 style="color:var(--azul); margin:20px 0 12px; letter-spacing:1px">💙 家庭設施（適合各年齡）</h4>
+        <div class="table-wrap" style="margin-top:0">
+          <table>
+            <thead>
+              <tr>
+                <th>設施</th>
+                <th>園區</th>
+                <th>特色</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>鼠來堡歷險記 Ratatouille</strong></td>
+                <td>影城</td>
+                <td>4D 縮小老鼠視角廚房冒險，全年最受歡迎</td>
+              </tr>
+              <tr>
+                <td><strong>加勒比海盜 Pirates of the Caribbean</strong></td>
+                <td>樂園</td>
+                <td>經典坐船冒險，場景道具極細膩</td>
+              </tr>
+              <tr>
+                <td><strong>幽靈公館 Phantom Manor</strong></td>
+                <td>樂園</td>
+                <td>法國古堡版鬼屋，不恐怖，劇情豐富</td>
+              </tr>
+              <tr>
+                <td><strong>大雷山 Big Thunder Mountain</strong></td>
+                <td>樂園</td>
+                <td>礦山小火車，刺激但不太嚇人，老少皆宜</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 style="color:var(--sage); margin:20px 0 12px; letter-spacing:1px">🌸 巴黎限定 / 特色體驗</h4>
+        <div class="attraction-grid" style="margin-top:0">
+          <div class="attraction-card disney">
+            <h4>愛麗絲夢遊仙境迷宮</h4>
+            <p>全世界只有巴黎迪士尼才有，超可愛迷宮，適合拍照打卡。</p>
+          </div>
+          <div class="attraction-card disney">
+            <h4>睡美人城堡內部</h4>
+            <p>可進入城堡欣賞彩繪玻璃和地下龍的巢穴，東京版做不到的體驗。</p>
+          </div>
+          <div class="attraction-card disney">
+            <h4>夜間煙火秀</h4>
+            <p>城堡前提前 1–1.5 小時卡位，煙火搭配城堡投影秀，是一天的最高潮。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 票價 -->
+      <div id="disney-tickets" class="stab-panel">
+        <div class="alert" style="margin-top:0">
+          <strong>⚠ 動態定價：</strong>巴黎迪士尼採動態定價，旺季（暑假、聖誕、冰雪奇緣開幕後）票價明顯較高，提早購買可鎖定較低價格。
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>票種</th>
+                <th>說明</th>
+                <th>2026年參考價</th>
+                <th>建議</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1日單園</strong></td>
+                <td>僅迪士尼樂園 或 僅影城</td>
+                <td>€65–120</td>
+                <td>行程緊湊時</td>
+              </tr>
+              <tr>
+                <td><strong>1日雙園</strong></td>
+                <td>同一天進出兩個園</td>
+                <td>€85–150</td>
+                <td>體力好的旅客</td>
+              </tr>
+              <tr>
+                <td><strong>2日雙園</strong></td>
+                <td>最推薦，輕鬆玩完兩園</td>
+                <td>€150–230</td>
+                <td>⭐ 強烈推薦</td>
+              </tr>
+              <tr>
+                <td><strong>3日雙園</strong></td>
+                <td>含活動加值版更划算</td>
+                <td>€180–270</td>
+                <td>含特殊活動期</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap" style="margin-top:16px">
+          <table>
+            <thead>
+              <tr>
+                <th>快速通關類型</th>
+                <th>說明</th>
+                <th>參考費用</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Premier Access One</strong></td>
+                <td>單一設施快速通關</td>
+                <td>€8–15 / 項目</td>
+              </tr>
+              <tr>
+                <td><strong>Premier Access Ultimate</strong></td>
+                <td>多項設施自由選擇</td>
+                <td>€35–55 / 人</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight" style="margin-top:16px">
+          <h4>💡 省錢購票方式</h4>
+          <ul style="font-size:13.5px; padding-left:16px">
+            <li>官網 + KLOOK 比價，取最優惠</li>
+            <li>非日期票需在 App 另行登記入場日期</li>
+            <li>旺季強烈建議購買 Premier Access Ultimate</li>
+            <li>兒童（3–11歲）票價約比成人便宜 €10–20</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 餐廳 -->
+      <div id="disney-dining" class="stab-panel">
+        <div class="alert" style="margin-top:0">
+          <strong>💡 提前預約：</strong>熱門餐廳最多提前 60 天可透過 App 預約，旺季務必提早。
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>餐廳</th>
+                <th>園區</th>
+                <th>特色</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Auberge de Cendrillon（灰姑娘城堡）</strong></td>
+                <td>樂園/幻想世界</td>
+                <td>高級餐廳，可與公主見面，⚠ 需提前預約</td>
+              </tr>
+              <tr>
+                <td><strong>Walt's Restaurant</strong></td>
+                <td>樂園/大街</td>
+                <td>俯瞰睡美人城堡的景觀美食，下午茶最讚</td>
+              </tr>
+              <tr>
+                <td><strong>Blue Lagoon</strong></td>
+                <td>樂園/冒險</td>
+                <td>設在加勒比海盜船隻旁，魔幻用餐環境</td>
+              </tr>
+              <tr>
+                <td><strong>Bistrot Chez Rémy</strong></td>
+                <td>影城</td>
+                <td>鼠來堡主題縮小視角用餐，超熱門⚠ 需提前訂</td>
+              </tr>
+              <tr>
+                <td><strong>迪士尼村 Disney Village</strong></td>
+                <td>園外</td>
+                <td>Rainforest Cafe、迪士尼聯名麥當勞，無需入場票</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 style="margin:20px 0 12px; color:var(--terra); letter-spacing:1px">🛍 必買紀念品</h4>
+        <div class="info-grid" style="margin-top:0">
+          <div class="info-block gold">
+            <h4>巴黎限定商品</h4>
+            <ul>
+              <li>睡美人城堡系列（粉色城堡設計最獨特）</li>
+              <li>法語版迪士尼印刷品</li>
+              <li>❄️ 冰雪奇緣王國限定商品（2026/3/29 起）</li>
+            </ul>
+          </div>
+          <div class="info-block sage">
+            <h4>購物小提醒</h4>
+            <ul>
+              <li>離開前在 Main Street U.S.A. 集中購物，免得提早買後提重物逛一整天</li>
+              <li>馬卡龍、法式可頌等法式甜點是這裡才有的特色</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 行程貼士 -->
+      <div id="disney-tips" class="stab-panel">
+        <h4 style="color:var(--terra); margin-bottom:12px; letter-spacing:1px">⏰ 一日雙園建議時間表</h4>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>開園前 30 分鐘抵達</h4>
+              <p>完成 App 登入、Premier Access 設定，開放後第一時間入場</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>開園–12:00 衝影城</h4>
+              <p>直衝華特迪士尼影城：好萊塢塔→旋轉海龜→飛行特攻隊→鼠來堡歷險記</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>12:00–14:00 午餐</h4>
+              <p>影城內用餐或移動至樂園途中覓食</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>14:00–17:00 迪士尼樂園</h4>
+              <p>加勒比海盜→大雷山→印第安納瓊斯→睡美人城堡探索</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>17:00–18:30 迪士尼大遊行</h4>
+              <p>花車巡遊，提前 30 分鐘在蘭布拉大道沿線卡位</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">6</div>
+            <div class="step-body">
+              <h4>煙火前衝空設施</h4>
+              <p>城堡前人潮集中時，Discoveryland 太空山幾乎不排隊，趁機衝！</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">7</div>
+            <div class="step-body">
+              <h4>19:30 城堡前卡位</h4>
+              <p>等待夜間煙火秀，提前 1–1.5 小時是最佳觀賞位置</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-grid" style="margin-top:20px">
+          <div class="info-block gold">
+            <h4>💡 省時秘訣</h4>
+            <ul>
+              <li>週三人最少；暑假、法國學校假期為旺季</li>
+              <li>Premier Access 在 App 開賣後立刻選定時段</li>
+              <li>部分飯店提供早 30 分鐘入園（Extra Magic Hours）</li>
+              <li>強烈建議帶行動電源，全天用 App 很耗電</li>
+            </ul>
+          </div>
+          <div class="info-block azul">
+            <h4>🚆 交通建議</h4>
+            <ul>
+              <li>RER A 線最划算：巴黎市區 → Marne-la-Vallée/Chessy 約 35–45 分鐘</li>
+              <li>有 Navigo Pass 需另購 Zone 5 延伸票</li>
+              <li>機場直達：Magical Shuttle，約 €23–25</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4>🏨 住宿建議</h4>
+            <ul>
+              <li>園內飯店：可提前入園 30 分鐘，適合親子</li>
+              <li>省錢方案：住 Marne-la-Vallée 附近 Ibis，搭 RER 只需 5 分鐘</li>
+              <li>Disneyland Hotel：最奢華，就在樂園大門口</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /ctab-disney -->
+
+    <!-- ─── 伴手禮 ─── -->
+    <div id="souvenir" class="section-header">
+      <div class="section-tag">購物指南</div>
+      <h2 class="section-title">三國 <span>伴手禮</span> 精選</h2>
+      <p class="section-intro">各國購物退稅請確認單筆金額是否達門檻。⚠ 台灣入境免稅額自2024年起提升至 NT$35,000。</p>
+    </div>
+
+    <div class="country-grid">
+      <div class="country-card">
+        <div class="country-card-header cc-es">
+          <h3>🇪🇸 西班牙必買</h3>
+          <div class="sub">退稅門檻 €90.50</div>
+        </div>
+        <div class="country-card-body">
+          <div class="souvenir-grid" style="grid-template-columns: repeat(2,1fr)">
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🍫</span>
+              <h5>無花果巧克力</h5>
+              <p>Rabitos Royale</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🍬</span>
+              <h5>杏仁糖 Turrón</h5>
+              <p>El Almendro / 1880</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🫒</span>
+              <h5>特級橄欖油</h5>
+              <p>超市 €3–10起</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">☕</span>
+              <h5>Marcilla咖啡</h5>
+              <p>西班牙國民品牌</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🧴</span>
+              <h5>Xhekpon頸紋霜</h5>
+              <p>藥妝店必掃</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">👜</span>
+              <h5>LOEWE / Camper</h5>
+              <p>本土品牌省20–40%</p>
+            </div>
+          </div>
+          <div class="alert" style="margin-top:12px">⚠ 豬肉製品（火腿等）禁止攜帶入台灣</div>
+        </div>
+      </div>
+      <div class="country-card">
+        <div class="country-card-header cc-pt">
+          <h3>🇵🇹 葡萄牙必買</h3>
+          <div class="sub">退稅門檻 €61.35</div>
+        </div>
+        <div class="country-card-body">
+          <div class="souvenir-grid" style="grid-template-columns: repeat(2,1fr)">
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🪵</span>
+              <h5>軟木塞製品</h5>
+              <p>包包、明信片、飾品</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🐔</span>
+              <h5>巴塞羅斯公雞</h5>
+              <p>幸運象徵紀念品</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🍷</span>
+              <h5>波特酒 Porto</h5>
+              <p>10年份 €23、40年份組</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🐟</span>
+              <h5>沙丁魚罐頭</h5>
+              <p>Conserveira de Lisboa</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🎨</span>
+              <h5>Azulejo 藍白花磚</h5>
+              <p>磁鐵/馬克杯/鍋架</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🍓</span>
+              <h5>顏料管果醬</h5>
+              <p>meia.dúzia 品牌</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="country-card" style="grid-column: span 1">
+        <div class="country-card-header cc-fr">
+          <h3>🇫🇷 法國（南法）必買</h3>
+          <div class="sub">退稅門檻 €175.01</div>
+        </div>
+        <div class="country-card-body">
+          <div class="souvenir-grid" style="grid-template-columns: repeat(2,1fr)">
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🌸</span>
+              <h5>薰衣草肥皂</h5>
+              <p>市集購買最便宜</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🍯</span>
+              <h5>普羅旺斯蜂蜜</h5>
+              <p>薰衣草蜂蜜首選</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🧴</span>
+              <h5>理膚寶水 La Roche</h5>
+              <p>藥局購買最便宜</p>
+            </div>
+            <div class="souvenir-item">
+              <span class="souvenir-icon">🌹</span>
+              <h5>格拉斯香水</h5>
+              <p>香水之城限定</p>
+            </div>
+          </div>
+          <div class="highlight" style="margin-top:14px">
+            <h4>🛍 法國退稅 App</h4>
+            <p style="font-size:13px">法國可用 <strong>Wevat App</strong> 在當地退稅，普及率高。Global Blue App 適用精品店。法國退稅門檻高達
+              €175，需單店累計。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 精品購物 ─── -->
+    <div id="luxury" class="section-header" style="margin-top:40px">
+      <div class="section-tag">在地精品採購</div>
+      <h2 class="section-title">精品購物 <span>完全指南</span></h2>
+      <p class="section-intro">三國各有獨特在地品牌，選對品牌、掌握退稅與銷售時機，
+        退稅後比台灣便宜 20～50%。以下精選 CP 值最高的品牌與採購據點。</p>
+    </div>
+
+    <div class="ctab-wrap">
+      <div class="ctab-nav">
+        <button class="ctab-btn active" onclick="showLtab('brands',this)">💎 精品購物指南</button>
+        <button class="ctab-btn" onclick="showLtab('cp',this)">📊 三國品牌 CP 值</button>
+      </div>
+      <div id="ltab-brands" class="ctab-panel active">
+        <div class="info-grid" style="margin-top:20px">
+          <div class="info-block gold">
+            <h4>🗓 最佳購物時機</h4>
+            <ul>
+              <li><strong>西班牙 Rebajas</strong>：1 月初 & 7 月初折扣季，快時尚低至 2 折</li>
+              <li><strong>葡萄牙</strong>：1 月、7 月同樣有 Saldos 折扣季</li>
+              <li><strong>法國 Soldes</strong>：1 月中旬 & 6 月底，百貨特賣</li>
+            </ul>
+          </div>
+          <div class="info-block rose">
+            <h4>⚠ 重要提醒</h4>
+            <ul>
+              <li>週日多數精品店<strong>不營業</strong>，市集攤位為主要例外</li>
+              <li>傳統市集<strong>多只收現金</strong>，出門前備妥零錢</li>
+              <li>Cutipol 金屬餐具、波特酒瓶均<strong>重且易碎</strong>，建議托運</li>
+              <li>台灣海關<strong>嚴禁攜入豬肉製品</strong>（西班牙火腿請勿購買帶回）</li>
+            </ul>
+          </div>
+          <div class="info-block azul">
+            <h4>💳 退稅門檻速查</h4>
+            <ul>
+              <li>🇪🇸 西班牙：同店消費滿 <strong>€90.50</strong></li>
+              <li>🇵🇹 葡萄牙：同店消費滿 <strong>€61.35</strong></li>
+              <li>🇫🇷 法國：同店消費滿 <strong>€175.01</strong>（門檻最高）</li>
+              <li>退稅表國籍欄填 <strong>TAIWAN</strong>，切勿誤選 China</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 西班牙 -->
+        <div style="margin-top:32px">
+          <div
+            style="background:linear-gradient(135deg,#AA151B,#C4282F); color:white; padding:14px 22px; border-radius:2px 2px 0 0">
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem">🇪🇸 西班牙在地品牌</h3>
+            <div style="font-size:12px; opacity:.75; margin-top:2px">Barcelona · Madrid · La Roca Village</div>
+          </div>
+          <div style="background:white; border:1px solid #E8DFC8; border-top:none; padding:20px 22px">
+
+            <div class="highlight" style="margin-top:0">
+              <h4>⭐⭐⭐ 強烈推薦——退稅後價差最大</h4>
+            </div>
+
+            <div class="info-grid">
+              <div class="info-block gold">
+                <h4>LOEWE｜西班牙頂級皮件</h4>
+                <p>創立 1846 年，馬德里，西班牙皇室御用品牌。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣有售，但款式少、定價高</li>
+                  <li>退稅後比台灣便宜 <strong>20～30%</strong></li>
+                  <li>推薦：Puzzle、Gate、Flamenco、Basket 包</li>
+                  <li>🏪 馬德里塞拉諾大街旗艦店 / 巴塞隆納格拉西亞大道旗艦店</li>
+                  <li>💡 La Roca Village Outlet 有過季款，折扣更深</li>
+                </ul>
+              </div>
+              <div class="info-block">
+                <h4>Camper｜設計師休閒鞋</h4>
+                <p>1975 年創立，馬略卡島，全球知名休閒鞋品牌。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣代理有售，選擇偏少</li>
+                  <li>市區旗艦店約 <strong>6～7 折</strong>；Outlet 約 <strong>3～4 折</strong></li>
+                  <li>推薦：Peu Cami 系列、Pelotas 系列</li>
+                  <li>🏪 格拉西亞大道 / 馬德里 Gran Vía 旗艦店</li>
+                  <li>💡 可辦 Global Blue 退稅</li>
+                </ul>
+              </div>
+              <div class="info-block sage">
+                <h4>Massimo Dutti｜高端都會時尚</h4>
+                <p>INDITEX 集團旗下（Zara 同集團），定位更高端，1985 年創立於巴塞隆納。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣<strong>無實體門市</strong>，網購選擇有限</li>
+                  <li>原價約 <strong>6～7 折</strong>；折扣季低至 Zara 價</li>
+                  <li>推薦：男士亞麻襯衫、女士皮衣、皮革配件</li>
+                </ul>
+              </div>
+              <div class="info-block rose">
+                <h4>Pretty Ballerinas｜芭蕾平底鞋</h4>
+                <p>馬略卡島品牌，Kate Moss、Angelina Jolie 御用。台灣<strong>無正式代理</strong>。</p>
+                <ul style="margin-top:8px">
+                  <li>市區約 €129～299（≈台灣 <strong>6～7 折</strong>）</li>
+                  <li>Outlet 約 NT$3,000 起，台灣售 NT$7,000～8,000</li>
+                  <li>🏪 El Corte Inglés 百貨、La Roca Village 均有售</li>
+                </ul>
+              </div>
+              <div class="info-block azul">
+                <h4>TOUS｜輕珠寶品牌</h4>
+                <p>1920 年創立，巴塞隆納，小熊 Logo 招牌設計。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣有售，退稅後便宜約 <strong>25～40%</strong></li>
+                  <li>推薦：小熊系列項鍊 / 手環、La T 包款</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight" style="margin-top:24px">
+              <h4>⭐⭐ 值得逛——快時尚本土品牌</h4>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>品牌</th>
+                    <th>特色</th>
+                    <th>採購建議</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Zara / Pull&amp;Bear / Bershka</strong></td>
+                    <td>INDITEX集團，總部西班牙</td>
+                    <td>折扣季（1月/7月）必掃；海外限定款值得留意</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mango</strong></td>
+                    <td>巴塞隆納女裝，設計感強</td>
+                    <td>台灣有但選擇少，本地款式更多</td>
+                  </tr>
+                  <tr>
+                    <td><strong>OYSHO</strong></td>
+                    <td>INDITEX 旗下睡衣 / 運動品牌</td>
+                    <td>台灣無代理，CP 值高，泳裝特別值得買</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Women'secret</strong></td>
+                    <td>內衣 / 泳裝品牌</td>
+                    <td>波西米亞泳裝風格特別，尺寸選擇多</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="highlight" style="margin-top:20px">
+              <h4>💡 採購據點</h4>
+            </div>
+            <div class="table-wrap" style="margin-top:0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>地點</th>
+                    <th>說明</th>
+                    <th>小提示</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>格拉西亞大道（巴塞隆納）</strong></td>
+                    <td>LOEWE、Camper、Mango 旗艦店聚集</td>
+                    <td>週日部分精品店休息，宜安排平日</td>
+                  </tr>
+                  <tr>
+                    <td><strong>El Corte Inglés 英宮百貨</strong></td>
+                    <td>西班牙本土連鎖百貨</td>
+                    <td>服務台憑護照領 10% 旅客回饋卡，<strong>注意：LOEWE 等獨立品牌專櫃通常不適用</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>La Roca Village（巴塞隆納近郊）</strong></td>
+                    <td>Outlet，過季款折扣最深</td>
+                    <td>建議下載官方 APP 或在遊客服務中心換取 VIP 旅客卡，可享額外 5% 折扣</td>
+                  </tr>
+                  <tr>
+                    <td><strong>塞拉諾大街（馬德里）</strong></td>
+                    <td>精品集中區，LOEWE 旗艦店</td>
+                    <td>靠近 Retiro 公園，可一併安排</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 葡萄牙 -->
+        <div style="margin-top:24px">
+          <div
+            style="background:linear-gradient(135deg,#005A00,#006400); color:white; padding:14px 22px; border-radius:2px 2px 0 0">
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem">🇵🇹 葡萄牙在地品牌</h3>
+            <div style="font-size:12px; opacity:.75; margin-top:2px">Lisboa · Porto · Guimarães</div>
+          </div>
+          <div style="background:white; border:1px solid #E8DFC8; border-top:none; padding:20px 22px">
+
+            <div class="highlight" style="margin-top:0">
+              <h4>⭐⭐⭐ 強烈推薦——唯一產地 / 台灣難買</h4>
+            </div>
+
+            <div class="info-grid">
+              <div class="info-block gold">
+                <h4>Cutipol｜手工金屬餐具</h4>
+                <p>1963 年創立，北部 Guimarães，被譽為「餐具界的 LV」。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣 Pinkoi 有代購，易有仿品</li>
+                  <li>推薦：GOA 系列（黑柄 / 彩色柄 × 24K 金屬）、MOON 系列</li>
+                  <li>⚠ 本店<strong>不參加退稅</strong>，建議至 Armazéns do Chiado 等百貨通路購買可退稅</li>
+                  <li>🧳 餐具組很重，<strong>務必托運</strong>且妥善包裝，正品背面需有燙印 Cutipol 字樣</li>
+                  <li>🏪 里斯本店：Largo do Picadeiro 12</li>
+                </ul>
+              </div>
+              <div class="info-block">
+                <h4>A Vida Portuguesa｜葡式生活選物</h4>
+                <p>選物店，收集葡萄牙各地傳統老品牌，被 TimeOut 評選里斯本最值得逛 10 大店家。台灣<strong>完全買不到</strong>。</p>
+                <ul style="margin-top:8px">
+                  <li>推薦：Couto 百年牙膏、傳統花磚皂、手工蠟燭、復古文具</li>
+                  <li>🏪 里斯本 Chiado 區 & 波多均有分店</li>
+                  <li>💡 消費滿門檻可辦 Portugal Tax Free 退稅</li>
+                </ul>
+              </div>
+              <div class="info-block sage">
+                <h4>Claus Porto｜百年手工香皂</h4>
+                <p>1887 年創立，波多，歐洲頂級手工香皂品牌。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣少數精品通路有進，但售價高 30～40%</li>
+                  <li>推薦：DECO 系列禮盒皂、護手霜、香水</li>
+                  <li>當地 €8～12 / 塊；台灣約 NT$450～600</li>
+                  <li>🏪 里斯本 Claus Porto 旗艦店（Chiado 區）種類最齊</li>
+                </ul>
+              </div>
+              <div class="info-block azul">
+                <h4>PARFOIS｜輕時尚配件</h4>
+                <p>1994 年創立，波多，包包 / 飾品 / 配件品牌。台灣<strong>無代理</strong>，CP 值極高。</p>
+                <ul style="margin-top:8px">
+                  <li>推薦：皮革手提包、草編包、金屬飾品</li>
+                  <li>包款 €15～60，入門款友善，可辦退稅</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight" style="margin-top:24px">
+              <h4>⭐⭐ 值得採購——食品 / 酒類伴手禮</h4>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>商品</th>
+                    <th>推薦品牌 / 地點</th>
+                    <th>參考價格</th>
+                    <th>小提示</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>魚罐頭</strong></td>
+                    <td>Conserveira de Lisboa（1930年代老店）</td>
+                    <td>€3～8 / 罐</td>
+                    <td>外包裝精美，是最受歡迎的里斯本伴手禮</td>
+                  </tr>
+                  <tr>
+                    <td><strong>波特酒 Porto Wine</strong></td>
+                    <td>Taylor's / Graham's / Sandeman</td>
+                    <td>€15～50 / 瓶</td>
+                    <td>瓶裝較重，建議托運；Vila Nova de Gaia 酒莊直購最划算</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ginja 巧克力杯櫻桃酒</strong></td>
+                    <td>Óbidos 小鎮市集</td>
+                    <td>€7.5 / 瓶</td>
+                    <td>用巧克力杯盛裝，香甜好喝，是特色紀念品</td>
+                  </tr>
+                  <tr>
+                    <td><strong>軟木塞製品</strong></td>
+                    <td>各地工藝品店</td>
+                    <td>€10～50</td>
+                    <td>包 / 錢包 / 飾品，質輕好帶，葡萄牙獨有</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="highlight" style="margin-top:20px">
+              <h4>💡 採購據點</h4>
+            </div>
+            <div class="table-wrap" style="margin-top:0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>地點</th>
+                    <th>說明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>自由大道（里斯本 Av. da Liberdade）</strong></td>
+                    <td>LV、Gucci 等國際精品，退稅後全歐洲競爭力強</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Chiado 區（里斯本）</strong></td>
+                    <td>A Vida Portuguesa、Claus Porto 旗艦店聚集，步行可達</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Baixa 區（里斯本）</strong></td>
+                    <td>Cutipol 本店、Conserveira de Lisboa 魚罐頭老店</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vila Nova de Gaia（波多對岸）</strong></td>
+                    <td>波特酒酒莊直銷，可免費參觀酒窖後直購</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 南法 -->
+        <div style="margin-top:24px">
+          <div
+            style="background:linear-gradient(135deg,#002395,#0035C4); color:white; padding:14px 22px; border-radius:2px 2px 0 0">
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem">🇫🇷 法國南法在地品牌</h3>
+            <div style="font-size:12px; opacity:.75; margin-top:2px">Manosque · Grasse · L'Isle-sur-la-Sorgue · Nice
+            </div>
+          </div>
+          <div style="background:white; border:1px solid #E8DFC8; border-top:none; padding:20px 22px">
+
+            <div class="highlight" style="margin-top:0">
+              <h4>⭐⭐⭐ 強烈推薦——產地最便宜 / 台灣沒賣</h4>
+            </div>
+
+            <div class="info-grid">
+              <div class="info-block gold">
+                <h4>L'Occitane｜歐舒丹（普羅旺斯）</h4>
+                <p>1976 年創立，Manosque，南法最具代表性天然保養品牌。</p>
+                <ul style="margin-top:8px">
+                  <li>台灣有售，但比當地貴 <strong>30～50%</strong></li>
+                  <li>推薦：護手霜禮盒 8 支組（€52.2）、薰衣草身體乳、Pierre Hermé 聯名香水（限工廠門市）</li>
+                  <li>🏭 <strong>Manosque 工廠門市</strong>（全法最大）：退稅 + 獨家款，靠近 Valensole 薰衣草田，建議開車前往，可安排半天行程</li>
+                  <li>⚠ 法國退稅門檻 €175，建議一次集中購買</li>
+                </ul>
+              </div>
+              <div class="info-block">
+                <h4>Fragonard｜格拉斯香水</h4>
+                <p>1926 年創立，Grasse（世界香水之都）。台灣<strong>無代理</strong>。</p>
+                <ul style="margin-top:8px">
+                  <li>推薦：淡香水（EDT）、香皂禮盒、室內香氛蠟燭</li>
+                  <li>香水 €25～80，比代購便宜 40～50%</li>
+                  <li>💡 格拉斯尚有 <strong>Galimard、Molinard</strong> 可免費參觀；可付費體驗調製專屬香水（約 €50～100），是獨特紀念體驗</li>
+                </ul>
+              </div>
+              <div class="info-block sage">
+                <h4>Souleiado｜普羅旺斯印花布</h4>
+                <p>18 世紀 Tarascon，法國百年印花布品牌。台灣<strong>完全找不到</strong>，正宗普羅旺斯伴手禮首選。</p>
+                <ul style="margin-top:8px">
+                  <li>推薦：桌巾 / 圍裙 / 托特包 / 抱枕</li>
+                  <li>小物 €10～30；桌巾 €40～80</li>
+                </ul>
+              </div>
+              <div class="info-block azul">
+                <h4>Oliviers &amp; Co｜南法頂級橄欖油</h4>
+                <p>1996 年創立，普羅旺斯，精品橄欖油品牌。台灣<strong>無正式代理</strong>。</p>
+                <ul style="margin-top:8px">
+                  <li>推薦：特級初榨橄欖油禮盒裝、橄欖皂、橄欖護膚系列</li>
+                  <li>橄欖油 €15～40 / 瓶；台灣代購翻倍以上</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight" style="margin-top:24px">
+              <h4>⭐⭐ 市集採購最划算——現金備妥</h4>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>商品</th>
+                    <th>推薦地點</th>
+                    <th>參考價格</th>
+                    <th>小提示</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>薰衣草香皂</strong></td>
+                    <td>索格島週二市集、普羅旺斯市集</td>
+                    <td>€2～5 / 塊</td>
+                    <td>小農攤位品質較佳，認明來自 Valensole</td>
+                  </tr>
+                  <tr>
+                    <td><strong>普羅旺斯薰衣草蜂蜜</strong></td>
+                    <td>農夫市集</td>
+                    <td>€8～15 / 瓶</td>
+                    <td>「Miel de Lavande AOC」標章保證產地</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Marius Fabre 馬賽皂</strong></td>
+                    <td>超市 / 市集</td>
+                    <td>€3～6 / 塊</td>
+                    <td>百年老廠，認明「Savon de Marseille」橢圓印</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Moustiers-Sainte-Marie 手繪陶瓷</strong></td>
+                    <td>陶瓷小鎮工坊</td>
+                    <td>€15～80 / 件</td>
+                    <td>易碎，建議購買後請店家協助包裝，放入手提</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="highlight" style="margin-top:20px">
+              <h4>💡 採購據點</h4>
+            </div>
+            <div class="table-wrap" style="margin-top:0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>地點</th>
+                    <th>說明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Manosque（L'Occitane 工廠門市）</strong></td>
+                    <td>全法最大門市，靠近 Valensole 薰衣草田，建議開車前往，可安排半日遊</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Grasse 格拉斯</strong></td>
+                    <td>Fragonard / Galimard / Molinard 香水工廠，免費參觀、可試香，可加購調香體驗</td>
+                  </tr>
+                  <tr>
+                    <td><strong>L'Isle-sur-la-Sorgue 索格島</strong></td>
+                    <td>每週日為大型市集日（非週二），薰衣草周邊、古董市集均有，務必準備現金</td>
+                  </tr>
+                  <tr>
+                    <td><strong>尼斯老城 Cours Saleya 花市</strong></td>
+                    <td>每日開市（週一古董市集），普羅旺斯香草、肥皂、蜂蜜，品質參差，認明小農攤位</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /ltab-brands -->
+      <div id="ltab-cp" class="ctab-panel">
+        <div style="margin-bottom:16px">
+          <div class="section-tag">綜合比較</div>
+          <h3
+            style="font-family:'Playfair Display','Noto Serif TC',serif; font-size:1.4rem; color:var(--ink); margin-top:6px">
+            三國品牌 <span style="color:var(--terra);font-style:italic">CP 值總整理</span></h3>
+          <p style="color:var(--slate); font-size:14px; margin-top:8px">退稅後價差與台灣的比較，以及建議攜帶數量。★★★ = 強烈推薦。</p>
+        </div>
+
+        <div class="table-wrap" style="margin-top:16px">
+          <table>
+            <thead>
+              <tr>
+                <th>品牌</th>
+                <th>國家</th>
+                <th>台灣有無</th>
+                <th>退稅後價差</th>
+                <th>建議帶回</th>
+                <th>評級</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>LOEWE</strong></td>
+                <td>🇪🇸</td>
+                <td>✅ 有</td>
+                <td>-20～30%</td>
+                <td>1～2 件</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Camper</strong></td>
+                <td>🇪🇸</td>
+                <td>✅ 有</td>
+                <td>-30～50%（Outlet）</td>
+                <td>1～2 雙</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Pretty Ballerinas</strong></td>
+                <td>🇪🇸</td>
+                <td>❌ 無</td>
+                <td>-50%+</td>
+                <td>2～3 雙</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Massimo Dutti</strong></td>
+                <td>🇪🇸</td>
+                <td>△ 少</td>
+                <td>-30～40%</td>
+                <td>依需求</td>
+                <td>★★</td>
+              </tr>
+              <tr>
+                <td><strong>TOUS</strong></td>
+                <td>🇪🇸</td>
+                <td>✅ 有</td>
+                <td>-25～40%</td>
+                <td>依需求</td>
+                <td>★★</td>
+              </tr>
+              <tr>
+                <td><strong>Cutipol</strong></td>
+                <td>🇵🇹</td>
+                <td>△ 代購</td>
+                <td>-30%+</td>
+                <td>1～2 套（注意重量）</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Claus Porto</strong></td>
+                <td>🇵🇹</td>
+                <td>△ 少</td>
+                <td>-30～40%</td>
+                <td>多買，輕薄好帶</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>PARFOIS</strong></td>
+                <td>🇵🇹</td>
+                <td>❌ 無</td>
+                <td>台灣沒得比</td>
+                <td>依需求</td>
+                <td>★★</td>
+              </tr>
+              <tr>
+                <td><strong>A Vida Portuguesa</strong></td>
+                <td>🇵🇹</td>
+                <td>❌ 無</td>
+                <td>台灣沒得比</td>
+                <td>伴手禮首選</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>L'Occitane</strong></td>
+                <td>🇫🇷</td>
+                <td>✅ 有</td>
+                <td>-30～50%</td>
+                <td>大量囤貨</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Fragonard 香水</strong></td>
+                <td>🇫🇷</td>
+                <td>❌ 無</td>
+                <td>台灣沒得比</td>
+                <td>1～2 瓶</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Souleiado 印花布</strong></td>
+                <td>🇫🇷</td>
+                <td>❌ 無</td>
+                <td>台灣沒得比</td>
+                <td>伴手禮首選</td>
+                <td>★★★</td>
+              </tr>
+              <tr>
+                <td><strong>Oliviers &amp; Co 橄欖油</strong></td>
+                <td>🇫🇷</td>
+                <td>❌ 無</td>
+                <td>台灣沒得比</td>
+                <td>禮盒裝 1～2 瓶</td>
+                <td>★★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert" style="margin-top:24px">
+          <strong>🧾 退稅實務提醒：</strong>
+          三國均可使用 Global Blue 或 Planet 退稅，建議優先選擇退稅 APP（Global Blue App / Wevat）。
+          離開歐盟前在最後一個申根國（通常是機場）海關蓋章，再到退稅櫃台或 ATM 領回。
+          <strong>法國門檻 €175 最高</strong>，建議同日在同家店集中消費超標後才辦理退稅表。
+        </div>
+
+      </div><!-- /ltab-cp -->
+    </div><!-- /ctab-wrap luxury -->
+
+    <!-- ─── 退稅 ─── -->
+    <div id="taxrefund" class="section-header">
+      <div class="section-tag">購物省錢</div>
+      <h2 class="section-title">歐洲 <span>退稅全攻略</span></h2>
+      <p class="section-intro">退稅可退回購物金額的 12–20%，需在離開歐盟的最後一個申根國辦理。兩大退稅公司為 Global Blue 與 Planet。</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>國家</th>
+            <th>退稅門檻</th>
+            <th>退稅比例</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇫🇷 法國</td>
+            <td>€175.01</td>
+            <td>12–13%</td>
+            <td>可使用 Wevat App；Paris Pablo 自助退稅機</td>
+          </tr>
+          <tr>
+            <td>🇪🇸 西班牙</td>
+            <td>€90.50</td>
+            <td>15–21%</td>
+            <td>DIV 自助退稅機；無金額上限</td>
+          </tr>
+          <tr>
+            <td>🇵🇹 葡萄牙</td>
+            <td>€61.35</td>
+            <td>10–23%</td>
+            <td>門檻最低；Global Blue / Planet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="steps" style="margin-top:24px">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>購物時索取退稅單</h4>
+          <p>在標有「Tax Free」的商店消費達門檻後，告知店員「I'd like a tax refund」並出示護照，確認退稅公司（Global Blue / Planet）。注意：護照國籍欄台灣應選
+            158（Taiwan），非 156（China）！</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>保管好退稅單與商品</h4>
+          <p>海關可能抽查商品實物，退稅品不可使用/拆封。若需托運，辦理退稅前先完成，蓋章後才托運行李。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>在「最後離境申根國」辦理</h4>
+          <p>跨國購買的退稅單，需在離開申根區的最後一國辦理。例如：法國買的東西，若從西班牙出境，要在西班牙機場蓋「海關章」後投入郵筒。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>使用自助退稅機或人工櫃檯</h4>
+          <p>西班牙有 DIV 自助機，法國有 Pablo 自助機，有中文介面，掃描退稅單條碼即完成蓋章步驟，省去排隊時間。掃描成功後不需再投郵筒。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>選擇退稅方式</h4>
+          <p><strong>信用卡退稅</strong>：手續費較低（€1/筆），3–8 週入帳，建議方式。<strong>現金退稅</strong>：即時領取但手續費高
+            10–15%。若現場沒有歐元，可能會被換算成台幣，匯率較差，此時改選信用卡即可。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-grid" style="margin-top:20px">
+      <div class="info-block gold">
+        <h4>📱 Global Blue App 優點</h4>
+        <ul>
+          <li>掃描 App 條碼自動填寫退稅單</li>
+          <li>即時追蹤退稅進度</li>
+          <li>多筆消費更省時</li>
+          <li>適合多筆小額消費</li>
+        </ul>
+      </div>
+      <div class="info-block rose">
+        <h4>⚠ 退稅常見錯誤</h4>
+        <ul>
+          <li>護照國籍填 156（中國）→ 應填 158</li>
+          <li>商品已托運才想退稅→ 提前辦理</li>
+          <li>離境時間太趕→ 建議提早 3 小時到機場</li>
+          <li>把不同公司退稅單放錯信封</li>
+        </ul>
+      </div>
+      <div class="info-block azul">
+        <h4>🇹🇼 回台灣注意</h4>
+        <ul>
+          <li>免稅額：NT$35,000（2024起新制）</li>
+          <li>超過需申報並補繳關稅</li>
+          <li>豬肉製品嚴禁攜入</li>
+          <li>酒類有數量限制</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── 旅遊貼士 ─── -->
+    <div id="tips" class="section-header">
+      <div class="section-tag">實用資訊</div>
+      <h2 class="section-title">旅遊 <span>實用貼士</span></h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>🔒 治安注意</h4>
+        <ul>
+          <li>巴塞隆納蘭布拉大道扒手多</li>
+          <li>里斯本阿爾法馬夜間注意</li>
+          <li>穿著盡量低調，避免攜帶珠寶</li>
+          <li>護照、現金分散存放</li>
+          <li>使用抗盜刷信用卡</li>
+        </ul>
+      </div>
+      <div class="info-block azul">
+        <h4>📋 景點預訂</h4>
+        <ul>
+          <li>聖家堂：務必提前線上訂票</li>
+          <li>阿爾罕布拉宮：提前數週訂</li>
+          <li>熱門景點旺季一票難求</li>
+          <li>建議出發前 1–3 個月全部訂好</li>
+        </ul>
+      </div>
+      <div class="info-block sage">
+        <h4>☀ 天氣 & 防曬</h4>
+        <ul>
+          <li>西班牙：年均3000小時日照</li>
+          <li>南法夏天熱浪可達 40°C</li>
+          <li>太陽眼鏡、防曬乳必備</li>
+          <li>秋冬降雨機率較高，備雨傘</li>
+          <li>最適旅遊：4–6月、9–10月</li>
+        </ul>
+      </div>
+      <div class="info-block gold">
+        <h4>🗓 規劃建議</h4>
+        <ul>
+          <li>西葡法三國建議 18–21 天</li>
+          <li>僅西葡：12–14 天</li>
+          <li>僅南法：7–10 天</li>
+          <li>南法普羅旺斯慢遊至少 7 天</li>
+          <li>旺季節慶前後房價大漲</li>
+        </ul>
+      </div>
+      <div class="info-block rose">
+        <h4>💳 小費文化</h4>
+        <ul>
+          <li>西班牙：不強制，滿意可給</li>
+          <li>葡萄牙：不強制，約5–10%</li>
+          <li>法國：不強制，含服務費時不用</li>
+          <li>南法隨行解說服務：€10/人/天</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>🚌 罷工應對</h4>
+        <ul>
+          <li>歐洲罷工（grève）時有所聞</li>
+          <li>建議購買「旅行不便險」</li>
+          <li>多備一天緩衝時間</li>
+          <li>機票改退票規定事先確認</li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <p><strong>西班牙・葡萄牙・南法 自由行全攻略 2025–2026</strong></p>
+    <p style="margin-top:8px">資料收集自多個旅遊部落格及官方網站 ｜ 資訊僅供參考，實際情況以出發前最新公告為準</p>
+    <p style="margin-top:6px">ETIAS 電子旅行許可預計 2026 年第四季上線，出發前請至官網確認：travel-europe.europa.eu/etias_en</p>
+  </footer>
+
+  <script>
+    /* ── 精品購物雙層分頁切換 ── */
+    function showLtab(id, btn) {
+      var wrap = btn.closest('.ctab-wrap');
+      wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
+      wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('ltab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── 各國攻略分頁切換（scoped 至所屬 .ctab-wrap） ── */
+    function showCtab(id, btn) {
+      var wrap = btn.closest('.ctab-wrap');
+      wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
+      wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('ctab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── 交通分頁切換（scoped 至所屬 .ctab-wrap） ── */
+    function showTtab(id, btn) {
+      var wrap = btn.closest('.ctab-wrap');
+      wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
+      wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('ttab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── 子分頁切換（每個國家獨立命名空間） ── */
+    function showStab(country, tab, btn) {
+      var panel = document.getElementById('ctab-' + country);
+      panel.querySelectorAll('.stab-panel').forEach(el => el.classList.remove('active'));
+      panel.querySelectorAll('.stab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(country + '-' + tab).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>
