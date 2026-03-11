@@ -21,6 +21,8 @@
 | Navegante 大小寫 | `navigante 卡` | `Navegante 卡`（補 €0.50 卡費、€1.61/次） |
 | 緊急聯絡資訊 | 無 | 新增：歐盟 112、三國警察、台灣駐外館處 |
 | 求生語速查 | 無 | 新增：西葡法三語緊急短句 + Google 翻譯建議 |
+| 語氣與詞彙在地化 | 使用「貼士」 | 全面替換為台灣慣用詞「叮嚀/叮囑」 |
+| 版權與免責聲明 | 單行文字 | 新增版號、免責聲明、與 ETIAS/EES 官網重要預警連結 |
 
 ### 📱 前端 UX 優化
 
@@ -28,10 +30,13 @@
 |------|--------|--------|
 | 主分頁按鈕觸控高度 | 未定義（約 38px） | `min-height: 44px` + `touch-action` |
 | 子分頁按鈕觸控高度 | 未定義 | `min-height: 44px` + `touch-action` |
-| Tab 導覽列排版 | `flex-wrap: wrap`（手機多行） | 橫向單行可滑動（`overflow-x: auto`） |
+| Tab 導覽列排版 | `flex-wrap: wrap`（手機多行） | 橫向單行可滑動（`overflow-x: auto`），內容精簡（如：跨國移動→跨國） |
 | 手機 table 字體 | 與桌機相同 | `@media` 內縮小字體與內距 |
 | 景點卡排版 | 多欄（手機擠壓） | `@media` 內改單欄 |
 | 迪士尼雙欄 | 純 inline style | 改用 `.park-grid`（手機自動變單欄） |
+| **全站導航架構** | 4000+行單頁滾動到底 | **5大隱藏分頁系統（行前/交通/攻略/購物/叮囑），支援左右滑動手勢** |
+| **手機選單** | 隱藏在頂部需回捲 | **懸浮毛玻璃底部導航列（Bottom Nav）支援單手操作** |
+| **視覺色彩設計** | 傳統配色與內建行高 | **更換高質感陶土紅/琥珀金色系，加大行高至 `1.8`** |
 
 ### ⚙️ 程式碼品質
 
@@ -41,6 +46,7 @@
 | onclick handler | 27 個使用舊函式名 | 全部更新，無殘留 |
 | Utility classes | 無 | 新增 `.mt-0/sm/md/lg/xl`、`.park-grid`、`.park-card-*`、`.section-h3` |
 | 迪士尼 inline style | `style="display:grid; background:linear-gradient(...)"` | 改用 CSS class |
+| 分頁與動態佈局邏輯 | 全網頁依賴 CSS media query | 導入 JavaScript 分頁控制 `switchPage()`、Resize 監測與手勢滑動事件監聽 |
 
 ---
 
@@ -57,6 +63,9 @@
   - Hola BCN、Madrid Tarjeta Turística 票價
   - Pass SUD AZUR、Paris Visite 票價
   - 廉航參考票價（Ryanair / Vueling / TAP）
+
+- [ ] **新增「打包清單與急用藥物」模組**
+  在「行前」分頁中加入一區快速 Check-list（如常備藥、防竊暗袋、轉接頭等），這對於手機隨身查看非常有幫助。
 
 ### 📱 前端工程師
 
@@ -79,6 +88,12 @@
   [data-country="fr"] { --accent: #002395; }
   ```
 
+- [ ] **支援深色模式 (Dark Mode)**
+  導入 `@media (prefers-color-scheme: dark)`，把 `--cream`, `--ink`, `--parchment` 等變數自動轉換為深灰與黑的組合，以降低用戶在歐洲夜間巴士查資料時的螢幕刺眼度。
+
+- [ ] **Tab 標籤的 Scroll Snapping**
+  在 `.ctab-nav` 加入 `scroll-snap-type: x mandatory`，讓使用者在滑動票卡或景點標籤時可以有自動對齊（Snap）的磁吸手感。
+
 ### ⚙️ 後端工程師
 
 - [ ] **抽取 CSS → `assets/css/style.css`**
@@ -92,7 +107,7 @@
   ```
 
 - [ ] **抽取 JS → `assets/js/main.js`**
-  將 `<script>` 區塊移至獨立檔案
+  將 `<script>` 區塊移至獨立檔案。由於現在加入了 Swipe 手勢辨識、Resize 偵測、以及動態分頁切換，JS 邏輯變重，獨立出來比較符合關注點分離 (SoC)。
   ```
   europe-travel/
   ├── assets/
