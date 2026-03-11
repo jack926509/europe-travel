@@ -11,17 +11,17 @@
     rel="stylesheet">
   <style>
     :root {
-      --terra: #C8502A;
-      --saffron: #E8943A;
-      --gold: #D4A843;
-      --cream: #FAF6EE;
-      --parchment: #F0E8D8;
-      --ink: #1A1208;
-      --slate: #4A4035;
-      --sage: #6B7B5A;
-      --azul: #2B5FA0;
-      --moss: #3D5A3E;
-      --rose: #C4556A;
+      --terra: #B5441F;
+      --saffron: #D88530;
+      --gold: #C9983A;
+      --cream: #F8F4EB;
+      --parchment: #EDE5D4;
+      --ink: #1C1410;
+      --slate: #4D4238;
+      --sage: #5E7050;
+      --azul: #2A5690;
+      --moss: #3A5440;
+      --rose: #B84C5F;
     }
 
     * {
@@ -34,19 +34,20 @@
       font-family: 'Noto Sans TC', sans-serif;
       background: var(--cream);
       color: var(--ink);
-      line-height: 1.75;
-      font-size: 15px;
+      line-height: 1.8;
+      font-size: 14.5px;
+      -webkit-text-size-adjust: 100%;
     }
 
     /* ─── HERO ─── */
     .hero {
       background: linear-gradient(160deg, #1A0E05 0%, #3A1F0A 40%, #5C2E0E 70%, #8B4513 100%);
-      min-height: 340px;
+      min-height: 280px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px 24px 50px;
+      padding: 48px 24px 32px;
       position: relative;
       overflow: hidden;
     }
@@ -132,13 +133,13 @@
       letter-spacing: 1px;
     }
 
-    /* ─── NAV ─── */
+    /* ─── TOP NAV (desktop) ─── */
     .nav {
       background: var(--ink);
       position: sticky;
       top: 0;
       z-index: 100;
-      display: flex;
+      display: none;
       gap: 0;
       overflow-x: auto;
       scrollbar-width: none;
@@ -164,6 +165,167 @@
     .nav a:hover {
       color: var(--gold);
       border-bottom-color: var(--gold);
+    }
+
+    @media (min-width: 769px) {
+      .nav { display: flex; }
+      .bottom-nav { display: none !important; }
+    }
+
+    /* ─── BOTTOM NAV (mobile) ─── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(26, 18, 8, 0.92);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-top: 1px solid rgba(212, 168, 67, 0.2);
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      padding: 0 0 env(safe-area-inset-bottom, 0);
+      box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
+    }
+
+    .bottom-nav-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 2px 6px;
+      background: none;
+      border: none;
+      color: #8A7A60;
+      font-size: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      letter-spacing: 0.3px;
+    }
+
+    .bottom-nav-btn .nav-icon {
+      font-size: 20px;
+      margin-bottom: 3px;
+      transition: transform 0.25s ease;
+      line-height: 1;
+    }
+
+    .bottom-nav-btn.active {
+      color: var(--gold);
+    }
+
+    .bottom-nav-btn.active .nav-icon {
+      transform: scale(1.15);
+    }
+
+    .bottom-nav-btn.active::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 0 0 2px 2px;
+    }
+
+    .bottom-nav-btn:active {
+      transform: scale(0.92);
+    }
+
+    /* ─── PAGE SECTIONS ─── */
+    .page-section {
+      display: none;
+      animation: pageFadeIn 0.35s ease-out;
+    }
+
+    .page-section.active {
+      display: block;
+    }
+
+    @keyframes pageFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── PAGE HEADER PILL ─── */
+    .page-header-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 0 10px;
+    }
+
+    .page-header-bar .page-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--terra), var(--saffron));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(200, 80, 42, 0.25);
+    }
+
+    .page-header-bar .page-label {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terra);
+      font-weight: 700;
+    }
+
+    /* ─── SWIPE HINT ─── */
+    .swipe-hint {
+      text-align: center;
+      color: var(--slate);
+      font-size: 11px;
+      padding: 16px 0 8px;
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
+
+    /* ─── SCROLL TOP ─── */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(26, 18, 8, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 168, 67, 0.3);
+      color: var(--gold);
+      font-size: 18px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9998;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .scroll-top-btn.visible {
+      display: flex;
+    }
+
+    .scroll-top-btn:active {
+      transform: scale(0.9);
     }
 
     /* ─── LAYOUT ─── */
@@ -512,22 +674,23 @@
     }
 
     .ctab-btn {
-      padding: 10px 20px;
-      min-height: 44px;
+      padding: 8px 14px;
+      min-height: 40px;
       border: 1px solid #D8CEB8;
       border-bottom: none;
       background: var(--parchment);
       color: var(--slate);
-      font-family: 'Noto Serif TC', serif;
-      font-size: 13.5px;
-      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
       cursor: pointer;
-      border-radius: 4px 4px 0 0;
+      border-radius: 6px 6px 0 0;
       transition: all .2s;
       position: relative;
       top: 2px;
       white-space: nowrap;
       touch-action: manipulation;
+      letter-spacing: 0.3px;
     }
 
     .ctab-btn:hover {
@@ -587,18 +750,19 @@
     }
 
     .stab-btn {
-      padding: 8px 18px;
-      min-height: 44px;
+      padding: 6px 12px;
+      min-height: 36px;
       border: 1px solid #D8CEB8;
       background: var(--parchment);
       color: var(--slate);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       cursor: pointer;
-      border-radius: 20px;
+      border-radius: 18px;
       transition: all .2s;
       white-space: nowrap;
       touch-action: manipulation;
+      letter-spacing: 0.2px;
     }
 
     .stab-btn:hover {
@@ -724,16 +888,34 @@
     /* ─── FOOTER ─── */
     footer {
       background: var(--ink);
-      color: #8A7A60;
+      color: #9A8A70;
       text-align: center;
       padding: 32px 20px;
       margin-top: 60px;
-      font-size: 12px;
-      letter-spacing: 1px;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
+      line-height: 1.9;
     }
 
     footer strong {
       color: var(--gold);
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(201, 152, 58, 0.4);
+      transition: border-color 0.2s;
+    }
+
+    footer a:hover {
+      border-bottom-color: var(--gold);
+    }
+
+    footer .footer-version {
+      margin-top: 12px;
+      font-size: 10px;
+      opacity: 0.5;
     }
 
     /* ─── DIVIDER ─── */
@@ -747,7 +929,7 @@
     }
 
     .page-content {
-      padding-bottom: 20px;
+      padding-bottom: 90px;
     }
 
     /* ─── UTILITY CLASSES ─── */
@@ -781,9 +963,29 @@
       padding: 18px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero {
-        padding: 40px 16px 36px;
+        padding: 36px 16px 28px;
+        min-height: 220px;
+      }
+
+      .hero-title {
+        font-size: clamp(1.6rem, 5.5vw, 2.8rem);
+      }
+
+      .hero-sub {
+        font-size: 11px;
+        letter-spacing: 3px;
+      }
+
+      .hero-badges {
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .hero-badge {
+        font-size: 11px;
+        padding: 5px 12px;
       }
 
       .container {
@@ -798,7 +1000,6 @@
         grid-template-columns: 1fr;
       }
 
-      /* ─── 手機優化 ─── */
       .ctab-panel {
         padding: 16px 14px;
       }
@@ -830,11 +1031,34 @@
       }
 
       .section-header {
-        padding: 36px 0 8px;
+        padding: 28px 0 8px;
+        margin-top: 24px;
+      }
+
+      .section-header:first-child {
+        padding-top: 12px;
+        margin-top: 0;
       }
 
       .park-grid {
         grid-template-columns: 1fr;
+      }
+
+      .souvenir-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .info-block {
+        padding: 14px 16px;
+      }
+
+      .highlight {
+        padding: 16px 18px;
+      }
+
+      footer {
+        margin-top: 32px;
+        padding: 24px 16px 100px;
       }
     }
   </style>
@@ -870,10 +1094,40 @@
     <a href="#souvenir">🛍 伴手禮</a>
     <a href="#luxury">💎 精品購物</a>
     <a href="#taxrefund">💰 退稅</a>
-    <a href="#tips">💡 貼士</a>
+    <a href="#tips">💡 叮囑</a>
   </nav>
 
+  <!-- BOTTOM NAV (mobile) -->
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="bottom-nav-btn active" data-page="page-prep" onclick="switchPage('page-prep', this)">
+      <span class="nav-icon">📋</span>
+      <span>行前</span>
+    </button>
+    <button class="bottom-nav-btn" data-page="page-transport" onclick="switchPage('page-transport', this)">
+      <span class="nav-icon">🚆</span>
+      <span>交通</span>
+    </button>
+    <button class="bottom-nav-btn" data-page="page-guide" onclick="switchPage('page-guide', this)">
+      <span class="nav-icon">📖</span>
+      <span>攻略</span>
+    </button>
+    <button class="bottom-nav-btn" data-page="page-shop" onclick="switchPage('page-shop', this)">
+      <span class="nav-icon">🛍</span>
+      <span>購物</span>
+    </button>
+    <button class="bottom-nav-btn" data-page="page-tips" onclick="switchPage('page-tips', this)">
+      <span class="nav-icon">💡</span>
+      <span>叮囑</span>
+    </button>
+  </nav>
+
+  <!-- SCROLL TOP -->
+  <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+
   <div class="container page-content">
+
+    <!-- ═══ PAGE 1: 行前準備 ═══ -->
+    <div id="page-prep" class="page-section active">
 
     <!-- ─── 行前準備 ─── -->
     <div id="visa" class="section-header">
@@ -931,6 +1185,8 @@
         </ul>
       </div>
     </div>
+
+    <div class="ornament">✦ ✦ ✦</div>
 
     <!-- ─── 航班 ─── -->
     <div id="flight" class="section-header">
@@ -1025,6 +1281,11 @@
       </div>
     </div>
 
+    </div><!-- /page-prep -->
+
+    <!-- ═══ PAGE 2: 交通 ═══ -->
+    <div id="page-transport" class="page-section">
+
     <!-- ─── 跨國交通 ─── -->
     <div id="transport" class="section-header">
       <div class="section-tag">移動攻略</div>
@@ -1034,12 +1295,12 @@
 
     <div class="ctab-wrap" id="transport-wrap">
       <div class="ctab-nav">
-        <button class="ctab-btn multi active" onclick="showTabPanel('ttab-cross',this)">🌍 跨國移動</button>
+        <button class="ctab-btn multi active" onclick="showTabPanel('ttab-cross',this)">🌍 跨國</button>
         <button class="ctab-btn es" onclick="showTabPanel('ttab-es-t',this)">🇪🇸 西班牙</button>
         <button class="ctab-btn pt" onclick="showTabPanel('ttab-pt-t',this)">🇵🇹 葡萄牙</button>
-        <button class="ctab-btn fr" onclick="showTabPanel('ttab-fr-t',this)">🇫🇷 法國南法</button>
-        <button class="ctab-btn" onclick="showTabPanel('ttab-summary',this)">📊 票卡總整理</button>
-        <button class="ctab-btn" onclick="showTabPanel('ttab-apps',this)">📱 實用 App</button>
+        <button class="ctab-btn fr" onclick="showTabPanel('ttab-fr-t',this)">🇫🇷 南法</button>
+        <button class="ctab-btn" onclick="showTabPanel('ttab-summary',this)">📊 票卡</button>
+        <button class="ctab-btn" onclick="showTabPanel('ttab-apps',this)">📱 App</button>
       </div>
 
       <!-- ── 跨國移動 ── -->
@@ -1936,11 +2197,16 @@
       </div>
     </div><!-- /transport-wrap -->
 
+    </div><!-- /page-transport -->
+
+    <!-- ═══ PAGE 3: 各國攻略 + 迪士尼 ═══ -->
+    <div id="page-guide" class="page-section">
+
     <!-- ─── 各國詳細攻略（分頁） ─── -->
-    <div id="destinations" class="section-header" style="margin-top:40px">
+    <div id="destinations" class="section-header">
       <div class="section-tag">詳細攻略</div>
       <h2 class="section-title">各國 <span>旅遊指南</span></h2>
-      <p class="section-intro">點選國家，切換景點行程、必吃美食、節慶活動、實用貼士各分頁。</p>
+      <p class="section-intro">點選國家，切換景點行程、必吃美食、節慶活動、實用叮囑各分頁。</p>
     </div>
 
     <div class="ctab-wrap">
@@ -1956,10 +2222,10 @@
     ════════════════════════════════ -->
       <div id="ctab-es" class="ctab-panel active">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showSubTab('ctab-es','es-sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-es','es-food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-es','es-festival',this)">🎉 節慶活動</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-es','es-tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-es','es-sights',this)">🏙 景點</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-food',this)">🍽 美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-festival',this)">🎉 節慶</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-tips',this)">💡 叮囑</button>
         </div>
 
         <!-- 景點 -->
@@ -2257,7 +2523,7 @@
           </div>
         </div>
 
-        <!-- 貼士 -->
+        <!-- 叮嚀 -->
         <div id="es-tips" class="stab-panel">
           <div class="info-grid" style="margin-top:0">
             <div class="info-block gold">
@@ -2301,9 +2567,9 @@
     ════════════════════════════════ -->
       <div id="ctab-pt" class="ctab-panel">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showSubTab('ctab-pt','pt-sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-pt','pt-sights',this)">🏙 景點</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-food',this)">🍽 美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-tips',this)">💡 叮囑</button>
         </div>
 
         <!-- 景點 -->
@@ -2530,7 +2796,7 @@
           </div>
         </div>
 
-        <!-- 貼士 -->
+        <!-- 叮囑 -->
         <div id="pt-tips" class="stab-panel">
           <div class="info-grid" style="margin-top:0">
             <div class="info-block sage">
@@ -2565,10 +2831,10 @@
     ════════════════════════════════ -->
       <div id="ctab-fr" class="ctab-panel">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showSubTab('ctab-fr','fr-sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-festival',this)">🎉 節慶活動</button>
-          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-fr','fr-sights',this)">🏙 景點</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-food',this)">🍽 美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-festival',this)">🎉 節慶</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-tips',this)">💡 叮囑</button>
         </div>
 
         <!-- 景點 -->
@@ -2851,7 +3117,7 @@
           </div>
         </div>
 
-        <!-- 貼士 -->
+        <!-- 叮囑 -->
         <div id="fr-tips" class="stab-panel">
           <div class="info-grid" style="margin-top:0">
             <div class="info-block gold">
@@ -2900,11 +3166,11 @@
     </div>
     <div id="ctab-disney" style="background:white; border:1px solid #E8DFC8; padding:24px; margin-top:12px">
       <div class="stab-nav">
-        <button class="stab-btn active" onclick="showSubTab('ctab-disney','disney-intro',this)">🎡 園區介紹</button>
-        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-rides',this)">🎢 必玩設施</button>
-        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tickets',this)">🎟 票價攻略</button>
+        <button class="stab-btn active" onclick="showSubTab('ctab-disney','disney-intro',this)">🎡 園區</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-rides',this)">🎢 必玩</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tickets',this)">🎟 票價</button>
         <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-dining',this)">🍔 餐廳</button>
-        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tips',this)">💡 行程貼士</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tips',this)">💡 叮囑</button>
       </div>
 
       <!-- 園區介紹 -->
@@ -3216,7 +3482,7 @@
         </div>
       </div>
 
-      <!-- 行程貼士 -->
+      <!-- 行程叮囑 -->
       <div id="disney-tips" class="stab-panel">
         <h4 style="color:var(--terra); margin-bottom:12px; letter-spacing:1px">⏰ 一日雙園建議時間表</h4>
         <div class="steps">
@@ -3300,6 +3566,11 @@
         </div>
       </div>
     </div><!-- /ctab-disney -->
+
+    </div><!-- /page-guide -->
+
+    <!-- ═══ PAGE 4: 購物 ═══ -->
+    <div id="page-shop" class="page-section">
 
     <!-- ─── 伴手禮 ─── -->
     <div id="souvenir" class="section-header">
@@ -4119,10 +4390,15 @@
       </div>
     </div>
 
-    <!-- ─── 旅遊貼士 ─── -->
+    </div><!-- /page-shop -->
+
+    <!-- ═══ PAGE 5: 叮囑 ═══ -->
+    <div id="page-tips" class="page-section">
+
+    <!-- ─── 旅遊叮囑 ─── -->
     <div id="tips" class="section-header">
       <div class="section-tag">實用資訊</div>
-      <h2 class="section-title">旅遊 <span>實用貼士</span></h2>
+      <h2 class="section-title">旅遊 <span>實用叮囑</span></h2>
     </div>
 
     <div class="info-grid">
@@ -4206,13 +4482,17 @@
       </div>
     </div>
 
+    </div><!-- /page-tips -->
 
   </div>
 
   <footer>
-    <p><strong>西班牙・葡萄牙・南法 自由行全攻略 2025–2026</strong></p>
-    <p style="margin-top:8px">資料收集自多個旅遊部落格及官方網站 ｜ 資訊僅供參考，實際情況以出發前最新公告為準</p>
-    <p style="margin-top:6px">ETIAS 電子旅行許可預計 2026 年第四季上線，出發前請至官網確認：travel-europe.europa.eu/etias_en</p>
+    <p><strong>西班牙・葡萄牙・南法 自由行全攻略</strong></p>
+    <p style="margin-top:10px">本指南僅供行前規劃參考，實際資訊請以各國官方網站及現場公告為準</p>
+    <p style="margin-top:6px">📌 ETIAS 電子旅行許可預計 2026 Q4 上線，出發前請至 <a href="https://travel-europe.europa.eu/etias_en" target="_blank">EU 官網</a> 確認</p>
+    <p style="margin-top:6px">📌 EES 出入境系統預計 2026 Q2 上線，入境需掃描護照、拍照及按指紋</p>
+    <p style="margin-top:8px">資料來源：各國觀光局、Renfe、CP、SNCF、Google Maps、背包客棧 等</p>
+    <p class="footer-version">v2.1 │ 更新日期 2026-03-11</p>
   </footer>
 
   <script>
@@ -4233,6 +4513,135 @@
       document.getElementById(tabId).classList.add('active');
       btn.classList.add('active');
     }
+
+    /* ── 手機分頁系統 ── */
+    var pageIds = ['page-prep', 'page-transport', 'page-guide', 'page-shop', 'page-tips'];
+    var currentPageIdx = 0;
+
+    function switchPage(pageId, btn) {
+      // Hide all page sections
+      document.querySelectorAll('.page-section').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      // Show target page
+      var target = document.getElementById(pageId);
+      if (target) {
+        target.classList.add('active');
+        // Re-trigger animation
+        target.style.animation = 'none';
+        target.offsetHeight; // Force reflow
+        target.style.animation = '';
+      }
+      // Update bottom nav active state
+      document.querySelectorAll('.bottom-nav-btn').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      if (btn) {
+        btn.classList.add('active');
+      } else {
+        // Find the right button
+        document.querySelectorAll('.bottom-nav-btn').forEach(function(el) {
+          if (el.getAttribute('data-page') === pageId) {
+            el.classList.add('active');
+          }
+        });
+      }
+      // Update page index
+      currentPageIdx = pageIds.indexOf(pageId);
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* ── Desktop nav links trigger page switch too ── */
+    document.querySelectorAll('.nav a').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var href = a.getAttribute('href').replace('#', '');
+        var pageMap = {
+          'visa': 'page-prep', 'flight': 'page-prep',
+          'transport': 'page-transport',
+          'destinations': 'page-guide', 'disney': 'page-guide',
+          'souvenir': 'page-shop', 'luxury': 'page-shop', 'taxrefund': 'page-shop',
+          'tips': 'page-tips'
+        };
+        var isMobile = window.innerWidth <= 768;
+        if (isMobile && pageMap[href]) {
+          e.preventDefault();
+          switchPage(pageMap[href]);
+          // Scroll to the actual section after page switch
+          setTimeout(function() {
+            var target = document.getElementById(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 100);
+        }
+      });
+    });
+
+    /* ── Scroll to top button ── */
+    var scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    /* ── Swipe gesture support ── */
+    var touchStartX = 0;
+    var touchEndX = 0;
+    var touchStartY = 0;
+    var touchEndY = 0;
+
+    document.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      var diffX = touchStartX - touchEndX;
+      var diffY = Math.abs(touchStartY - touchEndY);
+      // Only trigger on horizontal swipes (not vertical scroll)
+      if (Math.abs(diffX) < 80 || diffY > Math.abs(diffX) * 0.7) return;
+      // Only on mobile
+      if (window.innerWidth > 768) return;
+
+      if (diffX > 0 && currentPageIdx < pageIds.length - 1) {
+        // Swipe left → next page
+        switchPage(pageIds[currentPageIdx + 1]);
+      } else if (diffX < 0 && currentPageIdx > 0) {
+        // Swipe right → previous page
+        switchPage(pageIds[currentPageIdx - 1]);
+      }
+    }
+
+    /* ── On desktop, show all pages ── */
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        document.querySelectorAll('.page-section').forEach(function(el) {
+          el.style.display = 'block';
+          el.style.animation = 'none';
+        });
+      } else {
+        document.querySelectorAll('.page-section').forEach(function(el) {
+          el.style.display = '';
+          el.style.animation = '';
+        });
+        // Ensure current page is shown
+        switchPage(pageIds[currentPageIdx]);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    // Initial check
+    handleResize();
   </script>
 
 </body>
