@@ -1,56 +1,151 @@
-# 🚀 專案重構與優化流程指南
+# 🛠 專案優化工作流程
 
-為確保 `Europe-travel-guide` 專案在未來能夠穩定擴充與維護，基於導遊、前端工程師與後端工程師視角的全面盤點，我們將接下來的優化項目劃分為明確的四個階段流程。
+> **定位**：個人旅遊規劃靜態網站，供出發前查閱用途。
+> 優化目標以「**手機易讀、資料正確、程式碼不打架**」為核心，不需 SEO 或社群分享功能。
+>
+> 三角色分工：
+> - 🧭 **旅遊專家** — 確保交通票價、景點資訊、時刻表正確
+> - 📱 **前端工程師** — 以手機為主的 UX/UI，tab 分頁清晰易操作
+> - ⚙️ **後端工程師** — 消滅程式碼重複、清理 inline style、統一命名
 
-## 📍 階段一：架構重構與基礎建設
+---
 
-**目標：降低維護成本，實現關注點分離（Separation of Concerns），並確保檔案庫的乾淨。**
+## ✅ 已完成（v2.1，2026-03-11）
 
-1. **入口整併與冗餘檔案清除**：
-   - 確認唯一對外的頁面為 `index.html`。
-   - 移除高度重疊的備份與開發中的單獨版 HTML（如 `europe-travel-guide.html`）以防止後續維護產生「改 A 忘記改 B」的同步災難。
-   - 將剩下的開發前草稿（Markdown 檔）移至 `docs/` 或封存庫中。
-2. **抽取與整合樣式（CSS）**：
-   - 建立 `assets/css/style.css`。
-   - 將 `index.html` 內建近 400 行的 `<style>` 全部移入獨立 CSS 檔案。
-   - 清洗散落於 HTML 標籤內的大量 Inline Styles（例如 `style="margin-top:32px"` 或迪士尼園區卡片的特設漸層樣式），將其轉化為通用的 Utility Classes（如 `.mt-lg`、`.park-card-pink`）。
-   - 優化重複出現的卡片 CSS 結構（如 `.attraction-card.pt`, `.attraction-card.fr`），利用 CSS 變數或資料屬性（`data-country`）重構以大幅簡化樣式表。
-3. **抽取行為邏輯（JavaScript）**：
-   - 建立 `assets/js/main.js`。
-   - 移除多達 30 處以上的 Inline Handler（`onclick="showCtab('es',this)"` 等），改為在 JS 檔案中利用 `document.addEventListener` 進行事件委託綁定。
+### 🧭 旅遊資料修正
 
-## 📍 階段二：使用者體驗（UX）、無障礙（A11y）與 SEO 升級
+| 項目 | 修正前 | 修正後 |
+|------|--------|--------|
+| Lisboa Card 24hr 票價 | €19（錯誤） | **€21**（補全 48hr €35 / 72hr €44） |
+| 里斯本↔波多列車時間 | IC「3.5 小時」（錯誤） | AP 約 2h50m €34.6 / IC 約 3h13m €27.4 |
+| Navegante 大小寫 | `navigante 卡` | `Navegante 卡`（補 €0.50 卡費、€1.61/次） |
+| 緊急聯絡資訊 | 無 | 新增：歐盟 112、三國警察、台灣駐外館處 |
+| 求生語速查 | 無 | 新增：西葡法三語緊急短句 + Google 翻譯建議 |
 
-**目標：確保網站在不同裝置上表現優異、對輔助工具友善，同時提升外部搜尋能見度。**
+### 📱 前端 UX 優化
 
-1. **加強無障礙屬性（WAI-ARIA）**：
-   - 針對所有自製的 Tab 元件（國家、交通、購物等），追加完整的 ARIA 屬性（`role="tab"`, `role="tabpanel"`, `aria-selected`, `aria-controls`）。
-   - 確保導航列（`<nav>`）及 Tab 可完全經由鍵盤按鍵來切換與瀏覽。
-2. **SEO 標記完善**：
-   - 補齊缺失的 `<meta name="description">`。
-   - 加入 Open Graph 標籤（`og:title`, `og:description`, `og:image`），確保網址在 Line、Facebook 等社群平台分享時有漂亮的預覽卡片。
-3. **導入向量圖示（SVG Icons）**：
-   - 逐步汰換依賴作業系統字型的 Emoji 圖示，改採輕量級且具一致性的向量圖示庫（如 Lucide 或 Phosphor Icons）。
+| 項目 | 修正前 | 修正後 |
+|------|--------|--------|
+| 主分頁按鈕觸控高度 | 未定義（約 38px） | `min-height: 44px` + `touch-action` |
+| 子分頁按鈕觸控高度 | 未定義 | `min-height: 44px` + `touch-action` |
+| Tab 導覽列排版 | `flex-wrap: wrap`（手機多行） | 橫向單行可滑動（`overflow-x: auto`） |
+| 手機 table 字體 | 與桌機相同 | `@media` 內縮小字體與內距 |
+| 景點卡排版 | 多欄（手機擠壓） | `@media` 內改單欄 |
+| 迪士尼雙欄 | 純 inline style | 改用 `.park-grid`（手機自動變單欄） |
 
-## 📍 階段三：旅遊內容擴充與痛點解決
+### ⚙️ 程式碼品質
 
-**目標：導入導遊實務經驗，解決自由行旅客常見的出遊盲點。**
+| 項目 | 修正前 | 修正後 |
+|------|--------|--------|
+| Tab 切換函式 | 4 個邏輯重複函式（`showLtab / showCtab / showTtab / showStab`） | 合併為 2 個（`showTabPanel` / `showSubTab`），script 36 行 → 14 行 |
+| onclick handler | 27 個使用舊函式名 | 全部更新，無殘留 |
+| Utility classes | 無 | 新增 `.mt-0/sm/md/lg/xl`、`.park-grid`、`.park-card-*`、`.section-h3` |
+| 迪士尼 inline style | `style="display:grid; background:linear-gradient(...)"` | 改用 CSS class |
 
-1. **擴充在地實用指南區塊**：
-   - **氣候與穿搭行李清單**：針對夏季 40°C 或者南法強風（Mistral）給予「洋蔥式穿搭」建議與打包表。
-   - **特殊飲食限制建議**：針對素食者（Vegetarian / Vegan）與無麩質（Gluten-Free）需求，新增如何在餐廳溝通與點餐的指南。
-   - **當地求生與緊急聯絡**：補上各國緊急聯絡電話（如 112）、駐外館處聯繫方式，以及附上簡單的幾個當地母語問候/求生實用句。
-2. **在地導航與內容精確性修正**：
-   - 為所有主要的景點與特色餐廳加上直接連動至 **Google Maps 的超連結**（支援 `target="_blank"`），讓手機讀者能一鍵打開導航。
-   - 修正文中少數的資訊不對稱（如交通卡一小節提及 Lisboa Card 為 €21，但貼士區為 €19，需統整至最新動態定價）。
+---
 
-## 📍 階段四：進階工程化與自動化擴展
+## 🔄 待辦：下一輪迭代
 
-**目標：將「純手工維護」升級為「可擴展架構」，解決數千行代碼帶來的 Git 難以比對問題。**
+### 🧭 旅遊專家
 
-1. **資料與展示分離**：
-   - 將票價、交通花費等頻繁變更的數據，抽離至獨立的 `data/prices.json` 中管理，避免未來更新時必須翻找茫茫的 HTML 結構。
-2. **靜態網站產生器（SSG）導入評估**：
-   - 考慮導入如 Astro 或是 Eleventy 框架，將龐大的 `index.html` 拆解成獨立元件（如 `Header.astro`, `CountryCard.astro`），由建構系統負責組裝，大幅提升專案維護效益。
-3. **持續整合（CI）流程建立**：
-   - 於 GitHub Actions 中加入 `htmlhint`（保證 HTML 語法正確）、自動化失效連結檢查（確保所附的官方來源未斷鏈），甚至引入 `pa11y` 自動測試無障礙評分。
+- [ ] **景點 Google Maps 連結**
+  為各國主要景點（聖家堂、阿爾罕布拉宮、貝倫塔等）加上 `<a href="..." target="_blank" rel="noopener">` 導航連結，方便手機一鍵開啟
+- [ ] **素食 / 特殊飲食補充**
+  各城市補充 1–2 間素食友善或有英文菜單的餐廳選項
+- [ ] **定期票價校對**（每年出發前更新）
+  - Lisboa Card 官網最新成人票價（官網：visitlisboa.com）
+  - Hola BCN、Madrid Tarjeta Turística 票價
+  - Pass SUD AZUR、Paris Visite 票價
+  - 廉航參考票價（Ryanair / Vueling / TAP）
+
+### 📱 前端工程師
+
+- [ ] **剩餘 inline style 替換為 utility class**
+  全文現有 180+ 處 `style="margin-top:...px"` → 改用 `.mt-sm/md/lg/xl`
+  優先清理交通分頁（`ttab-*`）與精品購物分頁（`ltab-*`）
+
+- [ ] **區段 `<h3>` 標題替換為 `.section-h3` class**
+  現況：`<h3 style="font-family:'Playfair Display',serif; color:var(--terra); margin:28px 0 16px">` 等散落各處
+  目標：統一用 `<h3 class="section-h3">` / `<h3 class="section-h3 pt">` / `<h3 class="section-h3 fr">`
+
+- [ ] **`.attraction-card` 色彩改用 CSS 變數**
+  現況：`.attraction-card.pt { border-left-color: #006600; }` 重複宣告
+  目標：改用 `data-country` attribute 搭配 CSS 變數減少重複
+
+  ```css
+  /* 目標結構 */
+  .attraction-card { border-left-color: var(--accent, var(--terra)); }
+  [data-country="pt"] { --accent: #006600; }
+  [data-country="fr"] { --accent: #002395; }
+  ```
+
+### ⚙️ 後端工程師
+
+- [ ] **抽取 CSS → `assets/css/style.css`**
+  將 `index.html` 內 `<style>` 區塊（目前約 800 行）移至獨立檔案
+  ```
+  europe-travel/
+  ├── assets/
+  │   └── css/
+  │       └── style.css
+  └── index.html  ← 僅留 <link rel="stylesheet" href="assets/css/style.css">
+  ```
+
+- [ ] **抽取 JS → `assets/js/main.js`**
+  將 `<script>` 區塊移至獨立檔案
+  ```
+  europe-travel/
+  ├── assets/
+  │   └── js/
+  │       └── main.js
+  └── index.html  ← 僅留 <script src="assets/js/main.js" defer></script>
+  ```
+  > 加上 `defer` 屬性，確保 DOM 載入後才執行，避免 `getElementById` 返回 null
+
+- [ ] **事件委託取代 inline onclick**
+  現況：27 個按鈕仍使用 `onclick="..."` inline handler
+  目標：`main.js` 改用事件委託，HTML 改用 `data-tab` / `data-container` 屬性
+  ```js
+  // 目標寫法
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-tab]');
+    if (!btn) return;
+    showTabPanel(btn.dataset.tab, btn);
+  });
+  ```
+
+---
+
+## 📌 長期評估（視需求決定是否執行）
+
+### 資料與展示分離
+將頻繁變動的票價數據抽離至 `data/prices.json`，避免每次更新都需翻找 HTML：
+```
+data/
+├── prices.json      ← 各城市票卡價格、退稅門檻
+└── attractions.json ← 景點名稱、開放時間、門票價格
+```
+
+### 靜態網站產生器（SSG）評估
+當 `index.html` 超過 5,000 行或需要新增第四個國家時，考慮導入 Astro 或 Eleventy，
+將重複結構（`attraction-card`、`food-card`）改為可複用元件。
+目前規模尚在手工維護的合理範圍內，**暫不優先執行**。
+
+---
+
+## 📋 校對清單（每次出發前執行）
+
+出發前 **1–2 個月**，逐一查閱官方網站確認下列數據仍為最新：
+
+- [ ] Lisboa Card 票價（visitlisboa.com）
+- [ ] Hola Barcelona 票價（holabarcelona.com）
+- [ ] 馬德里旅遊票 Tarjeta Turística 票價（metromadrid.es）
+- [ ] Paris Visite / Navigo 票價（ratp.fr）
+- [ ] Pass SUD AZUR 票價（zou.maregionsud.fr）
+- [ ] 法國 ETIAS 申請是否已正式上線（travel-europe.europa.eu）
+- [ ] 聖家堂、阿爾罕布拉宮門票是否需提前購買及目前票價
+- [ ] 台灣駐西班牙 / 葡萄牙辦事處聯絡方式是否有變更
+
+---
+
+*最後更新：2026-03-11 ｜ v2.1 三角色優化後*
