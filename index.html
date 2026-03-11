@@ -497,15 +497,23 @@
 
     .ctab-nav {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
       gap: 6px;
       border-bottom: 2px solid #E8DFC8;
       padding-bottom: 0;
       margin-bottom: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ctab-nav::-webkit-scrollbar {
+      display: none;
     }
 
     .ctab-btn {
       padding: 10px 20px;
+      min-height: 44px;
       border: 1px solid #D8CEB8;
       border-bottom: none;
       background: var(--parchment);
@@ -519,6 +527,7 @@
       position: relative;
       top: 2px;
       white-space: nowrap;
+      touch-action: manipulation;
     }
 
     .ctab-btn:hover {
@@ -564,13 +573,22 @@
 
     .stab-nav {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
       gap: 6px;
       margin-bottom: 20px;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .stab-nav::-webkit-scrollbar {
+      display: none;
     }
 
     .stab-btn {
-      padding: 7px 16px;
+      padding: 8px 18px;
+      min-height: 44px;
       border: 1px solid #D8CEB8;
       background: var(--parchment);
       color: var(--slate);
@@ -580,6 +598,7 @@
       border-radius: 20px;
       transition: all .2s;
       white-space: nowrap;
+      touch-action: manipulation;
     }
 
     .stab-btn:hover {
@@ -731,6 +750,37 @@
       padding-bottom: 20px;
     }
 
+    /* ─── UTILITY CLASSES ─── */
+    .mt-0  { margin-top: 0 !important; }
+    .mt-sm { margin-top: 10px; }
+    .mt-md { margin-top: 16px; }
+    .mt-lg { margin-top: 20px; }
+    .mt-xl { margin-top: 28px; }
+    .section-h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--terra);
+      margin: 20px 0 8px;
+    }
+    .section-h3.pt { color: #006600; }
+    .section-h3.fr { color: #002395; }
+    /* 迪士尼雙欄 grid */
+    .park-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .park-card-pink {
+      background: linear-gradient(135deg, #FF9EC7, #FFB8D4);
+      border-radius: 4px;
+      padding: 18px;
+    }
+    .park-card-purple {
+      background: linear-gradient(135deg, #4A2080, #6B35B0);
+      border-radius: 4px;
+      padding: 18px;
+    }
+
     @media (max-width: 600px) {
       .hero {
         padding: 40px 16px 36px;
@@ -745,6 +795,45 @@
       }
 
       .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* ─── 手機優化 ─── */
+      .ctab-panel {
+        padding: 16px 14px;
+      }
+
+      .ctab-btn {
+        font-size: 12.5px;
+        padding: 8px 14px;
+      }
+
+      table {
+        font-size: 12.5px;
+      }
+
+      thead th {
+        padding: 10px 10px;
+        font-size: 10px;
+      }
+
+      tbody td {
+        padding: 8px 10px;
+      }
+
+      .attraction-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-header {
+        padding: 36px 0 8px;
+      }
+
+      .park-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -945,12 +1034,12 @@
 
     <div class="ctab-wrap" id="transport-wrap">
       <div class="ctab-nav">
-        <button class="ctab-btn multi active" onclick="showTtab('cross',this)">🌍 跨國移動</button>
-        <button class="ctab-btn es" onclick="showTtab('es-t',this)">🇪🇸 西班牙</button>
-        <button class="ctab-btn pt" onclick="showTtab('pt-t',this)">🇵🇹 葡萄牙</button>
-        <button class="ctab-btn fr" onclick="showTtab('fr-t',this)">🇫🇷 法國南法</button>
-        <button class="ctab-btn" onclick="showTtab('summary',this)">📊 票卡總整理</button>
-        <button class="ctab-btn" onclick="showTtab('apps',this)">📱 實用 App</button>
+        <button class="ctab-btn multi active" onclick="showTabPanel('ttab-cross',this)">🌍 跨國移動</button>
+        <button class="ctab-btn es" onclick="showTabPanel('ttab-es-t',this)">🇪🇸 西班牙</button>
+        <button class="ctab-btn pt" onclick="showTabPanel('ttab-pt-t',this)">🇵🇹 葡萄牙</button>
+        <button class="ctab-btn fr" onclick="showTabPanel('ttab-fr-t',this)">🇫🇷 法國南法</button>
+        <button class="ctab-btn" onclick="showTabPanel('ttab-summary',this)">📊 票卡總整理</button>
+        <button class="ctab-btn" onclick="showTabPanel('ttab-apps',this)">📱 實用 App</button>
       </div>
 
       <!-- ── 跨國移動 ── -->
@@ -1857,9 +1946,9 @@
     <div class="ctab-wrap">
       <!-- ── 國家分頁按鈕 ── -->
       <div class="ctab-nav">
-        <button class="ctab-btn es active" onclick="showCtab('es',this)">🇪🇸 西班牙</button>
-        <button class="ctab-btn pt" onclick="showCtab('pt',this)">🇵🇹 葡萄牙</button>
-        <button class="ctab-btn fr" onclick="showCtab('fr',this)">🇫🇷 南法</button>
+        <button class="ctab-btn es active" onclick="showTabPanel('ctab-es',this)">🇪🇸 西班牙</button>
+        <button class="ctab-btn pt" onclick="showTabPanel('ctab-pt',this)">🇵🇹 葡萄牙</button>
+        <button class="ctab-btn fr" onclick="showTabPanel('ctab-fr',this)">🇫🇷 南法</button>
       </div>
 
       <!-- ════════════════════════════════
@@ -1867,10 +1956,10 @@
     ════════════════════════════════ -->
       <div id="ctab-es" class="ctab-panel active">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showStab('es','sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showStab('es','food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showStab('es','festival',this)">🎉 節慶活動</button>
-          <button class="stab-btn" onclick="showStab('es','tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-es','es-sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-festival',this)">🎉 節慶活動</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-es','es-tips',this)">💡 實用貼士</button>
         </div>
 
         <!-- 景點 -->
@@ -2212,9 +2301,9 @@
     ════════════════════════════════ -->
       <div id="ctab-pt" class="ctab-panel">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showStab('pt','sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showStab('pt','food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showStab('pt','tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-pt','pt-sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-pt','pt-tips',this)">💡 實用貼士</button>
         </div>
 
         <!-- 景點 -->
@@ -2447,15 +2536,15 @@
             <div class="info-block sage">
               <h4>🎫 城市交通卡</h4>
               <ul>
-                <li><strong>里斯本卡 Lisboa Card</strong>：24hr €19，無限搭乘地鐵＋電車＋公車，含貝倫塔等景點免費，超值</li>
+                <li><strong>里斯本卡 Lisboa Card</strong>：24hr <strong>€21</strong>，無限搭乘地鐵＋電車＋公車，含貝倫塔等景點免費，超值（48hr €35 / 72hr €44）</li>
                 <li><strong>波多卡 Porto Card</strong>：同樣概念，含地鐵無限搭乘</li>
-                <li><strong>navigante 卡</strong>：類似悠遊卡，不需要景點優惠時使用</li>
+                <li><strong>Navegante 卡</strong>：類似悠遊卡，不需景點優惠時使用（卡費 €0.50，Zapping 每次 €1.61）</li>
               </ul>
             </div>
             <div class="info-block azul">
               <h4>🚆 城市間交通</h4>
               <ul>
-                <li>里斯本 ⟷ 波多：IC 火車約 <strong>3.5 小時</strong>，建議提早訂位</li>
+                <li>里斯本 ⟷ 波多：Alfa Pendular 約 <strong>2h50m</strong>（€34.6）、IC 約 <strong>3h13m</strong>（€27.4），建議提前 2–4 週訂早鳥票</li>
                 <li>里斯本 ⟷ 辛特拉：普通火車約 <strong>40 分鐘</strong>，CP 鐵路</li>
               </ul>
             </div>
@@ -2476,10 +2565,10 @@
     ════════════════════════════════ -->
       <div id="ctab-fr" class="ctab-panel">
         <div class="stab-nav">
-          <button class="stab-btn active" onclick="showStab('fr','sights',this)">🏙 景點行程</button>
-          <button class="stab-btn" onclick="showStab('fr','food',this)">🍽 必吃美食</button>
-          <button class="stab-btn" onclick="showStab('fr','festival',this)">🎉 節慶活動</button>
-          <button class="stab-btn" onclick="showStab('fr','tips',this)">💡 實用貼士</button>
+          <button class="stab-btn active" onclick="showSubTab('ctab-fr','fr-sights',this)">🏙 景點行程</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-food',this)">🍽 必吃美食</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-festival',this)">🎉 節慶活動</button>
+          <button class="stab-btn" onclick="showSubTab('ctab-fr','fr-tips',this)">💡 實用貼士</button>
         </div>
 
         <!-- 景點 -->
@@ -2811,11 +2900,11 @@
     </div>
     <div id="ctab-disney" style="background:white; border:1px solid #E8DFC8; padding:24px; margin-top:12px">
       <div class="stab-nav">
-        <button class="stab-btn active" onclick="showStab('disney','intro',this)">🎡 園區介紹</button>
-        <button class="stab-btn" onclick="showStab('disney','rides',this)">🎢 必玩設施</button>
-        <button class="stab-btn" onclick="showStab('disney','tickets',this)">🎟 票價攻略</button>
-        <button class="stab-btn" onclick="showStab('disney','dining',this)">🍔 餐廳</button>
-        <button class="stab-btn" onclick="showStab('disney','tips',this)">💡 行程貼士</button>
+        <button class="stab-btn active" onclick="showSubTab('ctab-disney','disney-intro',this)">🎡 園區介紹</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-rides',this)">🎢 必玩設施</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tickets',this)">🎟 票價攻略</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-dining',this)">🍔 餐廳</button>
+        <button class="stab-btn" onclick="showSubTab('ctab-disney','disney-tips',this)">💡 行程貼士</button>
       </div>
 
       <!-- 園區介紹 -->
@@ -2845,10 +2934,9 @@
           </div>
         </div>
 
-        <div style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:14px">
-          <div style="background:linear-gradient(135deg,#FF9EC7,#FFB8D4); border-radius:4px; padding:18px">
-            <h4 style="font-family:'Playfair Display',serif; color:#6B003A; margin-bottom:10px">1️⃣ 迪士尼樂園 Disneyland
-              Park</h4>
+        <div class="park-grid">
+          <div class="park-card-pink">
+            <h4 style="font-family:'Playfair Display',serif; color:#6B003A; margin-bottom:10px">1️⃣ 迪士尼樂園 Disneyland Park</h4>
             <p style="font-size:13px; color:#4A0028">童話故事 · 公主奇幻 · 粉色睡美人城堡</p>
             <ul style="font-size:12.5px; padding-left:16px; margin-top:8px; color:#3A0020">
               <li>Main Street U.S.A.（購物、遊行）</li>
@@ -2859,9 +2947,8 @@
             </ul>
             <p style="font-size:12px; margin-top:8px; color:#6B003A">💡 可進入城堡內部參觀彩繪玻璃及地下睡龍巢穴</p>
           </div>
-          <div style="background:linear-gradient(135deg,#4A2080,#6B35B0); border-radius:4px; padding:18px">
-            <h4 style="font-family:'Playfair Display',serif; color:#FFD4FF; margin-bottom:10px">2️⃣ 華特迪士尼影城 Walt Disney
-              Studios</h4>
+          <div class="park-card-purple">
+            <h4 style="font-family:'Playfair Display',serif; color:#FFD4FF; margin-bottom:10px">2️⃣ 華特迪士尼影城 Walt Disney Studios</h4>
             <p style="font-size:13px; color:#DDB0FF">電影世界 · 漫威英雄 · 刺激設施</p>
             <ul style="font-size:12.5px; padding-left:16px; margin-top:8px; color:#E8C4FF">
               <li>復仇者聯盟園區 Avengers Campus（2022開放）</li>
@@ -3350,8 +3437,8 @@
 
     <div class="ctab-wrap">
       <div class="ctab-nav">
-        <button class="ctab-btn active" onclick="showLtab('brands',this)">💎 精品購物指南</button>
-        <button class="ctab-btn" onclick="showLtab('cp',this)">📊 三國品牌 CP 值</button>
+        <button class="ctab-btn active" onclick="showTabPanel('ltab-brands',this)">💎 精品購物指南</button>
+        <button class="ctab-btn" onclick="showTabPanel('ltab-cp',this)">📊 三國品牌 CP 值</button>
       </div>
       <div id="ltab-brands" class="ctab-panel active">
         <div class="info-grid" style="margin-top:20px">
@@ -4096,6 +4183,27 @@
           <li>機票改退票規定事先確認</li>
         </ul>
       </div>
+      <div class="info-block rose">
+        <h4>🆘 緊急聯絡速查</h4>
+        <ul>
+          <li>歐盟統一緊急電話：<strong>112</strong>（警察 / 救護 / 消防）</li>
+          <li>🇪🇸 西班牙警察：091 / 警衛隊：062</li>
+          <li>🇵🇹 葡萄牙警察：213 421 634</li>
+          <li>🇫🇷 法國警察：17 / SAMU 急救：15</li>
+          <li>台灣駐西班牙辦事處：+34 91 571 6969</li>
+          <li>台灣駐葡萄牙辦事處：+351 213 936 910</li>
+        </ul>
+      </div>
+      <div class="info-block sage">
+        <h4>🗣 當地求生語</h4>
+        <ul>
+          <li>🇪🇸 救命！→ <em>¡Socorro!</em> / 失竊 → <em>Me han robado</em></li>
+          <li>🇵🇹 請幫我 → <em>Ajude-me, por favor</em></li>
+          <li>🇫🇷 我迷路了 → <em>Je suis perdu(e)</em></li>
+          <li>英語「Do you speak English?」在主要景點通用</li>
+          <li>Google 翻譯離線下載西 / 葡 / 法語包備用</li>
+        </ul>
+      </div>
     </div>
 
 
@@ -4108,39 +4216,21 @@
   </footer>
 
   <script>
-    /* ── 精品購物雙層分頁切換 ── */
-    function showLtab(id, btn) {
+    /* ── 統一上層分頁切換（交通 / 各國 / 精品購物）── */
+    function showTabPanel(id, btn) {
       var wrap = btn.closest('.ctab-wrap');
       wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
       wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById('ltab-' + id).classList.add('active');
+      document.getElementById(id).classList.add('active');
       btn.classList.add('active');
     }
 
-    /* ── 各國攻略分頁切換（scoped 至所屬 .ctab-wrap） ── */
-    function showCtab(id, btn) {
-      var wrap = btn.closest('.ctab-wrap');
-      wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
-      wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById('ctab-' + id).classList.add('active');
-      btn.classList.add('active');
-    }
-
-    /* ── 交通分頁切換（scoped 至所屬 .ctab-wrap） ── */
-    function showTtab(id, btn) {
-      var wrap = btn.closest('.ctab-wrap');
-      wrap.querySelectorAll('.ctab-panel').forEach(el => el.classList.remove('active'));
-      wrap.querySelectorAll('.ctab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById('ttab-' + id).classList.add('active');
-      btn.classList.add('active');
-    }
-
-    /* ── 子分頁切換（每個國家獨立命名空間） ── */
-    function showStab(country, tab, btn) {
-      var panel = document.getElementById('ctab-' + country);
-      panel.querySelectorAll('.stab-panel').forEach(el => el.classList.remove('active'));
-      panel.querySelectorAll('.stab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById(country + '-' + tab).classList.add('active');
+    /* ── 統一子分頁切換（各國景點 / 迪士尼等）── */
+    function showSubTab(containerId, tabId, btn) {
+      var container = document.getElementById(containerId);
+      container.querySelectorAll('.stab-panel').forEach(el => el.classList.remove('active'));
+      container.querySelectorAll('.stab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
       btn.classList.add('active');
     }
   </script>
