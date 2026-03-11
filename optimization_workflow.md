@@ -47,6 +47,7 @@
 | Utility classes | 無 | 新增 `.mt-0/sm/md/lg/xl`、`.park-grid`、`.park-card-*`、`.section-h3` |
 | 迪士尼 inline style | `style="display:grid; background:linear-gradient(...)"` | 改用 CSS class |
 | 分頁與動態佈局邏輯 | 全網頁依賴 CSS media query | 導入 JavaScript 分頁控制 `switchPage()`、Resize 監測與手勢滑動事件監聽 |
+| 水平滑動體驗 (Tabs) | 容易滑過頭或卡在中間，易誤觸換頁 | 1. 新增 `scroll-snap-type` 磁吸對齊<br>2. 導入 **Safe Zone** 防誤觸邏輯（滑動 tab 時忽略換頁）<br>3. 提高滑動門檻 (Threshold) 至 120px |
 
 ---
 
@@ -91,8 +92,8 @@
 - [ ] **支援深色模式 (Dark Mode)**
   導入 `@media (prefers-color-scheme: dark)`，把 `--cream`, `--ink`, `--parchment` 等變數自動轉換為深灰與黑的組合，以降低用戶在歐洲夜間巴士查資料時的螢幕刺眼度。
 
-- [ ] **Tab 標籤的 Scroll Snapping**
-  在 `.ctab-nav` 加入 `scroll-snap-type: x mandatory`，讓使用者在滑動票卡或景點標籤時可以有自動對齊（Snap）的磁吸手感。
+- [ ] **iOS 下拉回彈體驗優化 (Overscroll)**
+  設定 `overscroll-behavior-y: none` 在 body 上，避免在手機版（尤其是 iOS）滑到頂部或底部時觸發整頁拉動的 Safari 原生回彈效果，讓整體更像 Native App。
 
 ### ⚙️ 後端工程師
 
