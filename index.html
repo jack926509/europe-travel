@@ -4590,16 +4590,33 @@
 
     /* ── Swipe gesture support ── */
     var touchStartX = 0;
-    var touchEndX = 0;
     var touchStartY = 0;
+    var touchEndX = 0;
     var touchEndY = 0;
+    var swipeIgnored = false;
 
     document.addEventListener('touchstart', function(e) {
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
+      
+      // Prevent page swipe if touching a horizontally scrollable area (tabs, tables, etc.)
+      var target = e.target;
+      swipeIgnored = false;
+      while (target && target !== document.body) {
+        var style = window.getComputedStyle(target);
+        if (style.overflowX === 'auto' || style.overflowX === 'scroll' || 
+            target.classList.contains('ctab-nav') || 
+            target.classList.contains('stab-nav') || 
+            target.classList.contains('table-wrap')) {
+          swipeIgnored = true;
+          break;
+        }
+        target = target.parentElement;
+      }
     }, { passive: true });
 
     document.addEventListener('touchend', function(e) {
+      if (swipeIgnored) return;
       touchEndX = e.changedTouches[0].screenX;
       touchEndY = e.changedTouches[0].screenY;
       handleSwipe();
@@ -4608,8 +4625,10 @@
     function handleSwipe() {
       var diffX = touchStartX - touchEndX;
       var diffY = Math.abs(touchStartY - touchEndY);
-      // Only trigger on horizontal swipes (not vertical scroll)
-      if (Math.abs(diffX) < 80 || diffY > Math.abs(diffX) * 0.7) return;
+      
+      // Increase threshold to 120 to avoid accidental page swaps, and lower diagonal tolerance
+      if (Math.abs(diffX) < 120 || diffY > Math.abs(diffX) * 0.5) return;
+      
       // Only on mobile
       if (window.innerWidth > 768) return;
 
