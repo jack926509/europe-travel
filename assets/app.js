@@ -1,32 +1,5 @@
 'use strict';
 (() => {
-  // ---- 深色模式：跟隨系統，使用者可自行覆寫並記住選擇 ----
-  const root = document.documentElement;
-  const toggle = document.querySelector('#theme-toggle');
-  if (toggle) {
-    const system = window.matchMedia('(prefers-color-scheme: dark)');
-    const label = toggle.querySelector('.theme-toggle-text');
-    const isDark = () => (root.dataset.theme ? root.dataset.theme === 'dark' : system.matches);
-    const render = () => {
-      const dark = isDark();
-      toggle.setAttribute('aria-pressed', String(dark));
-      const text = dark ? '淺色模式' : '深色模式';
-      if (label) label.textContent = text;
-      toggle.title = `切換為${text}`;
-      toggle.setAttribute('aria-label', `切換為${text}`);
-    };
-    toggle.hidden = false;
-    render();
-    toggle.addEventListener('click', () => {
-      const next = isDark() ? 'light' : 'dark';
-      root.dataset.theme = next;
-      try { localStorage.setItem('fep-theme', next); } catch { /* 無痕模式下略過保存 */ }
-      render();
-    });
-    // 尚未手動覆寫時，系統設定改變要跟著更新按鈕文字。
-    system.addEventListener('change', () => { if (!root.dataset.theme) render(); });
-  }
-
   // ---- 主導覽：把目前頁面捲進視野，並提示左右還有項目 ----
   const nav = document.querySelector('.main-nav');
   if (nav) {
