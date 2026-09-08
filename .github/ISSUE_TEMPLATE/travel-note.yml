@@ -1,0 +1,33 @@
+name: 收集旅遊資料
+description: 保存法國、西班牙、葡萄牙的景點、交通、餐飲與購物來源
+title: "[旅遊收集] "
+body:
+  - type: markdown
+    attributes:
+      value: "此專案公開。請勿填入護照、訂位代號、信用卡或私人訂單。"
+  - type: dropdown
+    id: country
+    attributes:
+      label: 國家
+      options: [法國, 西班牙, 葡萄牙, 跨國／通用]
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: 城市
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 來源網址
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 重點與待確認項目
+    validations:
+      required: true
