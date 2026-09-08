@@ -12,7 +12,7 @@
 | `CDG-BCN` | 舊內容來源，後續更新集中至主專案 | 巴黎至巴塞隆納路線拆為 `routes.html` 與 `content/route-modules.json` 的 16 個城市模組 |
 | `disneyland-paris` | 舊內容來源，後續更新集中至主專案 | 交通、票務、設施、餐廳與購物合入 `disney.html` 與 `content/disney-legacy.html` |
 
-截至 2026-09-08，本整合版及 README 更新位於 [PR #4](https://github.com/jack926509/europe-travel/pull/4)，仍為草稿、尚未合併至 `main`；不代表正式站已更新。兩個舊專案尚未刪除或封存。PR 合併並確認正式站後，請同步更新本段狀態。
+本整合版已於 2026-09-08 透過 [PR #4](https://github.com/jack926509/europe-travel/pull/4) 合併至 `main`。兩個舊專案目前保留，後續內容統一在本專案維護。
 
 ## 頁面
 
