@@ -2,7 +2,9 @@
 
 以 **[jack926509/europe-travel](https://github.com/jack926509/europe-travel)** 為唯一主專案，整合法國、西班牙與葡萄牙的旅遊攻略，作為持續收集、整理與更新的旅遊資料庫，不綁定特定出發日期。
 
-後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。\n\n**正式網站：[法西葡旅遊攻略](https://jack926509.github.io/europe-travel/)**
+後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。
+
+**現行網站：[法西葡旅遊攻略](https://jack926509.github.io/europe-travel/)**
 
 ## 專案整合狀態
 
@@ -47,6 +49,21 @@ node --check assets/app.js
 - 產出的根目錄 HTML 與索引一併提交，既有靜態部署方式可沿用。
 
 本機以 HTTP 預覽，例如 `python3 -m http.server 8000`。直接以 `file://` 開啟時，瀏覽器可能禁止搜尋索引的 fetch；頁面與導覽不依賴 JavaScript。
+
+## Cloudflare Pages 部署
+
+Cloudflare Pages 使用以下設定連接本 repository：
+
+| 設定 | 值 |
+| --- | --- |
+| Production branch | `main` |
+| Root directory | `/` |
+| Build command | `python3 scripts/build_cloudflare.py` |
+| Build output directory | `dist` |
+| Pages project name | `europe-travel` |
+| Custom domain | `europetrip.xiehnet.com` |
+
+`scripts/build_cloudflare.py` 會先重建網站，再把 11 個 HTML 頁面、搜尋索引、樣式、程式與圖片整理到 `dist/`。`wrangler.jsonc` 也使用相同的輸出目錄，供 Cloudflare Pages 直接部署。
 
 ## 收集 → 查核 → 更新
 
