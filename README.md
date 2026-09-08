@@ -2,7 +2,7 @@
 
 以 **[jack926509/europe-travel](https://github.com/jack926509/europe-travel)** 為唯一主專案，整合法國、西班牙與葡萄牙的旅遊攻略，作為持續收集、整理與更新的旅遊資料庫，不綁定特定出發日期。
 
-後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。
+後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。\n\n**正式網站：[法西葡旅遊攻略](https://jack926509.github.io/europe-travel/)**
 
 ## 專案整合狀態
 
