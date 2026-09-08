@@ -1,6 +1,18 @@
 # 法國・西班牙・葡萄牙旅遊攻略
 
-整合 `europe-travel`、`CDG-BCN` 與 `disneyland-paris`，作為不綁定出發日期的旅遊資料庫。維護主專案為本 repository。
+以 **[jack926509/europe-travel](https://github.com/jack926509/europe-travel)** 為唯一主專案，整合法國、西班牙與葡萄牙的旅遊攻略，作為持續收集、整理與更新的旅遊資料庫，不綁定特定出發日期。
+
+後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。
+
+## 專案整合狀態
+
+| 專案 | 定位 | 內容去向 |
+| --- | --- | --- |
+| `europe-travel` | 唯一主專案 | 法西葡攻略、資料收集、共用頁面與後續更新 |
+| `CDG-BCN` | 舊內容來源，後續更新集中至主專案 | 巴黎至巴塞隆納路線拆為 `routes.html` 與 `content/route-modules.json` 的 16 個城市模組 |
+| `disneyland-paris` | 舊內容來源，後續更新集中至主專案 | 交通、票務、設施、餐廳與購物合入 `disney.html` 與 `content/disney-legacy.html` |
+
+截至 2026-09-08，本整合版及 README 更新位於 [PR #4](https://github.com/jack926509/europe-travel/pull/4)，仍為草稿、尚未合併至 `main`；不代表正式站已更新。兩個舊專案尚未刪除或封存。PR 合併並確認正式站後，請同步更新本段狀態。
 
 ## 頁面
 
@@ -57,6 +69,19 @@ node --check assets/app.js
 
 ## 整合與相容性
 
-沒有刪除或封存另外兩個 repository；舊版首頁可從 Git 歷史取得。原主站 `#visa`、`#flight`、`#transport`、`#destinations`、`#disney`、`#souvenir`、`#luxury`、`#taxrefund`、`#tips` 入口會導向對應新頁。其他兩個舊站的轉址留待確認正式網址後處理。
+主站的舊版首頁可從本專案 Git 歷史取得。原主站 `#visa`、`#flight`、`#transport`、`#destinations`、`#disney`、`#souvenir`、`#luxury`、`#taxrefund`、`#tips` 入口會導向對應新頁。
+
+整合後的頁面、城市模組與搜尋索引存放在主專案，建置不需讀取另外兩個 repository。但本次採內容整理，**沒有將兩個舊專案的完整 Git 歷史、Issues、PR 或部署設定移入主專案**；原始版本仍在各來源專案。
+
+### 另外兩個專案可以刪除嗎？
+
+完成整合上線及備份後可以考慮刪除；目前尚未完成下列事項，先保留。若只希望集中維護，可在切換完成後將舊專案封存（Archive），保留原始內容與歷史供查閱。
+
+1. 合併 PR #4，確認 `europe-travel` 正式站的攻略、路線、迪士尼、搜尋與資料收集入口正常。
+2. 備份兩個舊專案的完整 Git 歷史，以及需要保留的 Issues、PR、附件與部署設定；本次整理的攻略內容不能取代完整備份。
+3. 確認舊站的部署、網域及分享連結，決定保留轉址或停止使用；刪除 repository 不會自動把舊網址導向主站。
+4. 若確定刪除，先更新本專案更新頁的舊來源連結與「原始專案仍保留」說明，並記錄備份位置及來源版本。
+
+以上為退役步驟，尚未執行刪除、封存或轉址。
 
 詳細來源映射與後續工作見 `docs/MIGRATION.md`。照片為 Joe deSousa 的巴黎塞納河全景，CC0，來源列於更新頁。
