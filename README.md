@@ -55,7 +55,8 @@ node --check assets/app.js
 - `content/*-legacy.html`：原專案整理出的延伸閱讀，預設標示待複查。
 - `content/route-modules.json`：原 16 天景點模組，無出發日期。
 - `docs/SOURCES.md`：已查核規則、官方來源、適用範圍與重查時機。
-- `assets/site.css`、`assets/app.js`：共用樣式、全文搜尋與收集表單。
+- `assets/site.css`：共用樣式。淺／深色以 `:root` 的語意 token 切換，元件規則共用同一組變數。
+- `assets/app.js`：深色模式切換、導覽與表格的捲動提示、頁內章節跳轉、全文搜尋與收集表單。
 - `assets/search-index.json`：建置時產生的全文索引，不要手動修改。
 - 產出的根目錄 HTML 與索引一併提交，既有靜態部署方式可沿用。
 

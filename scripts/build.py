@@ -3,10 +3,12 @@ from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
 import json
+import re
 ROOT=Path(__file__).resolve().parents[1]
 CONTENT=ROOT/'content'
 DATE='2026-09-08'
 REPO='https://github.com/jack926509/europe-travel'
+SITE='https://europetrip.xiehnet.com'
 NAV=[('index','攻略首頁'),('france','法國'),('spain','西班牙'),('portugal','葡萄牙'),('disney','巴黎迪士尼'),('routes','路線靈感'),('transport','交通'),('prep','行前準備'),('shopping','購物'),('collection','收集資料'),('updates','更新紀錄')]
 PAGES={}
 def link(url,title):return f'<a href="{escape(url,quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
@@ -19,8 +21,8 @@ def legacy(name,title='延伸閱讀・原專案資料'):
  return f'<details class="legacy"><summary>{title}</summary><div class="notice"><strong>整合筆記・部分內容仍會變動</strong><p>交通票價、退稅門檻、迪士尼票務及已發現的矛盾已於 {DATE} 更新；店家價格、營業時間、節慶日期與主觀推薦仍須在使用前查看官方頁。每個已查核項目的來源列在<a href="updates.html">更新紀錄</a>。</p></div><div class="legacy-body">'+(CONTENT/(name+'-legacy.html')).read_text()+'</div></details>'
 def add(slug,title,sub,body):PAGES[slug]=(title,sub,body)
 def sources(items):return '<p class="source-line">官方查詢：'+' · '.join(link(u,t) for t,u in items)+'</p>'
-add('index','法西葡，慢慢收集。','法國・西班牙・葡萄牙｜一份隨旅程長大的攻略', '''<div class="search-area"><label for="guide-search">想找哪個城市或主題？</label><div class="search-row"><input id="guide-search" type="search" placeholder="例如：巴黎、辛特拉、迪士尼、交通卡" autocomplete="off"><button id="search-clear" type="button">清除</button></div><p id="search-status" role="status">搜尋三國攻略、路線與專題內容</p><div id="search-results"></div></div>
-<figure class="panorama"><img src="assets/paris-seine.jpg" alt="巴黎塞納河、橋梁與西堤島的城市全景" width="3840" height="869"><figcaption>PARIS · 沿著塞納河，開始下一段旅程</figcaption></figure>'''+
+add('index','法西葡，慢慢收集。','法國・西班牙・葡萄牙｜一份隨旅程長大的攻略', '''<div class="search-area"><label for="guide-search">想找哪個城市或主題？</label><div class="search-row"><input id="guide-search" type="search" placeholder="例如：巴黎、辛特拉、迪士尼、交通卡" autocomplete="off"><kbd class="search-hint" aria-hidden="true">／</kbd><button id="search-clear" type="button">清除</button></div><p id="search-status" role="status">搜尋三國攻略、路線與專題內容</p><div id="search-results"></div></div>
+<figure class="panorama"><img src="assets/paris-seine.jpg" alt="巴黎塞納河、橋梁與西堤島的城市全景" width="3840" height="869" fetchpriority="high" decoding="async"><figcaption>PARIS · 沿著塞納河，開始下一段旅程</figcaption></figure>'''+
 section('從一個國家開始',grid([card('法國','巴黎與凡爾賽、里昂、普羅旺斯和蔚藍海岸。','france.html','01 / FRANCE'),card('西班牙','高第建築、馬德里藝術與安達魯西亞古城。','spain.html','02 / ESPAÑA'),card('葡萄牙','里斯本、辛特拉、波多與杜羅河沿岸。','portugal.html','03 / PORTUGAL')]))+
 section('把靈感，接成旅行',grid([card('巴黎迪士尼','交通、雙園選擇、設施、美食與購物集中閱讀。','disney.html','主題樂園'),card('可以拆開的路線','原本 16 天行程改為城市模組，依假期長短自由組合。','routes.html','不指定出發日'),card('收集下一個想去的地方','保存來源連結、城市與筆記，整理成之後會用到的攻略。','collection.html','旅遊資料收件匣')]))+
 '<div class="notice">已整合三個專案。旅遊日期不預設；資料查核日期仍保留。新整理內容與舊資料分開標示，可到<a href="updates.html">更新紀錄</a>查看查核範圍。</div>')
@@ -110,10 +112,14 @@ card('7–10 天｜一國深度','巴黎＋近郊＋里昂／南法擇一；或�
 card('12–16 天｜二國銜接','巴黎＋南法＋巴塞隆納，或馬德里＋安達魯西亞＋里斯本。優先選較少住宿搬遷的組合。'),
 card('18–24 天｜三國慢遊','巴黎 → 里斯本／辛特拉 → 波多 → 馬德里 → 巴塞隆納。跨國段依當期交通調整；想加塞維亞與格拉納達，另增天數或刪掉一個城市。')]))
 body+=section('原 16 天行程，改成 16 個可拆用模組','<p>保留原有城市、景點與地圖入口。一天可選一個模組，也可以拆成兩天；移動日減少付費景點，日落與入場時段依實際日期查詢。</p>')
+order=[]
+for m in mods:
+ if m['city'] not in order:order.append(m['city'])
+body+='<nav class="page-toc" aria-label="城市模組"><span class="page-toc-label">跳到城市</span><ul>'+''.join(f'<li><a href="#{escape(c)}">{escape(citynames.get(c,c))}</a></li>' for c in order)+'</ul></nav>'
 last=None
 for m in mods:
  city=m['city'];title=m['title'].replace('抵達巴黎 CDG・','巴黎・').replace('抵達里斯本・','里斯本・').replace('抵達塞維亞・','塞維亞・').replace(' + 離境 BCN','').replace('・全西班牙最難搶門票','').replace('羅浮宮 + 奧塞美術館 + 蒙馬特','巴黎藝術散步：羅浮宮／奧塞擇一＋蒙馬特')
- if city!=last:body+=f'<h2 id="{escape(city)}">{citynames.get(city,city)}</h2>';last=city
+ if city!=last:body+=f'<h2 id="{escape(city)}" tabindex="-1">{citynames.get(city,city)}</h2>';last=city
  body+=f'<article class="route-module" id="{m["id"]}"><h3>{escape(title)}</h3><p><span class="pill">建議 {escape(m["duration"])}</span></p><p><strong>順路排法：</strong>{escape(m["plan"])}</p><p><strong>先確認：</strong>{escape(m["booking"])}</p><p><strong>時間不足：</strong>{escape(m["cut"])}</p><ul>'+''.join('<li>'+link(p['url'],p['name'])+'</li>' for p in m['places'])+'</ul></article>'
 add('routes','路線靈感','不用綁日期，也能把想去的地方排順。',body)
 add('prep','行前準備','把預訂順序與重要官方入口放在一起。',section('確認日期後再完成', '<ol class="steps"><li>確認護照、入境資格與官方最新申請要求。</li><li>安排進出城市，再訂機票與可接受退改條件的住宿。</li><li>把有指定入場時段的景點列出：阿爾罕布拉宮、聖家堂、迪士尼與熱門博物館。</li><li>確認城際交通與機場接駁，保留轉乘緩衝。</li><li>出發前再檢查景點休館、罷工或交通異動，保存必要離線資料。</li></ol>')+
@@ -176,10 +182,27 @@ class Text(HTMLParser):
  def handle_data(self,s):self.parts.append(s)
 def plain(s):
  p=Text();p.feed(s);return ' '.join(' '.join(p.parts).split())
+SEC=re.compile(r'<section class="section"(?P<attrs>[^>]*)><h2>(?P<title>.*?)</h2>')
+def anchor(body):
+ """Give every top-level section a stable id and return the on-page table of contents."""
+ items=[]
+ def mark(m):
+  attrs,heading=m.group('attrs'),m.group('title')
+  sid=re.search(r'id="([^"]+)"',attrs)
+  sid=sid.group(1) if sid else 'sec-%d'%(len(items)+1)
+  items.append((sid,plain(heading)))
+  attrs=attrs if 'id="' in attrs else f' id="{sid}"'+attrs
+  return f'<section class="section"{attrs}><h2 tabindex="-1">{heading}</h2>'
+ body=SEC.sub(mark,body)
+ if len(items)<3:return body,''
+ links=''.join(f'<li><a href="#{sid}">{escape(t)}</a></li>' for sid,t in items)
+ return body,f'<nav class="page-toc" aria-label="頁內章節"><span class="page-toc-label">這一頁</span><ul>{links}</ul></nav>'
 index=[]
 for slug,(title,sub,body) in PAGES.items():
  nav=''.join(f'<a href="{s}.html"'+(' aria-current="page"' if s==slug else '')+f'>{t}</a>' for s,t in NAV)
- html=f'''<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#183c4a"><title>{escape(title)}｜法西葡旅遊攻略</title><meta name="description" content="{escape(sub)}"><link rel="stylesheet" href="assets/site.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到主要內容</a><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">F / E / P</span><span>法西葡旅遊攻略<small>TRAVEL FIELD NOTES</small></span></a><a class="collect-link" href="collection.html">＋ 收集資料</a></header><nav class="main-nav" aria-label="主要導覽">{nav}</nav><main id="main"><div class="page-heading"><p class="eyebrow">FRANCE / ESPAÑA / PORTUGAL</p><h1>{escape(title)}</h1><p>{escape(sub)}</p></div>{body}</main><footer><div><strong>法西葡旅遊攻略</strong><p>不預設出發日 · 保存靈感與來源 · 持續整理</p></div><div><a href="updates.html">更新與來源</a> · <a href="{REPO}/issues/new?title={escape('資料更新：'+title,quote=True)}" target="_blank" rel="noopener noreferrer">回報更新 ↗</a><p>內容整合 {DATE}；查核範圍見更新紀錄</p></div></footer></body></html>'''
+ body,toc=anchor(body)
+ url=f'{SITE}/{slug}.html'
+ html=f'''<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#183c4a"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1f26"><title>{escape(title)}｜法西葡旅遊攻略</title><meta name="description" content="{escape(sub)}"><link rel="canonical" href="{escape(url,quote=True)}"><meta property="og:type" content="website"><meta property="og:site_name" content="法西葡旅遊攻略"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="{escape(title,quote=True)}｜法西葡旅遊攻略"><meta property="og:description" content="{escape(sub,quote=True)}"><meta property="og:url" content="{escape(url,quote=True)}"><meta property="og:image" content="{SITE}/assets/paris-seine.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="assets/site.css"><script src="assets/app.js" defer></script><script>try{{var t=localStorage.getItem("fep-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}}catch(e){{}}</script></head><body><a class="skip" href="#main">跳到主要內容</a><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">F / E / P</span><span>法西葡旅遊攻略<small>TRAVEL FIELD NOTES</small></span></a><div class="header-actions"><button id="theme-toggle" class="theme-toggle" type="button" hidden aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true"></span><span class="theme-toggle-text">深色模式</span></button><a class="collect-link" href="collection.html">＋ 收集資料</a></div></header><div class="main-nav-wrap"><nav class="main-nav" aria-label="主要導覽">{nav}</nav></div><main id="main"><div class="page-heading"><p class="eyebrow">FRANCE / ESPAÑA / PORTUGAL</p><h1>{escape(title)}</h1><p>{escape(sub)}</p></div>{toc}{body}</main><footer><div><strong>法西葡旅遊攻略</strong><p>不預設出發日 · 保存靈感與來源 · 持續整理</p></div><div><a href="updates.html">更新與來源</a> · <a href="{REPO}/issues/new?title={escape('資料更新：'+title,quote=True)}" target="_blank" rel="noopener noreferrer">回報更新 ↗</a><p>內容整合 {DATE}；查核範圍見更新紀錄</p></div></footer><button id="to-top" class="to-top" type="button" hidden><span aria-hidden="true">↑</span><span class="sr-only">回到頁面頂端</span></button></body></html>'''
  (ROOT/(slug+'.html')).write_text(html)
  index.append({'title':title,'url':slug+'.html','text':plain(body)})
 (ROOT/'assets/search-index.json').write_text(json.dumps(index,ensure_ascii=False))
