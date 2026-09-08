@@ -1,0 +1,390 @@
+[
+  {
+    "id": "module-1",
+    "city": "paris",
+    "title": "抵達巴黎 CDG・鐵塔 + 香榭麗舍",
+    "places": [
+      {
+        "name": "香榭麗舍大道 Champs-Élysées",
+        "url": "https://www.google.com/maps/search/?api=1&query=Champs-Élysées+Paris"
+      },
+      {
+        "name": "凱旋門 Arc de Triomphe",
+        "url": "https://www.google.com/maps/search/?api=1&query=Arc+de+Triomphe+Paris"
+      },
+      {
+        "name": "Trocadéro 廣場",
+        "url": "https://www.google.com/maps/search/?api=1&query=Place+du+Trocadéro+Paris"
+      }
+    ]
+  },
+  {
+    "id": "module-2",
+    "city": "paris",
+    "title": "羅浮宮 + 奧塞美術館 + 蒙馬特",
+    "places": [
+      {
+        "name": "羅浮宮",
+        "url": "https://www.google.com/maps/search/?api=1&query=Musée+du+Louvre+Paris"
+      },
+      {
+        "name": "杜樂麗花園",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jardin+des+Tuileries+Paris"
+      },
+      {
+        "name": "奧塞美術館",
+        "url": "https://www.google.com/maps/search/?api=1&query=Musée+d'Orsay+Paris"
+      },
+      {
+        "name": "蒙馬特聖心堂 Sacré-Cœur",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sacré-Cœur+Paris"
+      },
+      {
+        "name": "小丘廣場",
+        "url": "https://www.google.com/maps/search/?api=1&query=Place+du+Tertre+Paris"
+      }
+    ]
+  },
+  {
+    "id": "module-3",
+    "city": "paris",
+    "title": "迪士尼樂園 Disneyland Paris 全天",
+    "places": [
+      {
+        "name": "迪士尼樂園 Disneyland Park",
+        "url": "https://www.google.com/maps/search/?api=1&query=Disneyland+Paris"
+      },
+      {
+        "name": "Walt Disney Studios Park",
+        "url": "https://www.google.com/maps/search/?api=1&query=Walt+Disney+Studios+Park+Paris"
+      }
+    ]
+  },
+  {
+    "id": "module-4",
+    "city": "lisbon",
+    "title": "抵達里斯本・阿爾法馬老城",
+    "places": [
+      {
+        "name": "阿爾法馬區 Alfama",
+        "url": "https://www.google.com/maps/search/?api=1&query=Alfama+Lisbon"
+      },
+      {
+        "name": "聖喬治城堡 Castelo de São Jorge",
+        "url": "https://www.google.com/maps/search/?api=1&query=Castelo+de+São+Jorge+Lisbon"
+      },
+      {
+        "name": "Portas do Sol 觀景台",
+        "url": "https://www.google.com/maps/search/?api=1&query=Miradouro+Portas+do+Sol+Lisbon"
+      },
+      {
+        "name": "Mesa de Frades",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mesa+de+Frades+Lisbon"
+      },
+      {
+        "name": "Tasca do Chico",
+        "url": "https://www.google.com/maps/search/?api=1&query=Tasca+do+Chico+Lisbon"
+      }
+    ]
+  },
+  {
+    "id": "module-5",
+    "city": "lisbon",
+    "title": "貝倫區・葡萄牙大航海遺址",
+    "places": [
+      {
+        "name": "傑羅尼摩斯修道院 Jerónimos",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mosteiro+dos+Jerónimos+Lisbon"
+      },
+      {
+        "name": "貝倫塔 Torre de Belém",
+        "url": "https://www.google.com/maps/search/?api=1&query=Torre+de+Belém+Lisbon"
+      },
+      {
+        "name": "發現者紀念碑",
+        "url": "https://www.google.com/maps/search/?api=1&query=Padrão+dos+Descobrimentos+Lisbon"
+      },
+      {
+        "name": "Pastéis de Belém",
+        "url": "https://www.google.com/maps/search/?api=1&query=Pastéis+de+Belém+Lisbon"
+      },
+      {
+        "name": "LX Factory",
+        "url": "https://www.google.com/maps/search/?api=1&query=LX+Factory+Lisbon"
+      }
+    ]
+  },
+  {
+    "id": "module-6",
+    "city": "lisbon",
+    "title": "辛特拉 Sintra 童話宮殿（近郊）",
+    "places": [
+      {
+        "name": "佩納宮 Palácio da Pena",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palácio+da+Pena+Sintra"
+      },
+      {
+        "name": "摩爾城堡遺跡",
+        "url": "https://www.google.com/maps/search/?api=1&query=Castelo+dos+Mouros+Sintra"
+      }
+    ]
+  },
+  {
+    "id": "module-7",
+    "city": "porto",
+    "title": "波多・世界遺產河岸城",
+    "places": [
+      {
+        "name": "里貝拉區 Ribeira",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ribeira+Porto"
+      },
+      {
+        "name": "路易一世橋 Ponte Luís I",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ponte+Luís+I+Porto"
+      },
+      {
+        "name": "萊羅書店 Livraria Lello",
+        "url": "https://www.google.com/maps/search/?api=1&query=Livraria+Lello+Porto"
+      },
+      {
+        "name": "塔之堂 Torre dos Clérigos",
+        "url": "https://www.google.com/maps/search/?api=1&query=Torre+dos+Clérigos+Porto"
+      },
+      {
+        "name": "Vila Nova de Gaia",
+        "url": "https://www.google.com/maps/search/?api=1&query=Vila+Nova+de+Gaia+Porto"
+      }
+    ]
+  },
+  {
+    "id": "module-8",
+    "city": "porto",
+    "title": "波多精華 + 在地美食",
+    "places": [
+      {
+        "name": "聖本篤車站 São Bento",
+        "url": "https://www.google.com/maps/search/?api=1&query=Estação+São+Bento+Porto"
+      },
+      {
+        "name": "波多主教座堂 Sé",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sé+do+Porto"
+      },
+      {
+        "name": "Bolhão 市場",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mercado+do+Bolhão+Porto"
+      },
+      {
+        "name": "Majestic Café",
+        "url": "https://www.google.com/maps/search/?api=1&query=Majestic+Café+Porto"
+      },
+      {
+        "name": "Café Santiago",
+        "url": "https://www.google.com/maps/search/?api=1&query=Café+Santiago+Porto"
+      }
+    ]
+  },
+  {
+    "id": "module-9",
+    "city": "sevilla",
+    "title": "抵達塞維亞・王宮與大教堂",
+    "places": [
+      {
+        "name": "塞維亞王宮 Real Alcázar",
+        "url": "https://www.google.com/maps/search/?api=1&query=Real+Alcázar+de+Sevilla"
+      },
+      {
+        "name": "塞維亞大教堂",
+        "url": "https://www.google.com/maps/search/?api=1&query=Catedral+de+Sevilla"
+      },
+      {
+        "name": "希拉達塔 Giralda",
+        "url": "https://www.google.com/maps/search/?api=1&query=Giralda+Sevilla"
+      },
+      {
+        "name": "聖十字區 Barrio Santa Cruz",
+        "url": "https://www.google.com/maps/search/?api=1&query=Barrio+Santa+Cruz+Sevilla"
+      }
+    ]
+  },
+  {
+    "id": "module-10",
+    "city": "sevilla",
+    "title": "塞維亞・西班牙廣場 + 佛朗明哥",
+    "places": [
+      {
+        "name": "都市陽傘 Metropol Parasol",
+        "url": "https://www.google.com/maps/search/?api=1&query=Metropol+Parasol+Sevilla"
+      },
+      {
+        "name": "西班牙廣場 Plaza de España",
+        "url": "https://www.google.com/maps/search/?api=1&query=Plaza+de+España+Sevilla"
+      },
+      {
+        "name": "特里亞納區 Triana",
+        "url": "https://www.google.com/maps/search/?api=1&query=Triana+Sevilla"
+      },
+      {
+        "name": "El Rinconcillo",
+        "url": "https://www.google.com/maps/search/?api=1&query=El+Rinconcillo+Sevilla"
+      }
+    ]
+  },
+  {
+    "id": "module-11",
+    "city": "granada",
+    "title": "格拉納達・阿爾拜辛與免費 Tapas",
+    "places": [
+      {
+        "name": "阿爾拜辛 Albaicín",
+        "url": "https://www.google.com/maps/search/?api=1&query=Albaicín+Granada"
+      },
+      {
+        "name": "聖尼古拉斯廣場 Mirador de San Nicolás",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mirador+de+San+Nicolás+Granada"
+      }
+    ]
+  },
+  {
+    "id": "module-12",
+    "city": "granada",
+    "title": "阿爾罕布拉宮・全西班牙最難搶門票",
+    "places": [
+      {
+        "name": "阿爾罕布拉宮",
+        "url": "https://www.google.com/maps/search/?api=1&query=Alhambra+Granada"
+      },
+      {
+        "name": "納斯里德宮 Palacios Nazaríes",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palacios+Nazaríes+Alhambra+Granada"
+      },
+      {
+        "name": "阿爾卡薩巴堡壘 Alcazaba",
+        "url": "https://www.google.com/maps/search/?api=1&query=Alcazaba+Alhambra+Granada"
+      },
+      {
+        "name": "赫內拉利費花園 Generalife",
+        "url": "https://www.google.com/maps/search/?api=1&query=Generalife+Granada"
+      },
+      {
+        "name": "格拉納達大教堂",
+        "url": "https://www.google.com/maps/search/?api=1&query=Catedral+de+Granada"
+      },
+      {
+        "name": "皇家禮拜堂",
+        "url": "https://www.google.com/maps/search/?api=1&query=Capilla+Real+Granada"
+      }
+    ]
+  },
+  {
+    "id": "module-13",
+    "city": "madrid",
+    "title": "馬德里・皇宮與藝術三角",
+    "places": [
+      {
+        "name": "馬德里王宮 Palacio Real",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palacio+Real+de+Madrid"
+      },
+      {
+        "name": "德波神殿 Templo de Debod",
+        "url": "https://www.google.com/maps/search/?api=1&query=Templo+de+Debod+Madrid"
+      },
+      {
+        "name": "普拉多美術館 Prado",
+        "url": "https://www.google.com/maps/search/?api=1&query=Museo+del+Prado+Madrid"
+      },
+      {
+        "name": "太陽門廣場 Puerta del Sol",
+        "url": "https://www.google.com/maps/search/?api=1&query=Puerta+del+Sol+Madrid"
+      },
+      {
+        "name": "主廣場 Plaza Mayor",
+        "url": "https://www.google.com/maps/search/?api=1&query=Plaza+Mayor+Madrid"
+      }
+    ]
+  },
+  {
+    "id": "module-14",
+    "city": "madrid",
+    "title": "蘇菲亞藝術中心 + 托雷多古城",
+    "places": [
+      {
+        "name": "蘇菲亞王后藝術中心 Reina Sofía",
+        "url": "https://www.google.com/maps/search/?api=1&query=Museo+Reina+Sofía+Madrid"
+      },
+      {
+        "name": "麗池公園 Retiro",
+        "url": "https://www.google.com/maps/search/?api=1&query=Parque+del+Retiro+Madrid"
+      },
+      {
+        "name": "水晶宮",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palacio+de+Cristal+Retiro+Madrid"
+      },
+      {
+        "name": "托雷多",
+        "url": "https://www.google.com/maps/search/?api=1&query=Toledo+Spain"
+      },
+      {
+        "name": "大教堂",
+        "url": "https://www.google.com/maps/search/?api=1&query=Catedral+de+Toledo"
+      },
+      {
+        "name": "聖托梅教堂",
+        "url": "https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santo+Tomé+Toledo"
+      }
+    ]
+  },
+  {
+    "id": "module-15",
+    "city": "bcn",
+    "title": "巴塞隆納・聖家堂 + 高第精華",
+    "places": [
+      {
+        "name": "聖家堂 Sagrada Família",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sagrada+Família+Barcelona"
+      },
+      {
+        "name": "聖十字聖保羅醫院 Sant Pau",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hospital+de+Sant+Pau+Barcelona"
+      },
+      {
+        "name": "奎爾公園 Park Güell",
+        "url": "https://www.google.com/maps/search/?api=1&query=Park+Güell+Barcelona"
+      },
+      {
+        "name": "Bunkers del Carmel",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bunkers+del+Carmel+Barcelona"
+      }
+    ]
+  },
+  {
+    "id": "module-16",
+    "city": "bcn",
+    "title": "巴塞隆納・高第建築 + 離境 BCN",
+    "places": [
+      {
+        "name": "Casa Batlló 巴特婁之家",
+        "url": "https://www.google.com/maps/search/?api=1&query=Casa+Batlló+Barcelona"
+      },
+      {
+        "name": "Casa Milà",
+        "url": "https://www.google.com/maps/search/?api=1&query=Casa+Milà+Barcelona"
+      },
+      {
+        "name": "Passeig de Gràcia",
+        "url": "https://www.google.com/maps/search/?api=1&query=Passeig+de+Gràcia+Barcelona"
+      },
+      {
+        "name": "蘭布拉大道 Las Ramblas",
+        "url": "https://www.google.com/maps/search/?api=1&query=La+Rambla+Barcelona"
+      },
+      {
+        "name": "博蓋利亞市場",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mercat+de+la+Boqueria+Barcelona"
+      },
+      {
+        "name": "哥德區 Barri Gòtic",
+        "url": "https://www.google.com/maps/search/?api=1&query=Barri+Gòtic+Barcelona"
+      }
+    ]
+  }
+]
