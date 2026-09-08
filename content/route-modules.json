@@ -16,7 +16,11 @@
         "name": "Trocadéro 廣場",
         "url": "https://www.google.com/maps/search/?api=1&query=Place+du+Trocadéro+Paris"
       }
-    ]
+    ],
+    "duration": "半天至一天",
+    "plan": "凱旋門 → 香榭麗舍 → Trocadéro；鐵塔若要登塔，依預約時段反向調整。",
+    "booking": "凱旋門／艾菲爾鐵塔入場時段",
+    "cut": "移動日可只留凱旋門＋Trocadéro。"
   },
   {
     "id": "module-2",
@@ -43,7 +47,11 @@
         "name": "小丘廣場",
         "url": "https://www.google.com/maps/search/?api=1&query=Place+du+Tertre+Paris"
       }
-    ]
+    ],
+    "duration": "一天或拆兩天",
+    "plan": "羅浮宮與奧塞擇一入內，杜樂麗串接；蒙馬特另留半天最舒服。",
+    "booking": "羅浮宮或奧塞指定時段",
+    "cut": "想深看兩座美術館就拆兩天。"
   },
   {
     "id": "module-3",
@@ -55,10 +63,14 @@
         "url": "https://www.google.com/maps/search/?api=1&query=Disneyland+Paris"
       },
       {
-        "name": "Walt Disney Studios Park",
+        "name": "Disney Adventure World",
         "url": "https://www.google.com/maps/search/?api=1&query=Walt+Disney+Studios+Park+Paris"
       }
-    ]
+    ],
+    "duration": "完整一天",
+    "plan": "先選主園或雙園，再以最想玩的 3–5 項和當日表演倒排行程。",
+    "booking": "指定日期票／未指定票登錄",
+    "cut": "只有一天時不強求看完兩園所有設施。"
   },
   {
     "id": "module-4",
@@ -85,7 +97,11 @@
         "name": "Tasca do Chico",
         "url": "https://www.google.com/maps/search/?api=1&query=Tasca+do+Chico+Lisbon"
       }
-    ]
+    ],
+    "duration": "半天至一天",
+    "plan": "Baixa／河岸起步，再往 Portas do Sol 與城堡；晚間才接 Fado。",
+    "booking": "聖喬治城堡與 Fado 餐廳",
+    "cut": "抵達較晚就只走觀景台與晚餐。"
   },
   {
     "id": "module-5",
@@ -112,7 +128,11 @@
         "name": "LX Factory",
         "url": "https://www.google.com/maps/search/?api=1&query=LX+Factory+Lisbon"
       }
-    ]
+    ],
+    "duration": "一天",
+    "plan": "修道院 → 蛋塔 → 發現者紀念碑；LX Factory 視時間另接。",
+    "booking": "修道院與貝倫塔指定時段／開放狀態",
+    "cut": "景點容量不足時保留河岸散步，LX Factory 可移除。"
   },
   {
     "id": "module-6",
@@ -127,7 +147,11 @@
         "name": "摩爾城堡遺跡",
         "url": "https://www.google.com/maps/search/?api=1&query=Castelo+dos+Mouros+Sintra"
       }
-    ]
+    ],
+    "duration": "完整一天",
+    "plan": "先鎖定佩納宮時段，再排一座宮殿或摩爾城堡；依山區交通銜接。",
+    "booking": "佩納宮等官方指定票",
+    "cut": "一天以 1–2 座宮殿為上限。"
   },
   {
     "id": "module-7",
@@ -154,7 +178,11 @@
         "name": "Vila Nova de Gaia",
         "url": "https://www.google.com/maps/search/?api=1&query=Vila+Nova+de+Gaia+Porto"
       }
-    ]
+    ],
+    "duration": "一天",
+    "plan": "São Bento／教堂 → Ribeira → 路易一世橋 → Gaia 酒窖。",
+    "booking": "酒窖導覽",
+    "cut": "萊羅書店可移至模組 8，避免折返。"
   },
   {
     "id": "module-8",
@@ -181,7 +209,11 @@
         "name": "Café Santiago",
         "url": "https://www.google.com/maps/search/?api=1&query=Café+Santiago+Porto"
       }
-    ]
+    ],
+    "duration": "半天至一天",
+    "plan": "Bolhão → 市中心 → 萊羅書店；餐廳依訂位和營業時間插入。",
+    "booking": "萊羅書店時段",
+    "cut": "與模組 7 合併時刪一間付費景點。"
   },
   {
     "id": "module-9",
@@ -204,7 +236,11 @@
         "name": "聖十字區 Barrio Santa Cruz",
         "url": "https://www.google.com/maps/search/?api=1&query=Barrio+Santa+Cruz+Sevilla"
       }
-    ]
+    ],
+    "duration": "一天",
+    "plan": "王宮 → 大教堂／希拉達塔 → 聖十字區，依入場時段微調。",
+    "booking": "王宮與大教堂官方票",
+    "cut": "抵達日只保留一座付費景點。"
   },
   {
     "id": "module-10",
@@ -227,7 +263,11 @@
         "name": "El Rinconcillo",
         "url": "https://www.google.com/maps/search/?api=1&query=El+Rinconcillo+Sevilla"
       }
-    ]
+    ],
+    "duration": "半天至一天",
+    "plan": "西班牙廣場＋公園 → Triana；佛朗明哥依晚間場次安排。",
+    "booking": "佛朗明哥表演",
+    "cut": "都市陽傘與 Triana 可擇一。"
   },
   {
     "id": "module-11",
@@ -242,7 +282,11 @@
         "name": "聖尼古拉斯廣場 Mirador de San Nicolás",
         "url": "https://www.google.com/maps/search/?api=1&query=Mirador+de+San+Nicolás+Granada"
       }
-    ]
+    ],
+    "duration": "半天",
+    "plan": "阿爾拜辛慢走，日落前到 San Nicolás；石板坡路預留體力。",
+    "booking": "通常不需預訂，餐廳另查",
+    "cut": "與阿爾罕布拉同日需大幅縮短。"
   },
   {
     "id": "module-12",
@@ -273,7 +317,11 @@
         "name": "皇家禮拜堂",
         "url": "https://www.google.com/maps/search/?api=1&query=Capilla+Real+Granada"
       }
-    ]
+    ],
+    "duration": "半天至一天",
+    "plan": "完全依納斯里德宮指定時間安排 Alcazaba、Generalife 與其餘區域。",
+    "booking": "阿爾罕布拉官方票與證件資料",
+    "cut": "大教堂與皇家禮拜堂可移到另一個半天。"
   },
   {
     "id": "module-13",
@@ -300,7 +348,11 @@
         "name": "主廣場 Plaza Mayor",
         "url": "https://www.google.com/maps/search/?api=1&query=Plaza+Mayor+Madrid"
       }
-    ]
+    ],
+    "duration": "一天或拆兩天",
+    "plan": "王宮＋舊城是一組；普拉多＋麗池公園是一組。",
+    "booking": "王宮與普拉多時段",
+    "cut": "一天只選王宮或普拉多深入參觀。"
   },
   {
     "id": "module-14",
@@ -331,7 +383,11 @@
         "name": "聖托梅教堂",
         "url": "https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santo+Tomé+Toledo"
       }
-    ]
+    ],
+    "duration": "一天或拆兩天",
+    "plan": "Reina Sofía＋麗池留在馬德里；托雷多應另排完整一日。",
+    "booking": "美術館與托雷多列車",
+    "cut": "短住時刪托雷多或刪美術館。"
   },
   {
     "id": "module-15",
@@ -354,7 +410,11 @@
         "name": "Bunkers del Carmel",
         "url": "https://www.google.com/maps/search/?api=1&query=Bunkers+del+Carmel+Barcelona"
       }
-    ]
+    ],
+    "duration": "一天",
+    "plan": "聖家堂 → 聖保羅醫院；奎爾公園依時段搭交通前往。",
+    "booking": "聖家堂與奎爾公園時段",
+    "cut": "Turó de la Rovira 先查開放時間，視餘裕另排。"
   },
   {
     "id": "module-16",
@@ -385,6 +445,10 @@
         "name": "哥德區 Barri Gòtic",
         "url": "https://www.google.com/maps/search/?api=1&query=Barri+Gòtic+Barcelona"
       }
-    ]
+    ],
+    "duration": "一天",
+    "plan": "格拉西亞大道建築 → 哥德區 → La Rambla／市場，依入內建築數量調整。",
+    "booking": "Casa Batlló／Casa Milà 入場",
+    "cut": "兩棟高第宅邸建議擇一入內。"
   }
 ]
