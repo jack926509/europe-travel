@@ -4,7 +4,7 @@
 
 後續新增城市、景點、交通、購物、路線與巴黎迪士尼資料，以及 Issue、PR 和網站部署設定，統一在 `europe-travel` 維護。
 
-**現行網站：[法西葡旅遊攻略](https://jack926509.github.io/europe-travel/)**
+**現行網站：[法西葡旅遊攻略](https://europetrip.xiehnet.com/)**
 
 ## 專案整合狀態
 
@@ -52,7 +52,7 @@ node --check assets/app.js
 
 ## Cloudflare Pages 部署
 
-Cloudflare Pages 使用以下設定連接本 repository：
+Cloudflare Pages 使用 GitHub Actions 部署到現有的 Direct Upload 專案：
 
 | 設定 | 值 |
 | --- | --- |
@@ -62,8 +62,16 @@ Cloudflare Pages 使用以下設定連接本 repository：
 | Build output directory | `dist` |
 | Pages project name | `europe-travel` |
 | Custom domain | `europetrip.xiehnet.com` |
+| Workflow | `.github/workflows/deploy-cloudflare.yml` |
 
-`scripts/build_cloudflare.py` 會先重建網站，再把 11 個 HTML 頁面、搜尋索引、樣式、程式與圖片整理到 `dist/`。`wrangler.jsonc` 也使用相同的輸出目錄，供 Cloudflare Pages 直接部署。
+每次 push 到 `main` 後，GitHub Actions 會執行 `python3 scripts/build_cloudflare.py`，再以 Wrangler 將 `dist/` 部署到 production。也可從 GitHub Actions 頁面手動執行同一個 workflow。
+
+Repository Actions secrets 必須設定：
+
+- `CLOUDFLARE_API_TOKEN`：僅授予指定 Cloudflare 帳號的 Cloudflare Pages Edit 權限。
+- `CLOUDFLARE_ACCOUNT_ID`：Cloudflare 帳號 ID。
+
+`scripts/build_cloudflare.py` 會先重建網站，再把 11 個 HTML 頁面、搜尋索引、樣式、程式與圖片整理到 `dist/`。`wrangler.jsonc` 也使用相同的輸出目錄。Cloudflare Direct Upload 專案無法改成內建 Git Integration，因此由 GitHub Actions 負責持續部署，無需刪除或重建現有專案與自訂網域。
 
 ## 收集 → 查核 → 更新
 
@@ -71,7 +79,7 @@ Cloudflare Pages 使用以下設定連接本 repository：
 2. Issue 為公開資料。不要提交護照、訂位代號、信用卡、住宿訂單或私人聯絡方式。
 3. 查核來源與重複內容，在相應頁面／模組整理，保留查核日期及來源。
 4. 更新 `updates` 頁面及 `CHANGELOG.md`，重新建置並提交 PR。
-5. 經確認合併後才進入既有部署流程。網站不會把未查核 Issue 自動當成攻略。
+5. 經確認合併或 push 到 `main` 後，GitHub Actions 自動部署正式網站。網站不會把未查核 Issue 自動當成攻略。
 
 收集表單不使用 localStorage，不放 GitHub token，不直接呼叫 GitHub 寫入 API。資料收件匣在 GitHub，可跨裝置檢視；本站不是即時 Issue 編輯器。
 
