@@ -7,6 +7,7 @@ import re
 ROOT=Path(__file__).resolve().parents[1]
 CONTENT=ROOT/'content'
 DATE='2026-09-08'
+CHECK_DATE='2026-10-01'
 REPO='https://github.com/jack926509/europe-travel'
 SITE='https://europetrip.xiehnet.com'
 NAV=[('index','攻略首頁'),('france','法國'),('spain','西班牙'),('portugal','葡萄牙'),('disney','巴黎迪士尼'),('routes','路線靈感'),('transport','交通'),('prep','行前準備'),('shopping','購物'),('collection','收集資料'),('updates','更新紀錄')]
@@ -60,7 +61,8 @@ section('優先預訂','<p>巴黎大型博物館、凡爾賽與熱門展覽先�
 <tr><td>塞維亞</td><td>王宮＋大教堂＋聖十字區；西班牙廣場＋Triana。</td><td>王宮與佛朗明哥場次，避免表演和晚餐時間相撞。</td></tr>
 <tr><td>格拉納達</td><td>阿爾罕布拉宮半天；阿爾拜辛與觀景台另半天。</td><td>納斯里德宮指定入場時間與票面證件資料。</td></tr></tbody></table>''')+
 section('瓦倫西亞 2–3 天規劃建議','<p>第一天走舊城、市場與 Turia 花園；第二天安排藝術科學城，想去海灘可接在同一方向。Albufera 自然公園與日落若是重點，另留一天會比把市中心、科學城、海灘和濕地塞進兩天更合理。</p>'+sources([('西班牙旅遊局瓦倫西亞兩日路線','https://www.spain.info/en/route/valencia-two-days/')]))+
-section('2026 建築進度說明','<p>聖家堂在 2026 年完成並啟用的是耶穌基督塔的重要里程碑，不代表整座教堂所有工程都已完工。參觀票、塔樓開放與施工影響仍以官方票務頁為準。</p>'+sources([('聖家堂歷史與工程進度','https://sagradafamilia.org/en/history-of-the-temple'),('阿爾罕布拉宮官方票務','https://tickets.alhambra-patronato.es/en/')])),
+section('2026 建築進度說明','<p>聖家堂在 2026 年完成並啟用的是耶穌基督塔的重要里程碑，不代表整座教堂所有工程都已完工。參觀票、塔樓開放與施工影響仍以官方票務頁為準。</p>'+sources([('聖家堂歷史與工程進度','https://sagradafamilia.org/en/history-of-the-temple')]))+
+section('阿爾罕布拉宮營運快照','<div class="notice verified"><strong>'+CHECK_DATE+' 已查核</strong><p>Alcazaba 已於 2026 年 9 月 23 日恢復開放，但採依安全與古蹟維護需求調整的參觀動線；官方亦說明路線仍可能再變動。Casa Horno de Oro 與 Palace of Dar al-Horra 當日仍因安全理由關閉。這是查核日快照，不代表未來到訪日狀態；出發前仍要查看官方首頁的即時公告。</p></div>'+sources([('阿爾罕布拉宮官方票務與即時公告','https://tickets.alhambra-patronato.es/en/')])),
 'portugal':section('葡萄牙各段怎麼選據點','''<table><thead><tr><th>地區</th><th>建議據點</th><th>實用取捨</th></tr></thead><tbody>
 <tr><td>里斯本</td><td>Baixa／Chiado 轉乘方便；Avenida 周邊較平坦；Alfama 氣氛好但坡與石板路多。</td><td>有大行李先看住宿到地鐵站的坡度與電梯，不只看直線距離。</td></tr>
 <tr><td>辛特拉</td><td>多數旅客由里斯本當日往返。</td><td>宮殿選一至兩座；先鎖定指定時段，再排當地公車。</td></tr>
@@ -123,7 +125,7 @@ for m in mods:
  body+=f'<article class="route-module" id="{m["id"]}"><h3>{escape(title)}</h3><p><span class="pill">建議 {escape(m["duration"])}</span></p><p><strong>順路排法：</strong>{escape(m["plan"])}</p><p><strong>先確認：</strong>{escape(m["booking"])}</p><p><strong>時間不足：</strong>{escape(m["cut"])}</p><ul>'+''.join('<li>'+link(p['url'],p['name'])+'</li>' for p in m['places'])+'</ul></article>'
 add('routes','路線靈感','不用綁日期，也能把想去的地方排順。',body)
 add('prep','行前準備','把預訂順序與重要官方入口放在一起。',section('確認日期後再完成', '<ol class="steps"><li>確認護照、入境資格與官方最新申請要求。</li><li>安排進出城市，再訂機票與可接受退改條件的住宿。</li><li>把有指定入場時段的景點列出：阿爾罕布拉宮、聖家堂、迪士尼與熱門博物館。</li><li>確認城際交通與機場接駁，保留轉乘緩衝。</li><li>出發前再檢查景點休館、罷工或交通異動，保存必要離線資料。</li></ol>')+
-section('入境資訊｜直接查官方','<p>截至 '+DATE+'，ETIAS 官方仍標示尚未啟用，也不受理申請。不要向非官方網站預先付費；接近出發日再核對啟用狀態、資格與申請入口。EES 狀態也以歐盟官方頁為準。</p>'+sources([('歐盟 ETIAS','https://travel-europe.europa.eu/etias/about-etias/what-is-etias'),('歐盟 EES','https://travel-europe.europa.eu/en/ees'),('外交部領事事務局','https://www.boca.gov.tw/')]))+
+section('入境資訊｜直接查官方','<div class="notice verified"><strong>'+CHECK_DATE+' 已查核</strong><p><strong>EES 已全面運作：</strong>歐盟委員會公告，入出境系統自 2026 年 4 月 10 日起在申根外部邊境全面運作，短期停留的非歐盟旅客入出境改以電子紀錄，並登錄旅行文件資料、臉部影像與指紋等資料。</p><p><strong>ETIAS 仍未啟用：</strong>歐盟目前預告於 2026 年第 4 季推出，但尚未公布可申請的確切日期。正式上線前不要向非官方網站付費；接近出發日再核對啟用狀態、適用資格與官方申請入口。</p></div>'+sources([('歐盟委員會｜EES 已全面運作','https://home-affairs.ec.europa.eu/news/entryexit-system-ees-fully-operational-2026-04-10_en'),('歐盟｜EES 與 ETIAS 修訂時程','https://travel-europe.europa.eu/en/etias/about-etias/news-corner/revised-timeline-ees-and-etias'),('歐盟 ETIAS 官方入口','https://travel-europe.europa.eu/en/etias'),('外交部領事事務局','https://www.boca.gov.tw/')]))+
 section('航班資料怎麼保存','<p>航線、航空公司、轉機點與價格都會變動。攻略只保存「開口票是否減少折返、行李是否直掛、轉機時間與退改條件」等決策欄位；實際班次、票價與是否直飛等到旅行日期確定後再查。舊筆記的參考價格與「一定要提前幾個月」不作為購票規則。</p>')+
 section('訂單與旅行資料分開','<p>攻略收集城市、景點、來源與一般筆記。護照、訂位代號、信用卡與住宿訂單，另外放在自己的私人儲存空間。</p>')+legacy('prep','原專案整合：航班選項與旅遊提醒'))
 add('shopping','美食、購物與伴手禮','按地區收集，等行程確定再排順路。',
@@ -146,6 +148,22 @@ add('collection','旅遊資料收件匣','先記下來源，再慢慢整理成�
 <aside><article class="card"><p class="eyebrow">INBOX → GUIDE</p><h2>收集到攻略的流程</h2><ol class="steps"><li>加入來源、城市與筆記。</li><li>資料先保存在 GitHub 收件匣。</li><li>查核官方資訊、整理重複內容。</li><li>編輯對應攻略，確認後合併更新。</li></ol><a class="text-link" href="https://github.com/jack926509/europe-travel/issues?q=is%3Aissue+is%3Aopen" target="_blank" rel="noopener noreferrer">開啟資料收件匣 ↗</a></article>
 <article class="card"><h3>修正既有內容</h3><p>在每一頁底部選「回報更新」，附上新來源與需修正的段落，就能追蹤到整理完成。</p><p>收件匣不會自動出現在攻略頁；經過查核與合併後才發布。</p></article></aside></div>''')
 add('updates','更新與查核紀錄','記錄改了什麼，也標明哪些仍要確認。',
+'<article class="update-entry"><p class="eyebrow">'+CHECK_DATE+' / 增量查核</p><h2>更新入境系統與景點營運快照</h2><ul><li>補上 EES 已自 2026 年 4 月 10 日全面運作，以及短期停留旅客的電子入出境與生物辨識資料紀錄範圍。</li><li>ETIAS 維持尚未啟用；補充歐盟目前預告於 2026 年第 4 季推出，但確切申請日仍待官方公告。</li><li>加入阿爾罕布拉宮 Alcazaba 恢復開放、採調整動線，以及兩處安達魯西亞古蹟仍暫時關閉的查核快照。</li><li>重新核對 2026 巴黎、里斯本、波多交通票價、Lisboa Card 與巴黎迪士尼票務；未發現需改動的官方規則。</li></ul></article>'+
+section('2026-10-01 增量查核狀態','''<table><thead><tr><th>內容</th><th>狀態</th><th>適用範圍</th></tr></thead><tbody>
+<tr><td>EES</td><td>已更新</td><td>2026-04-10 起全面運作；適用申根外部邊境短期停留的非歐盟旅客。</td></tr>
+<tr><td>ETIAS</td><td>已更新時程</td><td>仍未啟用；目前僅能確認預計於 2026 年第 4 季推出，確切日期待公告。</td></tr>
+<tr><td>阿爾罕布拉宮</td><td>已查核快照</td><td>Alcazaba 恢復開放但採調整動線；個別古蹟關閉狀態須於到訪前重查。</td></tr>
+<tr><td>市區交通、Lisboa Card、巴黎迪士尼</td><td>已重查・無異動</td><td>僅代表 '''+CHECK_DATE+''' 官方頁面仍支持本站既有內容。</td></tr>
+</tbody></table>''')+
+section('2026-10-01 官方來源','<ul>'+''.join('<li>'+link(u,t)+'</li>' for t,u in [
+('歐盟委員會｜EES 已全面運作','https://home-affairs.ec.europa.eu/news/entryexit-system-ees-fully-operational-2026-04-10_en'),
+('歐盟｜EES 與 ETIAS 修訂時程','https://travel-europe.europa.eu/en/etias/about-etias/news-corner/revised-timeline-ees-and-etias'),
+('阿爾罕布拉宮即時公告','https://tickets.alhambra-patronato.es/en/'),
+('巴黎 2026 交通票價','https://www.iledefrance-mobilites.fr/en/tarifs-titre-de-transport-en-commun-2026'),
+('里斯本 2026 票價','https://www.metrolisboa.pt/en/2025/12/19/new-fares-2026-2/'),
+('波多 Andante Tour','https://andante.pt/en/purchase/andante-tour/'),
+('Lisboa Card 最新限制','https://shop.visitlisboa.com/products/lisboa-card'),
+('巴黎迪士尼門票規則','https://www.disneylandparis.com/en-int/visit-paris-and-disneyland-paris')])+'</ul><p>查核日：'+CHECK_DATE+'。未列為變更的項目只代表本次官方頁未顯示新規則。</p>')+
 '<article class="update-entry"><p class="eyebrow">'+DATE+' / 資料校正</p><h2>修正會直接影響行程與花費的資料</h2><ul><li>更新巴黎、巴塞隆納、里斯本與波多的 2026 市區票價及票卡限制。</li><li>修正法國、西班牙、葡萄牙旅客 VAT 退稅門檻與歐盟出口驗證說明。</li><li>分清巴黎迪士尼指定日期票、Basic 票、未指定日期票及套裝的不同退改規則。</li><li>修正 Single Rider、遊行地點及雙園夜間表演無法保證全部銜接等矛盾。</li><li>補上 Lisboa Card 實體兌換、熱門景點指定時段與 '+DATE+' 暫停開放名單。</li><li>釐清 2026 是聖家堂耶穌基督塔里程碑，不代表整座教堂所有工程完成。</li><li>補充三國住宿區域、無車玩法、波爾多、瓦倫西亞及 16 個路線模組的取捨。</li></ul></article>'+
 section('本輪查核狀態','''<table><thead><tr><th>內容</th><th>狀態</th><th>適用範圍</th></tr></thead><tbody>
 <tr><td>巴黎、巴塞隆納、里斯本、波多市區票價</td><td>已查核</td><td>2026 官方票價；年度調價後重查。</td></tr>
