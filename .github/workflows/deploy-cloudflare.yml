@@ -1,9 +1,7 @@
-name: Deploy to Cloudflare Pages
+name: Cloudflare Pages 手動備援部署
 
+# 日常自動部署由 Cloudflare Git 整合負責，此流程僅供手動備援。
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 concurrency:
