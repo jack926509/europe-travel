@@ -55,6 +55,38 @@
     });
   }
 
+  // ---- 摺疊區塊：連到 #d5 這類錨點時自動展開，才看得到內容 ----
+  const reveal = () => {
+    const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    const box = target?.closest('details');
+    if (box) { box.open = true; requestAnimationFrame(() => box.scrollIntoView({ block: 'start' })); }
+  };
+  reveal();
+  window.addEventListener('hashchange', reveal);
+  // 摺疊中的表格量不到寬度；展開後重算一次，捲動提示與鍵盤捲動才會出現。
+  document.addEventListener('toggle', event => {
+    if (event.target.open) window.dispatchEvent(new Event('resize'));
+  }, true);
+
+  // ---- 逐日行程：一鍵全部展開／收合 ----
+  const toggle = document.querySelector('[data-days-toggle]');
+  if (toggle) {
+    const days = [...document.querySelectorAll('details.day')];
+    const sync = () => {
+      const all = days.every(d => d.open);
+      toggle.textContent = all ? '全部收合' : '全部展開';
+      toggle.setAttribute('aria-pressed', String(all));
+    };
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => {
+      const open = !days.every(d => d.open);
+      for (const d of days) d.open = open;
+      sync();
+    });
+    for (const d of days) d.addEventListener('toggle', sync);
+    sync();
+  }
+
   // ---- 全文搜尋 ----
   const input = document.querySelector('#guide-search');
   if (input) {
