@@ -143,6 +143,35 @@ table:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .table-hint{font-size:13px;color:var(--muted);margin:-6px 0 10px}
 .table-hint::before{content:"↔ ";font-weight:700}
 
+/* 2027 行程頁：頁首摘要、晚數條、逐日摺疊 */
+.page-summary{padding:22px 26px;border:1px solid var(--line);border-top:3px solid var(--accent);background:var(--surface);margin:0 0 28px}
+.trip-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 24px;margin:0 0 16px}
+.trip-facts div{min-width:0}
+.trip-facts dt{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--muted)}
+.trip-facts dd{margin:2px 0 0}
+.legend{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.summary-title{font-size:1.2rem;margin:18px 0 8px}
+.page-summary ol{padding-left:22px;margin:0}
+.nights{display:flex;gap:6px;list-style:none;padding:0;margin:0 0 22px}
+.nights li{min-width:0;padding:10px 12px;background:var(--wash);border-top:4px solid var(--strong);line-height:1.5}
+.nights li:nth-child(even){border-top-color:var(--accent)}
+.nights .n2{flex:2}.nights .n3{flex:3}.nights .n4{flex:4}
+.nights span{display:block;font-weight:700;color:var(--strong)}
+.nights small{display:block;font-size:13px;color:var(--muted)}
+.legacy.day{margin-top:10px}
+.legacy.day>summary{padding:14px 20px;line-height:1.6}
+.day-no{display:inline-block;min-width:3.2em;margin-right:10px;padding:1px 8px;background:var(--strong);color:var(--surface);font-size:14px;text-align:center}
+.day-date{margin-right:10px}
+.day-city{display:inline-block;padding:0 8px;font-size:14px;font-weight:600;color:var(--strong);background:var(--wash);border:1px solid var(--line)}
+.day-title{display:block;margin-top:4px;font-weight:500}
+.day-meta{font-size:14px;padding:10px 14px;background:var(--wash)}
+.day-meta strong{margin-right:6px}
+.day-tools{margin:0 0 6px;text-align:right}
+.day-toggle{min-height:44px;padding:8px 16px;border:1px solid var(--field-line);background:var(--surface);color:var(--ink)}
+.day-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.section>h3{margin-top:28px}
+.legacy-body h4{font-size:1rem;margin:18px 0 8px}
+
 .steps{padding-left:25px}
 .steps li{padding:5px 0}
 .route-module{border-top:1px solid var(--line);padding:22px 0;scroll-margin-top:120px}
@@ -195,6 +224,11 @@ footer strong{color:var(--ink)}
   .legacy>summary{padding:18px}
   .legacy>.notice{margin:0 16px 18px}
   .legacy-body{padding:0 16px 20px}
+  .legacy-body ul,.legacy-body ol{padding-left:1.3em}
+  .page-summary{padding:18px 16px}
+  .nights{flex-wrap:wrap}
+  .nights li,.nights .n2,.nights .n3,.nights .n4{flex:1 1 30%}
+  .legacy.day>summary{padding:14px 16px}
   .legacy-body .info-grid,.legacy-body .country-grid,.legacy-body .park-grid,.legacy-body .cards-grid{grid-template-columns:1fr}
   /* 窄螢幕時列標題跟著捲動，才知道每一列在講哪個城市或項目 */
   tr>:first-child{position:sticky;left:0;background:var(--surface);z-index:1;min-width:104px;box-shadow:1px 0 0 var(--line)}
@@ -216,4 +250,5 @@ footer strong{color:var(--ink)}
   main{padding:10px}
   .panorama img{height:120px}
   .legacy[open] .legacy-body{display:block}
+  .day-tools{display:none}
 }

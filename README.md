@@ -11,14 +11,14 @@
 | 專案 | 定位 | 內容去向 |
 | --- | --- | --- |
 | `europe-travel` | 唯一主專案 | 法西葡攻略、資料收集、共用頁面與後續更新 |
-| `CDG-BCN` | 舊內容來源，後續更新集中至主專案 | 巴黎至巴塞隆納路線拆為 `routes.html` 與 `content/route-modules.json` 的 16 個城市模組 |
-| `disneyland-paris` | 舊內容來源，後續更新集中至主專案 | 交通、票務、設施、餐廳與購物合入 `disney.html` 與 `content/disney-legacy.html` |
+| `CDG-BCN` | 已封存（archived），後續更新集中至主專案 | 巴黎至巴塞隆納路線拆為 `routes.html` 與 `content/route-modules.json` 的城市模組 |
+| `disneyland-paris` | 已封存（archived），後續更新集中至主專案 | 交通、票務、設施、餐廳與購物合入 `disney.html` 與 `content/disney-legacy.html` |
 
-本整合版已於 2026-09-08 透過 [PR #4](https://github.com/jack926509/europe-travel/pull/4) 合併至 `main`。兩個舊專案目前保留，後續內容統一在本專案維護。
+本整合版已於 2026-09-08 透過 [PR #4](https://github.com/jack926509/europe-travel/pull/4) 合併至 `main`。兩個舊專案已封存（archived），保留歷史供查閱，後續內容統一在本專案維護。
 
 ## 最新更新與上線狀態
 
-最後整理：**2026-09-08**。資料修正版已透過 [PR #6](https://github.com/jack926509/europe-travel/pull/6) 合併至 `main` 並上線。
+最後整理：**2026-11-02**。本機新增 2027 西葡 20 天頁與資料修正，尚未發布。以下為前次上線狀態：資料修正版已透過 [PR #6](https://github.com/jack926509/europe-travel/pull/6) 合併至 `main` 並上線。
 
 - 正式入口：[europetrip.xiehnet.com](https://europetrip.xiehnet.com/)。已比對正式網域的交通頁、更新紀錄與搜尋索引，確認與修正版一致。
 - Cloudflare Pages 的 [GitHub Actions 部署](https://github.com/jack926509/europe-travel/actions/runs/34185554013)及 GitHub Pages 部署均已成功；後續狀態請以對應提交的 Actions 紀錄為準。
@@ -35,7 +35,8 @@
 | `spain.html` | 巴塞隆納、馬德里、安達魯西亞、瓦倫西亞 |
 | `portugal.html` | 里斯本、辛特拉、波多、杜羅河谷、阿爾加維 |
 | `disney.html` | 合併雙來源的迪士尼交通、票務、設施、餐廳與購物 |
-| `routes.html` | 無指定日期的路線建議與 16 個原行程城市模組 |
+| `routes.html` | 無指定日期的路線建議與 17 個路線模組 |
+| `itinerary-2027.html` | 2027 西葡 20 天範例、秋季出發、預約、美食、預算與入境限制 |
 | `transport.html` | 三國交通查詢順序、官方入口及原筆記 |
 | `prep.html` | 行前清單、官方入境入口及航班／旅遊筆記 |
 | `shopping.html` | 購物規劃、官方稅務入口及品牌／伴手禮筆記 |
@@ -92,7 +93,7 @@ Repository Actions secrets 必須設定：
 - `CLOUDFLARE_API_TOKEN`：僅授予指定 Cloudflare 帳號的 Cloudflare Pages Edit 權限。
 - `CLOUDFLARE_ACCOUNT_ID`：Cloudflare 帳號 ID。
 
-`scripts/build_cloudflare.py` 會先重建網站，再把 11 個 HTML 頁面、搜尋索引、樣式、程式與圖片整理到 `dist/`。`wrangler.jsonc` 也使用相同的輸出目錄。Cloudflare Direct Upload 專案無法改成內建 Git Integration，因此由 GitHub Actions 負責持續部署，無需刪除或重建現有專案與自訂網域。
+`scripts/build_cloudflare.py` 會先重建網站，再把 12 個 HTML 頁面、搜尋索引、樣式、程式與圖片整理到 `dist/`。`wrangler.jsonc` 也使用相同的輸出目錄。Cloudflare Direct Upload 專案無法改成內建 Git Integration，因此由 GitHub Actions 負責持續部署，無需刪除或重建現有專案與自訂網域。
 
 ## 收集 → 查核 → 更新
 
@@ -122,7 +123,7 @@ Repository Actions secrets 必須設定：
 
 ## 查核與日期政策
 
-- 取消固定旅遊日期、星期、倒數及「已訂」暗示；季節資訊、事件日期與查核日期仍可保留。
+- 通用攻略不綁固定日期；2027 行程頁的日期明確標示為範例，未訂票；季節資訊、事件日期與查核日期仍可保留。
 - 新頁面的建議天數與路線是編輯規劃建議，並非即時班次或完整費用試算。
 - 迪士尼園區名稱及 2026-03-29 開放事件已依官方公告查核。
 - 2026 市區交通、三國退稅、迪士尼票務、Lisboa Card 與聖家堂工程說明已依官方來源更新；範圍見 `docs/SOURCES.md`。
@@ -138,13 +139,13 @@ Repository Actions secrets 必須設定：
 
 ### 另外兩個專案可以刪除嗎？
 
-完成整合上線及備份後可以考慮刪除；目前尚未完成下列事項，先保留。若只希望集中維護，可在切換完成後將舊專案封存（Archive），保留原始內容與歷史供查閱。
+完成整合上線及備份後可以考慮刪除；目前尚未完成下列事項，先保留。兩個舊專案已封存（archived），保留原始內容與歷史供查閱。
 
 1. PR #4 與資料修正 PR #6 已合併上線；刪除舊專案前，仍需完整確認攻略、路線、迪士尼、搜尋與資料收集入口符合需求。
 2. 備份兩個舊專案的完整 Git 歷史，以及需要保留的 Issues、PR、附件與部署設定；本次整理的攻略內容不能取代完整備份。
 3. 確認舊站的部署、網域及分享連結，決定保留轉址或停止使用；刪除 repository 不會自動把舊網址導向主站。
 4. 若確定刪除，先更新本專案更新頁的舊來源連結與「原始專案仍保留」說明，並記錄備份位置及來源版本。
 
-以上為退役步驟，尚未執行刪除、封存或轉址。
+以上為退役步驟，尚未執行刪除或轉址；封存已完成。
 
 詳細來源映射與後續工作見 `docs/MIGRATION.md`。照片為 Joe deSousa 的巴黎塞納河全景，CC0，來源列於更新頁。

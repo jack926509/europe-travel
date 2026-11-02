@@ -9,7 +9,7 @@ CONTENT=ROOT/'content'
 DATE='2026-09-08'
 REPO='https://github.com/jack926509/europe-travel'
 SITE='https://europetrip.xiehnet.com'
-NAV=[('index','攻略首頁'),('france','法國'),('spain','西班牙'),('portugal','葡萄牙'),('disney','巴黎迪士尼'),('routes','路線靈感'),('transport','交通'),('prep','行前準備'),('shopping','購物'),('collection','收集資料'),('updates','更新紀錄')]
+NAV=[('index','攻略首頁'),('france','法國'),('spain','西班牙'),('portugal','葡萄牙'),('disney','巴黎迪士尼'),('routes','路線靈感'),('itinerary-2027','2027 西葡 20 天'),('transport','交通'),('prep','行前準備'),('shopping','購物'),('collection','收集資料'),('updates','更新紀錄')]
 PAGES={}
 def link(url,title):return f'<a href="{escape(url,quote=True)}" target="_blank" rel="noopener noreferrer">{escape(title)} ↗</a>'
 def card(title,body,url=None,kicker=''):
@@ -67,7 +67,7 @@ section('2026 建築進度說明','<p>聖家堂在 2026 年完成並啟用的是
 <tr><td>波多</td><td>São Bento／Bolhão 適合步行；Trindade 方便接機場；Ribeira 景觀好但坡多。</td><td>酒窖在 Gaia；把過橋、坡度和晚間回程算進路線。</td></tr>
 <tr><td>杜羅河谷</td><td>想輕鬆可由波多參團；想慢遊再住 Peso da Régua 或 Pinhão。</td><td>火車、遊船和酒莊不一定能無縫銜接，酒莊多需預約。</td></tr>
 <tr><td>阿爾加維</td><td>Lagos 適合西岸與步道；Faro 方便鐵路與機場；其餘海岸依租車與活動選擇。</td><td>海蝕洞船班、步道封閉與海況需在出發前確認。</td></tr></tbody></table>''')+
-section('Lisboa Card 使用前先看','''<p>官方原價（成人／4–15 歲兒童）為 24 小時 €31／€21、48 小時 €51／€28、72 小時 €62／€35，標示有效至 2027-03-31；截至 '''+DATE+''' 官網另有 5% 網路優惠。Lisboa Card 是實體個人卡，網購憑證須在 6 個月內到 Askme Lisboa 兌換。</p><p>貝倫塔與熱羅尼莫斯修道院要先拿到實體卡號，才能預約指定日期與時段，名額不保證。截至 '''+DATE+'''，官方列出國家磁磚博物館、國家古代藝術博物館、國家服飾博物館、國家戲劇與舞蹈博物館、國家考古博物館及聖胡斯塔升降梯暫停開放。這是當日狀態，買卡前要按實際想去的景點重查並試算。</p>'''+sources([('Lisboa Card 官方銷售與最新限制','https://shop.visitlisboa.com/products/lisboa-card'),('佩納宮官方票務','https://www.parquesdesintra.pt/en/plan-your-visit/ticket-office/')])),
+section('Lisboa Card 使用前先看','''<p>官方原價（成人／4–15 歲兒童）為 24 小時 €31／€21、48 小時 €51／€28、72 小時 €62／€35，價格效期到 2027-03-31，2027 年 9 月出發前要更新成 2027 年價格／出發前再確認；截至 '''+DATE+''' 官網另有 5% 網路優惠。Lisboa Card 是實體個人卡，網購憑證須在 6 個月內到 Askme Lisboa 兌換。</p><p>貝倫塔與熱羅尼莫斯修道院要先拿到實體卡號，才能預約指定日期與時段，名額不保證。依 2026-09-08 快照，官方列出國家磁磚博物館、國家古代藝術博物館、國家服飾博物館、國家戲劇與舞蹈博物館、國家考古博物館及聖胡斯塔升降梯暫停開放。此清單為 2026-09-08 快照，尚未重新查核，出發前再確認；買卡前要按實際想去的景點重查並試算。</p>'''+sources([('Lisboa Card 官方銷售與最新限制','https://shop.visitlisboa.com/products/lisboa-card'),('佩納宮官方票務','https://www.parquesdesintra.pt/en/plan-your-visit/ticket-office/')])),
 }
 for slug,(cn,en,intro,cities) in country_data.items():
  body='<p class="notice">停留天數是規劃建議，可依步調調整，不代表已訂行程。城市摘要供選路線；最新票務與開放資訊請查各城市入口。</p>'
@@ -111,7 +111,7 @@ body=section('依假期長短挑選','<p>以下是行程組合建議，天數包
 card('7–10 天｜一國深度','巴黎＋近郊＋里昂／南法擇一；或巴塞隆納＋馬德里；或里斯本＋辛特拉＋波多。'),
 card('12–16 天｜二國銜接','巴黎＋南法＋巴塞隆納，或馬德里＋安達魯西亞＋里斯本。優先選較少住宿搬遷的組合。'),
 card('18–24 天｜三國慢遊','巴黎 → 里斯本／辛特拉 → 波多 → 馬德里 → 巴塞隆納。跨國段依當期交通調整；想加塞維亞與格拉納達，另增天數或刪掉一個城市。')]))
-body+=section('原 16 天行程，改成 16 個可拆用模組','<p>保留原有城市、景點與地圖入口。一天可選一個模組，也可以拆成兩天；移動日減少付費景點，日落與入場時段依實際日期查詢。</p>')
+body+=section('17 個可拆用路線模組（含葡萄牙到安達魯西亞）','<p>保留原有城市、景點與地圖入口。一天可選一個模組，也可以拆成兩天；移動日減少付費景點，日落與入場時段依實際日期查詢。</p>')
 order=[]
 for m in mods:
  if m['city'] not in order:order.append(m['city'])
@@ -123,7 +123,7 @@ for m in mods:
  body+=f'<article class="route-module" id="{m["id"]}"><h3>{escape(title)}</h3><p><span class="pill">建議 {escape(m["duration"])}</span></p><p><strong>順路排法：</strong>{escape(m["plan"])}</p><p><strong>先確認：</strong>{escape(m["booking"])}</p><p><strong>時間不足：</strong>{escape(m["cut"])}</p><ul>'+''.join('<li>'+link(p['url'],p['name'])+'</li>' for p in m['places'])+'</ul></article>'
 add('routes','路線靈感','不用綁日期，也能把想去的地方排順。',body)
 add('prep','行前準備','把預訂順序與重要官方入口放在一起。',section('確認日期後再完成', '<ol class="steps"><li>確認護照、入境資格與官方最新申請要求。</li><li>安排進出城市，再訂機票與可接受退改條件的住宿。</li><li>把有指定入場時段的景點列出：阿爾罕布拉宮、聖家堂、迪士尼與熱門博物館。</li><li>確認城際交通與機場接駁，保留轉乘緩衝。</li><li>出發前再檢查景點休館、罷工或交通異動，保存必要離線資料。</li></ol>')+
-section('入境資訊｜直接查官方','<p>截至 '+DATE+'，ETIAS 官方仍標示尚未啟用，也不受理申請。不要向非官方網站預先付費；接近出發日再核對啟用狀態、資格與申請入口。EES 狀態也以歐盟官方頁為準。</p>'+sources([('歐盟 ETIAS','https://travel-europe.europa.eu/etias/about-etias/what-is-etias'),('歐盟 EES','https://travel-europe.europa.eu/en/ees'),('外交部領事事務局','https://www.boca.gov.tw/')]))+
+section('入境資訊｜直接查官方','<p>查核日 2026-11-02：EES 已於 2026-04-10 起全面上路，第一次入境錄指紋、臉部影像。ETIAS 仍未啟用、不受理申請，啟用日未確認；費用 €20，啟用後臺灣護照持有人也要申請。請勿向非官方網站預先付費，出發前再查。</p>'+sources([('歐盟 ETIAS','https://travel-europe.europa.eu/etias/about-etias/what-is-etias'),('歐盟 EES','https://travel-europe.europa.eu/en/ees'),('外交部領事事務局','https://www.boca.gov.tw/')]))+
 section('航班資料怎麼保存','<p>航線、航空公司、轉機點與價格都會變動。攻略只保存「開口票是否減少折返、行李是否直掛、轉機時間與退改條件」等決策欄位；實際班次、票價與是否直飛等到旅行日期確定後再查。舊筆記的參考價格與「一定要提前幾個月」不作為購票規則。</p>')+
 section('訂單與旅行資料分開','<p>攻略收集城市、景點、來源與一般筆記。護照、訂位代號、信用卡與住宿訂單，另外放在自己的私人儲存空間。</p>')+legacy('prep','原專案整合：航班選項與旅遊提醒'))
 add('shopping','美食、購物與伴手禮','按地區收集，等行程確定再排順路。',
@@ -197,10 +197,33 @@ def anchor(body):
  if len(items)<3:return body,''
  links=''.join(f'<li><a href="#{sid}">{escape(t)}</a></li>' for sid,t in items)
  return body,f'<nav class="page-toc" aria-label="頁內章節"><span class="page-toc-label">這一頁</span><ul>{links}</ul></nav>'
+# 2026-11-02: research-backed additions; historical DATE remains unchanged.
+add('itinerary-2027','2027 西葡 20 天','里斯本進、巴塞隆納出｜範例 2027/9/24–10/13｜查證日 2026-11-02',(CONTENT/'itinerary-2027.html').read_text())
+def insert_before(slug,heading,html):
+ """Insert research additions in front of an existing section, keeping each page's opening intact."""
+ title,sub,body=PAGES[slug]
+ mark=f'<section class="section"><h2>{heading}</h2>'
+ if mark not in body:raise SystemExit(f'{slug}: section {heading} not found')
+ at=body.index(mark)
+ PAGES[slug]=(title,sub,body[:at]+html+body[at:])
+TAX=(CONTENT/'tourist-tax-2027.html').read_text()
+trip=section('2027 西葡 20 天',grid([card('里斯本進，巴塞隆納出','範例日期 2027/9/24–10/13；每日行程、餐廳、秋季天氣、預約與入境限制。日期只是範例。','itinerary-2027.html','2026-11-02 整理')]))
+add_2027=lambda slug:(CONTENT/(slug+'-2027.html')).read_text()
+insert_before('index','把靈感，接成旅行',trip)
+insert_before('routes','17 個可拆用路線模組（含葡萄牙到安達魯西亞）',trip)
+for slug in ('spain','portugal'):insert_before(slug,'住宿與交通怎麼選',trip+add_2027(slug)+TAX)
+insert_before('prep','航班資料怎麼保存',add_2027('prep')+TAX)
+insert_before('transport','一段移動的查詢順序',add_2027('transport'))
+title,sub,body=PAGES['updates']
+PAGES['updates']=(title,sub,section('2026-11-02｜西葡 2027 規劃更新','<p>依本站 2026-11-02 的西葡研究整理完成 21 項內容修正（第 20 項僅更新 README），新增 2027 西葡 20 天行程、秋季天氣與開口票比較。更新 EES／ETIAS、航班開票時間、城際交通、景點預約、觀光稅與臺灣入境檢疫，移除緊急聯絡號碼，改連外交部領事事務局。PR #8 未合併；僅採用其明示為 2026-10-01 的阿爾罕布拉宮營運快照。Lisboa Card 暫停開放清單仍為 2026-09-08 快照，尚未重新查核。所有易變動資訊出發前再確認。</p>')+body)
+
 index=[]
 for slug,(title,sub,body) in PAGES.items():
  nav=''.join(f'<a href="{s}.html"'+(' aria-current="page"' if s==slug else '')+f'>{t}</a>' for s,t in NAV)
  body,toc=anchor(body)
+ # 有頁首摘要的頁面，摘要先於章節列出現。
+ lead,sep,rest=body.partition('<!-- /page-summary -->')
+ if sep:body,toc=lead+toc,'';body+=rest
  url=f'{SITE}/{slug}.html'
  html=f'''<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#183c4a"><title>{escape(title)}｜法西葡旅遊攻略</title><meta name="description" content="{escape(sub)}"><link rel="canonical" href="{escape(url,quote=True)}"><meta property="og:type" content="website"><meta property="og:site_name" content="法西葡旅遊攻略"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="{escape(title,quote=True)}｜法西葡旅遊攻略"><meta property="og:description" content="{escape(sub,quote=True)}"><meta property="og:url" content="{escape(url,quote=True)}"><meta property="og:image" content="{SITE}/assets/paris-seine.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="assets/site.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到主要內容</a><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">F / E / P</span><span>法西葡旅遊攻略<small>TRAVEL FIELD NOTES</small></span></a><a class="collect-link" href="collection.html">＋ 收集資料</a></header><div class="main-nav-wrap"><nav class="main-nav" aria-label="主要導覽">{nav}</nav></div><main id="main"><div class="page-heading"><p class="eyebrow">FRANCE / ESPAÑA / PORTUGAL</p><h1>{escape(title)}</h1><p>{escape(sub)}</p></div>{toc}{body}</main><footer><div><strong>法西葡旅遊攻略</strong><p>不預設出發日 · 保存靈感與來源 · 持續整理</p></div><div><a href="updates.html">更新與來源</a> · <a href="{REPO}/issues/new?title={escape('資料更新：'+title,quote=True)}" target="_blank" rel="noopener noreferrer">回報更新 ↗</a><p>內容整合 {DATE}；查核範圍見更新紀錄</p></div></footer><button id="to-top" class="to-top" type="button" hidden><span aria-hidden="true">↑</span><span class="sr-only">回到頁面頂端</span></button></body></html>'''
  (ROOT/(slug+'.html')).write_text(html)
